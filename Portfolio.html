@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeet Singh Saini - Portfolio</title>
+    <link rel="stylesheet" href="portfolio_style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <button class="theme-toggle">Toggle Theme</button>
+    <header>
+        <h1>Jeet Singh Saini</h1>
+        <p>Business Analyst | Data Scientist | AI Enthusiast</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! I'm Jeet Singh Saini, a dynamic Business Analyst and Data Scientist with expertise in AI, finance, and analytics. Currently pursuing a Master of Science in Business Analytics, I am passionate about leveraging data-driven insights to solve complex business challenges.</p>
+        <p>With hands-on experience at Jio, I have worked extensively on predictive analytics, anomaly detection, and AI-powered business solutions. My ability to analyze vast datasets and extract meaningful trends has helped businesses make strategic decisions.</p>
+        <p>Beyond my professional expertise, I am an avid football enthusiast and a fitness advocate. I thrive on new challenges that push me to expand my skills and drive impactful solutions.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills & Tech Stack</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <p>Python, SQL, C++, JavaScript</p>
+            </div>
+            <div class="skill-category">
+                <h3>Data Science & Analytics</h3>
+                <p>Pandas, NumPy, TensorFlow, Scikit-Learn, Power BI, Tableau</p>
+            </div>
+            <div class="skill-category">
+                <h3>Business & Financial Analytics</h3>
+                <p>Excel, Alteryx, Financial Modeling, Risk Analysis</p>
+            </div>
+            <div class="skill-category">
+                <h3>Web & Software Development</h3>
+                <p>React, HTML, CSS, FastAPI</p>
+            </div>
+            <div class="skill-category">
+                <h3>Cloud & DevOps</h3>
+                <p>AWS, Git, Docker</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Real-time Stock Market Analysis</h3>
+                <p>Designed an AI-powered stock market prediction model integrating real-time financial data sources.</p>
+            </div>
+            <div class="project-card">
+                <h3>AI-Assisted Patent Drafting Market Analysis</h3>
+                <p>Conducted an in-depth analysis of AI-driven patent drafting platforms to evaluate market trends and adoption.</p>
+            </div>
+            <div class="project-card">
+                <h3>Marketing Analytics for Business Growth</h3>
+                <p>Developed predictive analytics models to optimize digital marketing campaigns and enhance customer engagement.</p>
+            </div>
+            <div class="project-card">
+                <h3>Predictive Analytics for Jio Network Performance</h3>
+                <p>Implemented machine learning algorithms to forecast network traffic and enhance operational efficiency.</p>
+            </div>
+            <div class="project-card">
+                <h3>Anomaly Detection in Jio Network Performance</h3>
+                <p>Built anomaly detection systems to identify performance deviations in telecommunication networks.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+    <h2>Contact</h2>
+        <a href="mailto:sainijeetsingh@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/jeet-singh-saini/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/jeetsingh-14" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jeet Singh Saini. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
+</body>
+</html>
