@@ -1,126 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeet Singh Saini - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff;
-        }
-        header {
-            background: #1e1e1e;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .section {
-            padding: 50px;
-            text-align: center;
-        }
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .project-card {
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        .project-card:hover {
-            transform: scale(1.05);
-        }
-        footer {
-            background: #1e1e1e;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        a {
-            color: #1e90ff;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Jeet Singh Saini</h1>
-        <p>Business Analyst | Data Scientist | AI Enthusiast</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    transition: background 0.3s ease-in-out;
+    line-height: 1.6;
+}
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Master of Science in Business Analytics | Passionate about AI, Finance & Data Analytics</p>
-        <p>Previously worked at Jio on predictive analytics, anomaly detection, and AI-driven solutions. Experienced in market analysis, business intelligence, and strategic planning.</p>
-    </section>
+header {
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>Real-time Stock Market Analysis</h3>
-                <p>Developing a stock market prediction tool integrating multiple data sources for accuracy.</p>
-            </div>
-            <div class="project-card">
-                <h3>BlackRock Aladdin Management Analytics</h3>
-                <p>Analyzing the adoption and scalability of Aladdin in various industries.</p>
-            </div>
-            <div class="project-card">
-                <h3>AI-Assisted Patent Drafting Market Analysis</h3>
-                <p>Evaluating AI-powered patent drafting companies and their market potential.</p>
-            </div>
-            <div class="project-card">
-                <h3>Marketing Analytics for Business Growth</h3>
-                <p>Using data analytics to improve marketing campaigns, sales, and customer satisfaction.</p>
-            </div>
-            <div class="project-card">
-                <h3>Predictive Analytics for Jio Network Performance</h3>
-                <p>Built models to forecast network trends and optimize performance.</p>
-            </div>
-            <div class="project-card">
-                <h3>Anomaly Detection in Jio Network Performance</h3>
-                <p>Developed machine learning models to detect anomalies in network performance.</p>
-            </div>
-        </div>
-    </section>
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: jeetsinghsaini@example.com</p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/jeetsinghsaini</a></p>
-        <p>GitHub: <a href="#">github.com/jeetsinghsaini</a></p>
-    </section>
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-    <footer>
-        <p>&copy; 2025 Jeet Singh Saini. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+    border-bottom: 2px solid #1e90ff;
+}
+
+.section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    text-align: center;
+}
+
+.skill-category {
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 280px;
+    text-align: center;
+}
+
+.skill-category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.skill-category h3 {
+    color: #1e90ff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.skill-category p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.project-card h3 {
+    color: #1e90ff;
+}
+
+footer {
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #1e1e1e;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle:hover {
+    background: #1e90ff;
+}
+
+
