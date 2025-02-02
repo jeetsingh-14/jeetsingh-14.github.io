@@ -44,7 +44,6 @@ nav ul li a:hover {
     text-align: center;
 }
 
-
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -75,11 +74,29 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-.skill-category p {
-    font-size: 1rem;
-    line-height: 1.6;
+.certifications-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
+.certifications-list li {
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 250px;
+    text-align: center;
+    list-style: none;
+}
+
+.certifications-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
 
 .projects-container {
     display: grid;
@@ -145,5 +162,3 @@ a:hover {
 .theme-toggle:hover {
     background: #1e90ff;
 }
-
-
