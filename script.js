@@ -1,4 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Handle preloader
+    window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }, 800);
+    });
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+
+    // Check for saved theme preference or use device preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+    if (savedTheme === 'light' || (!savedTheme && !prefersDarkScheme.matches)) {
+        document.body.classList.add('light-mode');
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    // Toggle theme when button is clicked
+    themeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('light-mode');
+
+        // Update icon
+        if (document.body.classList.contains('light-mode')) {
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'light');
+        } else {
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
     // Initialize AOS animation library
     AOS.init({
         duration: 800,
@@ -101,4 +139,220 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     });
+
+
+    // Add skill progress bars
+    document.querySelectorAll('.skill-category li').forEach(skill => {
+        // Create a random percentage between 75% and 95% for demonstration
+        const percentage = Math.floor(Math.random() * 20) + 75;
+
+        // Create progress bar container
+        const progressContainer = document.createElement('div');
+        progressContainer.classList.add('skill-progress');
+
+        // Create progress bar
+        const progressBar = document.createElement('div');
+        progressBar.classList.add('progress-bar');
+        progressBar.setAttribute('data-width', percentage + '%');
+
+        // Append elements
+        progressContainer.appendChild(progressBar);
+        skill.appendChild(progressContainer);
+    });
+
+    // Animate progress bars when they come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBars = entry.target.querySelectorAll('.progress-bar');
+                progressBars.forEach(bar => {
+                    const width = bar.getAttribute('data-width');
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 200);
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    // Observe skill categories
+    document.querySelectorAll('.skill-category').forEach(category => {
+        observer.observe(category);
+    });
+
+    // Contact form handling
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    // Add error message elements to each form group
+    function setupFormValidation() {
+        const formGroups = contactForm.querySelectorAll('.form-group');
+
+        formGroups.forEach(group => {
+            const input = group.querySelector('input, textarea');
+            const errorElement = document.createElement('div');
+            errorElement.className = 'error-message';
+            group.appendChild(errorElement);
+        });
+    }
+
+    // Validate form fields
+    function validateForm() {
+        let isValid = true;
+
+        // Clear all previous errors
+        const formGroups = contactForm.querySelectorAll('.form-group');
+        formGroups.forEach(group => {
+            group.classList.remove('error');
+        });
+
+        // Validate name (not empty)
+        const nameInput = document.getElementById('name');
+        const nameGroup = nameInput.closest('.form-group');
+        const nameError = nameGroup.querySelector('.error-message');
+
+        if (!nameInput.value.trim()) {
+            nameGroup.classList.add('error');
+            nameError.textContent = 'Please enter your name';
+            isValid = false;
+        }
+
+        // Validate email (valid format)
+        const emailInput = document.getElementById('email');
+        const emailGroup = emailInput.closest('.form-group');
+        const emailError = emailGroup.querySelector('.error-message');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(emailInput.value.trim())) {
+            emailGroup.classList.add('error');
+            emailError.textContent = 'Please enter a valid email address';
+            isValid = false;
+        }
+
+        // Validate subject (not empty)
+        const subjectInput = document.getElementById('subject');
+        const subjectGroup = subjectInput.closest('.form-group');
+        const subjectError = subjectGroup.querySelector('.error-message');
+
+        if (!subjectInput.value.trim()) {
+            subjectGroup.classList.add('error');
+            subjectError.textContent = 'Please enter a subject';
+            isValid = false;
+        }
+
+        // Validate message (at least 10 characters)
+        const messageInput = document.getElementById('message');
+        const messageGroup = messageInput.closest('.form-group');
+        const messageError = messageGroup.querySelector('.error-message');
+
+        if (messageInput.value.trim().length < 10) {
+            messageGroup.classList.add('error');
+            messageError.textContent = 'Message must be at least 10 characters';
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    // Handle form submission
+    if (contactForm) {
+        // Setup validation elements
+        setupFormValidation();
+
+        // Support Enter key on message field
+        document.getElementById('message').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                contactForm.dispatchEvent(new Event('submit'));
+            }
+        });
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Validate form
+            if (!validateForm()) {
+                return;
+            }
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            // Show loading state
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="spinner"><i class="fas fa-spinner fa-spin"></i></span> Sending...';
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+
+            // Simulate form submission (in a real scenario, you would send data to a server)
+            setTimeout(() => {
+                // Reset button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+
+                // Show success message
+                formStatus.textContent = 'Message sent! Thank you for contacting me.';
+                formStatus.className = 'form-status success';
+
+                // Reset form
+                contactForm.reset();
+
+                // Hide success message after 5 seconds with animation
+                setTimeout(() => {
+                    formStatus.style.animation = 'slideOut 0.3s ease forwards';
+                    setTimeout(() => {
+                        formStatus.style.display = 'none';
+                        formStatus.style.animation = 'slideIn 0.3s ease forwards';
+                    }, 300);
+                }, 5000);
+            }, 1500);
+
+            // In a real implementation, you would use fetch or XMLHttpRequest to send the data
+            // Example with fetch:
+            /*
+            fetch('your-form-handler-url', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+
+                if (data.success) {
+                    formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+                    formStatus.className = 'form-status success';
+                    contactForm.reset();
+                } else {
+                    formStatus.textContent = 'Oops! Something went wrong. Please try again later.';
+                    formStatus.className = 'form-status error';
+                }
+
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            })
+            .catch(error => {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                formStatus.textContent = 'Oops! Something went wrong. Please try again later.';
+                formStatus.className = 'form-status error';
+
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            });
+            */
+        });
+    }
 });
