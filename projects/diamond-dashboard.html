@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diamond Dashboard Analysis Project by Jeet Singh">
+    <title>Diamond Dashboard Analysis – Jeet Singh Portfolio</title>
+    <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+        
+        .project-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .project-content h2 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .project-content h3 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .project-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .project-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .project-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .project-content li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .project-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <div class="container">
+            <h1>Jeet Singh</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#certifications">Certifications</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="project-content" data-aos="fade-up">
+            <h1>Diamond Dashboard Analysis</h1>
+            <h2>Interactive Power BI dashboards comparing lab-grown and natural diamonds</h2>
+            
+            <div class="divider"></div>
+            
+            <h3>Overview</h3>
+            <p>This project developed comprehensive interactive dashboards to analyze and compare lab-grown versus natural diamonds across multiple dimensions. Using Power BI and advanced data visualization techniques, the dashboards provide diamond industry professionals with insights into pricing trends, quality distributions, and market dynamics between these two categories of diamonds.</p>
+            
+            <h3>Problem Statement</h3>
+            <p>The diamond industry has been disrupted by the growing market for lab-created diamonds, but there was a lack of analytical tools to properly compare these products with natural diamonds. Industry stakeholders needed a data-driven approach to understand price differentials, quality variations, consumer preferences, and market trends between lab and natural diamonds to make informed business decisions.</p>
+            
+            <h3>Approach & Tech Stack</h3>
+            <ul>
+                <li><strong>Data Collection</strong>: Diamond pricing data from multiple industry sources</li>
+                <li><strong>Data Processing</strong>: Python and Excel for data cleaning and transformation</li>
+                <li><strong>Visualization</strong>: Power BI for interactive dashboards</li>
+                <li><strong>Automation</strong>: Power Automate for real-time data updates</li>
+                <li><strong>Statistical Analysis</strong>: R for advanced statistical comparisons</li>
+            </ul>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li>Interactive price comparison charts by carat, cut, clarity, and color</li>
+                <li>Market share visualization with time-series analysis</li>
+                <li>Quality distribution comparisons between lab and natural diamonds</li>
+                <li>Price trend forecasting with predictive analytics</li>
+                <li>Automated reporting with Excel integration</li>
+                <li>Geographical market analysis by region and consumer demographics</li>
+            </ul>
+            
+            <h3>Architecture</h3>
+            <p>The system follows a data pipeline architecture starting with automated data collection from various sources, followed by preprocessing in Python and Excel. The cleaned data is then loaded into Power BI for visualization and analysis. Power Automate handles the scheduled refreshes and report distribution. The dashboards are designed with a modular approach, allowing users to drill down from high-level overviews to detailed comparisons based on specific diamond attributes.</p>
+            
+            <h3>Challenges Faced</h3>
+            <ul>
+                <li>Harmonizing data from disparate sources with different grading standards</li>
+                <li>Creating meaningful comparisons between products with fundamentally different origins</li>
+                <li>Designing intuitive visualizations for complex multi-dimensional data</li>
+                <li>Implementing real-time data updates from rapidly changing market conditions</li>
+                <li>Balancing technical depth with accessibility for non-technical users</li>
+            </ul>
+            
+            <h3>Future Improvements</h3>
+            <ul>
+                <li>Integrate machine learning models for more accurate price predictions</li>
+                <li>Add consumer sentiment analysis from social media and review platforms</li>
+                <li>Develop mobile-optimized versions of key dashboards</li>
+                <li>Implement blockchain verification data for diamond provenance</li>
+                <li>Create customizable alerts for significant market shifts</li>
+            </ul>
+            
+            <div class="project-links">
+                <a href="https://github.com/jeetsingh-14/diamond-dashboard" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jeet Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

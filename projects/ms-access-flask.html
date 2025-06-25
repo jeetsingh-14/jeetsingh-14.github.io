@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MS Access to Flask Migration Project by Jeet Singh">
+    <title>MS Access to Flask Migration – Jeet Singh Portfolio</title>
+    <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+        
+        .project-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .project-content h2 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .project-content h3 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .project-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .project-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .project-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .project-content li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .project-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <div class="container">
+            <h1>Jeet Singh</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#certifications">Certifications</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="project-content" data-aos="fade-up">
+            <h1>MS Access to Flask Migration</h1>
+            <h2>Modernizing legacy database applications with web technology</h2>
+            
+            <div class="divider"></div>
+            
+            <h3>Overview</h3>
+            <p>This project involved migrating a critical business application from Microsoft Access to a modern web-based platform using Flask and SQL Server. The migration transformed a desktop-bound, single-user database application into a scalable, multi-user web application with enhanced functionality, improved data integrity, and modern user experience.</p>
+            
+            <h3>Problem Statement</h3>
+            <p>The client was using a legacy Microsoft Access database application that had become increasingly problematic: it was limited to single-user access, prone to data corruption, difficult to maintain, and lacked modern security features. As the business grew, they needed a solution that could support multiple concurrent users, provide better data validation, offer remote access capabilities, and scale with their expanding operations.</p>
+            
+            <h3>Approach & Tech Stack</h3>
+            <ul>
+                <li><strong>Backend</strong>: Python with Flask framework</li>
+                <li><strong>Database</strong>: Migration from Access to SQL Server</li>
+                <li><strong>ORM</strong>: SQLAlchemy for database interactions</li>
+                <li><strong>Frontend</strong>: HTML, CSS, JavaScript with Bootstrap for responsive design</li>
+                <li><strong>Authentication</strong>: Flask-Login with role-based access control</li>
+                <li><strong>Reporting</strong>: Flask-WeasyPrint for PDF generation</li>
+            </ul>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li>Multi-user concurrent access with proper transaction handling</li>
+                <li>Role-based permissions system (admin, manager, staff)</li>
+                <li>Comprehensive data validation and error handling</li>
+                <li>Advanced search and filtering capabilities</li>
+                <li>Automated reporting and export functions</li>
+                <li>Audit logging for all data modifications</li>
+                <li>Responsive design for desktop and mobile access</li>
+            </ul>
+            
+            <h3>Architecture</h3>
+            <p>The application follows the Model-View-Controller (MVC) pattern with Flask serving as the controller, SQLAlchemy models representing the database structure, and Jinja2 templates handling the view layer. The system is designed with a modular architecture that separates concerns between data access, business logic, and presentation. Database migrations were handled using Alembic to ensure smooth schema evolution over time.</p>
+            
+            <h3>Challenges Faced</h3>
+            <ul>
+                <li>Preserving complex business logic embedded in Access macros and VBA code</li>
+                <li>Migrating legacy data with inconsistent formats and relationships</li>
+                <li>Replicating Access reports functionality in the web environment</li>
+                <li>Training users accustomed to desktop interfaces to use web applications</li>
+                <li>Ensuring zero data loss during the transition period</li>
+            </ul>
+            
+            <h3>Future Improvements</h3>
+            <ul>
+                <li>Implement API endpoints for integration with other business systems</li>
+                <li>Add real-time notifications for critical events</li>
+                <li>Develop a mobile app for field workers</li>
+                <li>Implement advanced analytics and business intelligence features</li>
+                <li>Add document management capabilities with cloud storage integration</li>
+            </ul>
+            
+            <div class="project-links">
+                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jeet Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

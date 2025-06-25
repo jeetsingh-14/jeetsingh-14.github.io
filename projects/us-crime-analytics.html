@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="U.S. Crime Analytics (2020–2023) Project by Jeet Singh">
+    <title>U.S. Crime Analytics – Jeet Singh Portfolio</title>
+    <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+        
+        .project-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .project-content h2 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .project-content h3 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .project-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .project-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .project-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .project-content li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .project-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <div class="container">
+            <h1>Jeet Singh</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#certifications">Certifications</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="project-content" data-aos="fade-up">
+            <h1>U.S. Crime Analytics (2020–2023)</h1>
+            <h2>Combined analysis of crime trends in Los Angeles and across the United States</h2>
+            
+            <div class="divider"></div>
+            
+            <h3>Overview</h3>
+            <p>The U.S. Crime Analytics project combines local and national perspectives on crime patterns across the United States from 2020 to 2023. At the local level, it explores crime data from Los Angeles, identifying patterns across different neighborhoods, weapon types, and time periods using advanced geospatial visualization techniques including heatmaps and interactive plots. At the national level, it examines the complex interrelationships between economic indicators and violent crime rates across 217 major U.S. metropolitan areas, leveraging advanced statistical methodologies and machine learning techniques to explain 78.3% of the variance in violent crime rates through a combination of 27 distinct socioeconomic variables.</p>
+            
+            <p>This comprehensive approach provides a multi-dimensional view of crime trends, connecting local-level insights with broader national patterns to inform more effective public safety strategies and resource allocation.</p>
+            
+            <h3>Problem Statement</h3>
+            <p>Understanding crime patterns at both local and national levels presents significant challenges for law enforcement, policymakers, and researchers:</p>
+            
+            <ul>
+                <li><strong>Local Perspective</strong>: Raw crime data from large metropolitan areas like Los Angeles is often overwhelming and difficult to interpret. Transforming this complex data into actionable insights requires identifying spatial and temporal patterns, weapon usage trends, and demographic correlations.</li>
+                <li><strong>National Perspective</strong>: The relationship between economic conditions and criminal behavior represents one of the most persistent and consequential challenges in public policy. Previous studies have often relied on simplistic correlations or failed to account for confounding variables, leading to contradictory findings and ineffective policy recommendations.</li>
+                <li><strong>Integration Challenge</strong>: Connecting local crime patterns with national socioeconomic trends requires sophisticated data integration and analysis techniques that can bridge different geographic scales and data sources.</li>
+            </ul>
+            
+            <p>This project addresses these challenges through a comprehensive analytical framework that integrates multiple data sources, advanced statistical methodologies, and domain expertise to provide actionable insights for stakeholders at both local and national levels.</p>
+            
+            <h3>Approach & Tech Stack</h3>
+            <ul>
+                <li><strong>Data Sources</strong>:
+                    <ul>
+                        <li>Los Angeles Police Department's open data portal for local crime data</li>
+                        <li>FBI Uniform Crime Reports (2020-2023) for national crime statistics</li>
+                        <li>U.S. Census Bureau American Community Survey (ACS) for demographic and socioeconomic indicators</li>
+                        <li>Bureau of Labor Statistics data for employment metrics</li>
+                        <li>Federal Reserve Economic Data (FRED) for macroeconomic indicators</li>
+                    </ul>
+                </li>
+                <li><strong>Data Processing & Analysis</strong>:
+                    <ul>
+                        <li>Python ecosystem (Pandas, NumPy, SciPy) for data manipulation and feature engineering</li>
+                        <li>R statistical environment for advanced econometric modeling</li>
+                        <li>Scikit-learn for machine learning and predictive modeling</li>
+                    </ul>
+                </li>
+                <li><strong>Visualization</strong>:
+                    <ul>
+                        <li>Matplotlib and Seaborn for statistical visualizations</li>
+                        <li>Folium for interactive geospatial maps</li>
+                        <li>GeoPandas for spatial data processing</li>
+                        <li>D3.js for interactive web-based visualizations</li>
+                    </ul>
+                </li>
+                <li><strong>Statistical Methods</strong>:
+                    <ul>
+                        <li>Fixed-effects panel regression models for controlling city-specific characteristics</li>
+                        <li>Spatial regression techniques for geographic spillover effects</li>
+                        <li>Time-series analysis for temporal patterns and trends</li>
+                        <li>Machine learning for pattern recognition and predictive analytics</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Local Crime Analysis</strong>:
+                    <ul>
+                        <li>Interactive crime heatmaps showing concentration across LA neighborhoods</li>
+                        <li>Time-series analysis of crime rates by hour, day, month, and year</li>
+                        <li>Weapon type distribution analysis across different crime categories</li>
+                        <li>Demographic correlation studies between crime rates and local socioeconomic factors</li>
+                    </ul>
+                </li>
+                <li><strong>National Crime Analytics</strong>:
+                    <ul>
+                        <li>Multivariate panel regression models identifying significant economic predictors of violent crime</li>
+                        <li>Heterogeneous effects analysis revealing differential impacts across regions and demographic groups</li>
+                        <li>Temporal analysis capturing how economic changes affect crime rates over time</li>
+                        <li>Geospatial econometric models accounting for geographic spillover effects</li>
+                    </ul>
+                </li>
+                <li><strong>Integrated Insights</strong>:
+                    <ul>
+                        <li>Comparative analysis of local vs. national crime trends</li>
+                        <li>Identification of how national economic factors manifest in local crime patterns</li>
+                        <li>Policy simulation framework for testing intervention strategies at different scales</li>
+                        <li>Cross-scale visualization tools connecting neighborhood-level data with metropolitan and national trends</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h3>Challenges Faced</h3>
+            <ul>
+                <li>Integrating data from multiple sources with inconsistent geographic boundaries and temporal granularity</li>
+                <li>Addressing significant variation in crime reporting practices across jurisdictions</li>
+                <li>Establishing causal relationships between economic factors and crime rates</li>
+                <li>Creating meaningful visualizations that balance detail with clarity</li>
+                <li>Translating complex statistical findings into actionable insights for policymakers</li>
+            </ul>
+            
+            <h3>Future Improvements</h3>
+            <ul>
+                <li>Extend the analytical framework to census tract and block group levels for more granular insights</li>
+                <li>Develop ensemble forecasting models to project crime trends under various economic scenarios</li>
+                <li>Expand the analysis to include international comparative data from major metropolitan areas worldwide</li>
+                <li>Create an interactive policy simulation laboratory for testing different intervention strategies</li>
+                <li>Implement state-of-the-art causal machine learning techniques for more robust causal inference</li>
+            </ul>
+            
+            <div class="project-links">
+                <a href="https://github.com/jeetsingh-14/Crime-Analysis-" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jeet Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

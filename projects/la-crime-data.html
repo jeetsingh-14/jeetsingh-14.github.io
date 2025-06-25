@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LA Crime Data Analysis Project by Jeet Singh">
+    <title>LA Crime Data Analysis – Jeet Singh Portfolio</title>
+    <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+        
+        .project-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .project-content h2 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .project-content h3 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .project-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .project-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .project-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .project-content li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .project-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <div class="container">
+            <h1>Jeet Singh</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#certifications">Certifications</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="project-content" data-aos="fade-up">
+            <h1>LA Crime Data Analysis (2020–2023)</h1>
+            <h2>Comprehensive analysis of crime patterns in Los Angeles using geospatial visualization</h2>
+            
+            <div class="divider"></div>
+            
+            <h3>Overview</h3>
+            <p>This project analyzes crime data from Los Angeles between 2020 and 2023, identifying patterns across different areas, weapon types, and time periods. Using advanced data visualization techniques, including heatmaps and interactive plots, the analysis provides insights into crime trends that could help inform public safety strategies and resource allocation.</p>
+            
+            <h3>Problem Statement</h3>
+            <p>Understanding crime patterns in large metropolitan areas is crucial for effective law enforcement and public safety planning. However, raw crime data is often overwhelming and difficult to interpret. This project aimed to transform complex crime statistics into actionable insights by identifying spatial and temporal patterns, weapon usage trends, and demographic correlations.</p>
+            
+            <h3>Approach & Tech Stack</h3>
+            <ul>
+                <li><strong>Data Source</strong>: Los Angeles Police Department's open data portal</li>
+                <li><strong>Data Processing</strong>: Python with Pandas for cleaning and transformation</li>
+                <li><strong>Visualization</strong>: Matplotlib for static plots, Folium for interactive maps</li>
+                <li><strong>Geospatial Analysis</strong>: GeoPandas for spatial data processing</li>
+                <li><strong>Statistical Analysis</strong>: SciPy for correlation and trend analysis</li>
+            </ul>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li>Interactive crime heatmaps showing concentration across LA neighborhoods</li>
+                <li>Time-series analysis of crime rates by hour, day, month, and year</li>
+                <li>Weapon type distribution analysis across different crime categories</li>
+                <li>Demographic correlation studies between crime rates and socioeconomic factors</li>
+                <li>Comparative analysis of pre and post-pandemic crime patterns</li>
+            </ul>
+            
+            <h3>Architecture</h3>
+            <p>The project follows a data pipeline architecture starting with data acquisition and cleaning, followed by exploratory data analysis, statistical modeling, and visualization. The analysis is structured in modular Jupyter notebooks, with each focusing on a specific aspect of crime analysis (spatial, temporal, categorical, etc.). Final visualizations are exported as interactive HTML files for easy sharing with stakeholders.</p>
+            
+            <h3>Challenges Faced</h3>
+            <ul>
+                <li>Handling missing or inconsistent location data in crime reports</li>
+                <li>Creating meaningful visualizations that balance detail with clarity</li>
+                <li>Accounting for reporting biases in different neighborhoods</li>
+                <li>Optimizing performance for large geospatial datasets</li>
+            </ul>
+            
+            <h3>Future Improvements</h3>
+            <ul>
+                <li>Implement predictive modeling to forecast crime hotspots</li>
+                <li>Integrate additional datasets like economic indicators and population density</li>
+                <li>Develop an interactive dashboard for real-time crime analysis</li>
+                <li>Expand analysis to include comparative studies with other major cities</li>
+            </ul>
+            
+            <div class="project-links">
+                <a href="https://github.com/jeetsingh-14/Crime-Analysis-" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jeet Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

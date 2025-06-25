@@ -272,16 +272,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Validate form
             if (!validateForm()) {
+                // Show error feedback
+                formStatus.textContent = 'Please fix the errors in the form.';
+                formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
+
+                // Hide error message after 5 seconds
+                setTimeout(() => {
+                    formStatus.style.animation = 'slideOut 0.3s ease forwards';
+                    setTimeout(() => {
+                        formStatus.style.display = 'none';
+                        formStatus.style.animation = 'slideIn 0.3s ease forwards';
+                    }, 300);
+                }, 5000);
+
                 return;
             }
 
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
+            // Get form data for Formspree
+            const form = e.target;
+            const formData = new FormData(form);
 
             // Show loading state
             const submitBtn = contactForm.querySelector('.submit-btn');
@@ -290,8 +300,21 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.classList.add('loading');
             submitBtn.disabled = true;
 
-            // Simulate form submission (in a real scenario, you would send data to a server)
-            setTimeout(() => {
+            // Send data to Formspree
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok.');
+            })
+            .then(data => {
                 // Reset button
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.classList.remove('loading');
@@ -300,6 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Show success message
                 formStatus.textContent = 'Message sent! Thank you for contacting me.';
                 formStatus.className = 'form-status success';
+                formStatus.style.display = 'block';
 
                 // Reset form
                 contactForm.reset();
@@ -312,47 +336,29 @@ document.addEventListener('DOMContentLoaded', function() {
                         formStatus.style.animation = 'slideIn 0.3s ease forwards';
                     }, 300);
                 }, 5000);
-            }, 1500);
-
-            // In a real implementation, you would use fetch or XMLHttpRequest to send the data
-            // Example with fetch:
-            /*
-            fetch('your-form-handler-url', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                submitBtn.innerHTML = originalBtnText;
-                submitBtn.disabled = false;
-
-                if (data.success) {
-                    formStatus.textContent = 'Thank you! Your message has been sent successfully.';
-                    formStatus.className = 'form-status success';
-                    contactForm.reset();
-                } else {
-                    formStatus.textContent = 'Oops! Something went wrong. Please try again later.';
-                    formStatus.className = 'form-status error';
-                }
-
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                }, 5000);
             })
             .catch(error => {
+                // Reset button
                 submitBtn.innerHTML = originalBtnText;
+                submitBtn.classList.remove('loading');
                 submitBtn.disabled = false;
+
+                // Show error message
                 formStatus.textContent = 'Oops! Something went wrong. Please try again later.';
                 formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
 
+                // Hide error message after 5 seconds
                 setTimeout(() => {
-                    formStatus.style.display = 'none';
+                    formStatus.style.animation = 'slideOut 0.3s ease forwards';
+                    setTimeout(() => {
+                        formStatus.style.display = 'none';
+                        formStatus.style.animation = 'slideIn 0.3s ease forwards';
+                    }, 300);
                 }, 5000);
+
+                console.error('Error:', error);
             });
-            */
         });
     }
 });
