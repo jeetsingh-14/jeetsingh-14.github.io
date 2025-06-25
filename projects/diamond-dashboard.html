@@ -18,20 +18,20 @@
             padding: 20px;
             text-align: left;
         }
-        
+
         .project-content h1 {
             color: var(--primary-color);
             margin-bottom: 10px;
             font-size: 2.5rem;
         }
-        
+
         .project-content h2 {
             color: var(--text-color);
             font-size: 1.5rem;
             margin-bottom: 30px;
             font-weight: 400;
         }
-        
+
         .project-content h3 {
             color: var(--primary-color);
             margin-top: 40px;
@@ -40,7 +40,7 @@
             position: relative;
             padding-bottom: 10px;
         }
-        
+
         .project-content h3::after {
             content: '';
             position: absolute;
@@ -50,29 +50,29 @@
             height: 3px;
             background-color: var(--primary-color);
         }
-        
+
         .project-content p {
             margin-bottom: 20px;
             line-height: 1.8;
         }
-        
+
         .project-content ul {
             margin-bottom: 20px;
             padding-left: 20px;
         }
-        
+
         .project-content li {
             margin-bottom: 10px;
             line-height: 1.6;
         }
-        
+
         .project-links {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-top: 40px;
         }
-        
+
         .project-links a {
             display: inline-block;
             padding: 10px 20px;
@@ -83,17 +83,40 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
-        
+
         .project-links a:hover {
             background-color: var(--secondary-color);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .divider {
             height: 1px;
             background: linear-gradient(to right, transparent, var(--primary-color), transparent);
             margin: 30px 0;
+        }
+
+        .github-link {
+            display: flex;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .github-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .github-link a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -130,15 +153,19 @@
         <div class="project-content" data-aos="fade-up">
             <h1>Diamond Dashboard Analysis</h1>
             <h2>Interactive Power BI dashboards comparing lab-grown and natural diamonds</h2>
-            
+
             <div class="divider"></div>
-            
+
+            <div class="github-link">
+                <a href="https://github.com/jeetsingh-14/diamond-dashboard" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            </div>
+
             <h3>Overview</h3>
             <p>This project developed comprehensive interactive dashboards to analyze and compare lab-grown versus natural diamonds across multiple dimensions. Using Power BI and advanced data visualization techniques, the dashboards provide diamond industry professionals with insights into pricing trends, quality distributions, and market dynamics between these two categories of diamonds.</p>
-            
+
             <h3>Problem Statement</h3>
             <p>The diamond industry has been disrupted by the growing market for lab-created diamonds, but there was a lack of analytical tools to properly compare these products with natural diamonds. Industry stakeholders needed a data-driven approach to understand price differentials, quality variations, consumer preferences, and market trends between lab and natural diamonds to make informed business decisions.</p>
-            
+
             <h3>Approach & Tech Stack</h3>
             <ul>
                 <li><strong>Data Collection</strong>: Diamond pricing data from multiple industry sources</li>
@@ -147,7 +174,7 @@
                 <li><strong>Automation</strong>: Power Automate for real-time data updates</li>
                 <li><strong>Statistical Analysis</strong>: R for advanced statistical comparisons</li>
             </ul>
-            
+
             <h3>Key Features</h3>
             <ul>
                 <li>Interactive price comparison charts by carat, cut, clarity, and color</li>
@@ -157,10 +184,10 @@
                 <li>Automated reporting with Excel integration</li>
                 <li>Geographical market analysis by region and consumer demographics</li>
             </ul>
-            
+
             <h3>Architecture</h3>
             <p>The system follows a data pipeline architecture starting with automated data collection from various sources, followed by preprocessing in Python and Excel. The cleaned data is then loaded into Power BI for visualization and analysis. Power Automate handles the scheduled refreshes and report distribution. The dashboards are designed with a modular approach, allowing users to drill down from high-level overviews to detailed comparisons based on specific diamond attributes.</p>
-            
+
             <h3>Challenges Faced</h3>
             <ul>
                 <li>Harmonizing data from disparate sources with different grading standards</li>
@@ -169,7 +196,7 @@
                 <li>Implementing real-time data updates from rapidly changing market conditions</li>
                 <li>Balancing technical depth with accessibility for non-technical users</li>
             </ul>
-            
+
             <h3>Future Improvements</h3>
             <ul>
                 <li>Integrate machine learning models for more accurate price predictions</li>
@@ -178,9 +205,8 @@
                 <li>Implement blockchain verification data for diamond provenance</li>
                 <li>Create customizable alerts for significant market shifts</li>
             </ul>
-            
+
             <div class="project-links">
-                <a href="https://github.com/jeetsingh-14/diamond-dashboard" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
                 <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
             </div>
         </div>

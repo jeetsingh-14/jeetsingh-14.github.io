@@ -95,6 +95,29 @@
             background: linear-gradient(to right, transparent, var(--primary-color), transparent);
             margin: 30px 0;
         }
+
+        .github-link {
+            display: flex;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .github-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .github-link a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -132,6 +155,10 @@
             <h2>Real-time AI fraud detection system with explainable insights</h2>
 
             <div class="divider"></div>
+
+            <div class="github-link">
+                <a href="https://github.com/jeetsingh-14/TrustNet-AI" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            </div>
 
             <h3>Overview</h3>
             <p>TrustNet AI is an enterprise-grade, real-time transaction monitoring and fraud detection platform designed for high-volume financial institutions. The system processes over 10,000 transactions per second with sub-50ms latency, leveraging advanced behavioral analytics, machine learning, and anomaly detection algorithms to identify potentially fraudulent activities with 94.3% accuracy. Our solution has demonstrated a 76% reduction in false positives compared to traditional rule-based systems while increasing fraud detection rates by 62%.</p>
@@ -467,7 +494,6 @@
             </ul>
 
             <div class="project-links">
-                <a href="https://github.com/jeetsingh-14/TrustNet-AI" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
                 <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
             </div>
         </div>

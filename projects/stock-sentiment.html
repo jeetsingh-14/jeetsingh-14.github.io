@@ -18,20 +18,20 @@
             padding: 20px;
             text-align: left;
         }
-        
+
         .project-content h1 {
             color: var(--primary-color);
             margin-bottom: 10px;
             font-size: 2.5rem;
         }
-        
+
         .project-content h2 {
             color: var(--text-color);
             font-size: 1.5rem;
             margin-bottom: 30px;
             font-weight: 400;
         }
-        
+
         .project-content h3 {
             color: var(--primary-color);
             margin-top: 40px;
@@ -40,7 +40,7 @@
             position: relative;
             padding-bottom: 10px;
         }
-        
+
         .project-content h3::after {
             content: '';
             position: absolute;
@@ -50,29 +50,29 @@
             height: 3px;
             background-color: var(--primary-color);
         }
-        
+
         .project-content p {
             margin-bottom: 20px;
             line-height: 1.8;
         }
-        
+
         .project-content ul {
             margin-bottom: 20px;
             padding-left: 20px;
         }
-        
+
         .project-content li {
             margin-bottom: 10px;
             line-height: 1.6;
         }
-        
+
         .project-links {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-top: 40px;
         }
-        
+
         .project-links a {
             display: inline-block;
             padding: 10px 20px;
@@ -83,17 +83,40 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
-        
+
         .project-links a:hover {
             background-color: var(--secondary-color);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .divider {
             height: 1px;
             background: linear-gradient(to right, transparent, var(--primary-color), transparent);
             margin: 30px 0;
+        }
+
+        .github-link {
+            display: flex;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .github-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .github-link a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -130,15 +153,19 @@
         <div class="project-content" data-aos="fade-up">
             <h1>Real-Time Stock Market Sentiment Analysis</h1>
             <h2>Full-stack ML pipeline for live market sentiment prediction</h2>
-            
+
             <div class="divider"></div>
-            
+
+            <div class="github-link">
+                <a href="https://github.com/jeetsingh-14/real-time-stock" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            </div>
+
             <h3>Overview</h3>
             <p>This project is a comprehensive system that analyzes real-time stock market sentiment by processing financial news, social media data, and market indicators. It provides traders and analysts with immediate insights into market sentiment shifts that could impact stock prices.</p>
-            
+
             <h3>Problem Statement</h3>
             <p>Traditional stock analysis relies heavily on technical indicators and historical patterns, often missing the impact of rapidly changing market sentiment. News and social media can dramatically shift market dynamics in minutes, but manually tracking these sources is impossible. We needed an automated system to quantify and visualize sentiment in real-time.</p>
-            
+
             <h3>Approach & Tech Stack</h3>
             <ul>
                 <li><strong>Data Collection</strong>: Python scripts with APIs for financial news, Twitter/Reddit data, and market feeds</li>
@@ -148,7 +175,7 @@
                 <li><strong>Visualization</strong>: Grafana for real-time dashboards, Streamlit for interactive analysis</li>
                 <li><strong>Deployment</strong>: Cloud-based infrastructure with scheduled data pipelines</li>
             </ul>
-            
+
             <h3>Key Features</h3>
             <ul>
                 <li>Real-time sentiment scoring for major stocks and market sectors</li>
@@ -157,10 +184,10 @@
                 <li>Interactive dashboards for exploring sentiment by source and time period</li>
                 <li>API endpoints for integration with trading platforms</li>
             </ul>
-            
+
             <h3>Architecture</h3>
             <p>The system follows a modular architecture with separate components for data collection, processing, storage, and visualization. Data flows from various sources through our sentiment analysis pipeline, with results stored in databases and displayed on dashboards. The system updates continuously throughout trading hours, with batch processing for deeper analysis during off-hours.</p>
-            
+
             <h3>Challenges Faced</h3>
             <ul>
                 <li>Handling the high volume and velocity of financial news and social media data</li>
@@ -168,7 +195,7 @@
                 <li>Optimizing the NLP models for both accuracy and processing speed</li>
                 <li>Creating visualizations that effectively communicate complex sentiment patterns</li>
             </ul>
-            
+
             <h3>Future Improvements</h3>
             <ul>
                 <li>Incorporate more granular entity recognition to track sentiment for specific company aspects</li>
@@ -176,9 +203,8 @@
                 <li>Add automated trading strategy backtesting based on sentiment indicators</li>
                 <li>Expand coverage to international markets and cryptocurrencies</li>
             </ul>
-            
+
             <div class="project-links">
-                <a href="https://github.com/jeetsingh-14/real-time-stock" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
                 <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
             </div>
         </div>

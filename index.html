@@ -24,12 +24,22 @@
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>" type="image/svg+xml">
     <title>Jeet Singh - Portfolio</title>
-    <link rel="stylesheet" href="portfolio_style.css">
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="portfolio_style.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
+    <!-- Cache control meta tags -->
+    <meta http-equiv="Cache-Control" content="max-age=31536000, immutable">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="portfolio_style.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 <body>
     <!-- Preloader -->
@@ -46,14 +56,32 @@
     </button>
 
     <header>
+        <div class="particles-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
         <div class="container">
-            <h1>Jeet Singh</h1>
+            <h1 class="glowing-text">Jeet Singh</h1>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -62,9 +90,9 @@
 
     <section id="about" class="container">
         <h2>About Me</h2>
-        <div class="about-content" data-aos="fade-up">
+        <div class="about-content" data-aos="custom-fade-up">
             <div class="profile-image">
-                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22300%22%20height%3D%22300%22%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20fill%3D%22%231e90ff%22%2F%3E%3Ctext%20x%3D%22150%22%20y%3D%22150%22%20font-size%3D%22120%22%20text-anchor%3D%22middle%22%20alignment-baseline%3D%22middle%22%20fill%3D%22white%22%3EJS%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Jeet Singh" onerror="this.src='https://avatars.githubusercontent.com/u/jeetsingh-14'">
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22300%22%20height%3D%22300%22%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20fill%3D%22%231e90ff%22%2F%3E%3Ctext%20x%3D%22150%22%20y%3D%22150%22%20font-size%3D%22120%22%20text-anchor%3D%22middle%22%20alignment-baseline%3D%22middle%22%20fill%3D%22white%22%3EJS%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Jeet Singh" loading="lazy" onerror="this.src='https://avatars.githubusercontent.com/u/jeetsingh-14'">
             </div>
             <div class="about-text">
                 <p>Hello! I’m Jeet Singh — a versatile Business Analyst and Data Scientist with hands-on experience across AI, finance, analytics, and full-stack data applications. Currently pursuing my Master’s in Business Analytics, I specialize in designing end-to-end solutions that combine machine learning, interactive dashboards, and web technologies to solve real-world challenges.</p>
@@ -84,7 +112,7 @@
             <button class="filter-btn" data-filter="webapp">Web App</button>
         </div>
         <div class="project-grid">
-            <div class="project-card" data-aos="fade-up" data-category="ml dashboard">
+            <div class="project-card" data-aos="custom-fade-up" data-category="ml dashboard">
                 <div class="category-badges">
                     <span class="badge ml">ML</span>
                     <span class="badge dashboard">Dashboard</span>
@@ -98,9 +126,10 @@
                     <i class="fab fa-github"></i> View on GitHub
                   </a>
                 </p>
+                <div class="card-glow"></div>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-category="ml">
+            <div class="project-card" data-aos="custom-fade-right" data-category="ml">
                 <div class="category-badges">
                     <span class="badge ml">ML</span>
                 </div>
@@ -113,9 +142,10 @@
                     <i class="fab fa-github"></i> View on GitHub
                   </a>
                 </p>
+                <div class="card-glow"></div>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-category="ml dashboard">
+            <div class="project-card" data-aos="custom-fade-left" data-category="ml dashboard">
                 <div class="category-badges">
                     <span class="badge ml">ML</span>
                     <span class="badge dashboard">Dashboard</span>
@@ -131,7 +161,7 @@
                 </p>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-category="ml dashboard">
+            <div class="project-card" data-aos="custom-zoom" data-category="ml dashboard">
                 <div class="category-badges">
                     <span class="badge ml">ML</span>
                     <span class="badge dashboard">Dashboard</span>
@@ -140,9 +170,10 @@
                 <p>
                   Enterprise telecom analytics suite with predictive maintenance, anomaly detection, and capacity planning capabilities. Reduced network outages by 42% through SARIMA forecasting and deep learning models with real-time monitoring dashboards.
                 </p>
+                <div class="card-glow"></div>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-category="dashboard">
+            <div class="project-card" data-aos="custom-fade-up" data-aos-delay="100" data-category="dashboard">
                 <div class="category-badges">
                     <span class="badge dashboard">Dashboard</span>
                 </div>
@@ -155,9 +186,10 @@
                     <i class="fab fa-github"></i> View on GitHub
                   </a>
                 </p>
+                <div class="card-glow"></div>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-category="ml dashboard webapp">
+            <div class="project-card" data-aos="custom-flip" data-category="ml dashboard webapp">
                 <div class="category-badges">
                     <span class="badge ml">ML</span>
                     <span class="badge dashboard">Dashboard</span>
@@ -174,7 +206,7 @@
                 </p>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-category="webapp">
+            <div class="project-card" data-aos="custom-fade-right" data-aos-delay="150" data-category="webapp">
                 <div class="category-badges">
                     <span class="badge webapp">Web App</span>
                 </div>
@@ -187,6 +219,7 @@
                     <i class="fab fa-github"></i> View on GitHub
                   </a>
                 </p>
+                <div class="card-glow"></div>
             </div>
         </div>
     </section>
@@ -194,7 +227,7 @@
     <section id="skills" class="container">
         <h2>Skills</h2>
         <div class="skills-grid">
-            <div class="skill-category" data-aos="fade-up">
+            <div class="skill-category" data-aos="custom-fade-up">
                 <h3><i class="fas fa-chart-line"></i> Data Science & Analytics</h3>
                 <ul>
                     <li>Machine Learning</li>
@@ -205,7 +238,7 @@
                     <li>Data Mining</li>
                 </ul>
             </div>
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-category" data-aos="custom-fade-left" data-aos-delay="100">
                 <h3><i class="fas fa-chart-bar"></i> Business Intelligence & Visualization</h3>
                 <ul>
                     <li>Power BI</li>
@@ -216,7 +249,7 @@
                     <li>Data Storytelling</li>
                 </ul>
             </div>
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-category" data-aos="custom-fade-right" data-aos-delay="200">
                 <h3><i class="fas fa-code"></i> Programming & Scripting</h3>
                 <ul>
                     <li>Python</li>
@@ -227,7 +260,7 @@
                     <li>VBA</li>
                 </ul>
             </div>
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-category" data-aos="custom-zoom" data-aos-delay="300">
                 <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
                 <ul>
                     <li>HTML/CSS</li>
@@ -238,7 +271,7 @@
                     <li>RESTful APIs</li>
                 </ul>
             </div>
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-category" data-aos="custom-fade-up" data-aos-delay="400">
                 <h3><i class="fas fa-tools"></i> Tools & DevOps</h3>
                 <ul>
                     <li>Git</li>
@@ -249,7 +282,7 @@
                     <li>Streamlit</li>
                 </ul>
             </div>
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+            <div class="skill-category" data-aos="custom-flip" data-aos-delay="500">
                 <h3><i class="fas fa-database"></i> Databases & Cloud</h3>
                 <ul>
                     <li>MySQL</li>
@@ -266,35 +299,76 @@
     <section id="certifications" class="section container">
         <h2>Certifications</h2>
         <ul class="certifications-list">
-            <li data-aos="fade-up">Google Data Analytics (April 2023) <a href="https://www.coursera.org/account/accomplishments/professional-cert/SFYKWA4K7HTD" target="_blank">Certificate</a></li>
-            <li data-aos="fade-up" data-aos-delay="50">Graph Analytics for Big Data (April 2023)</li>
-            <li data-aos="fade-up" data-aos-delay="100">Deep Learning (Dec 2022) <a href="https://www.linkedin.com/in/jeet-singh-saini/" target="_blank">Certificate</a></li>
-            <li data-aos="fade-up" data-aos-delay="150">Natural Language Processing (Dec 2022)</li>
-            <li data-aos="fade-up" data-aos-delay="200">Fundamentals of Deep Learning (Aug 2022)</li>
-            <li data-aos="fade-up" data-aos-delay="250">AWS Machine Learning Foundations (Apr 2022)</li>
+            <li data-aos="custom-fade-up">Google Data Analytics (April 2023) <a href="https://www.coursera.org/account/accomplishments/professional-cert/SFYKWA4K7HTD" target="_blank">Certificate</a></li>
+            <li data-aos="custom-fade-left" data-aos-delay="50">Graph Analytics for Big Data (April 2023)</li>
+            <li data-aos="custom-fade-right" data-aos-delay="100">Deep Learning (Dec 2022) <a href="https://www.linkedin.com/in/jeet-singh-saini/" target="_blank">Certificate</a></li>
+            <li data-aos="custom-zoom" data-aos-delay="150">Natural Language Processing (Dec 2022)</li>
+            <li data-aos="custom-fade-up" data-aos-delay="200">Fundamentals of Deep Learning (Aug 2022)</li>
+            <li data-aos="custom-flip" data-aos-delay="250">AWS Machine Learning Foundations (Apr 2022)</li>
         </ul>
     </section>
 
+    <section id="roadmap" class="container">
+        <h2>My Roadmap</h2>
+        <div class="roadmap-container">
+            <div class="roadmap-item current" data-aos="custom-fade-right">
+                <div class="roadmap-icon">
+                    <i class="fas fa-map-pin"></i>
+                </div>
+                <div class="roadmap-content">
+                    <h3>Present</h3>
+                    <p>Working on advanced data engineering + AI integrations</p>
+                </div>
+            </div>
+
+            <div class="roadmap-item next" data-aos="custom-fade-right" data-aos-delay="150">
+                <div class="roadmap-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <div class="roadmap-content">
+                    <h3>Next 3–6 Months</h3>
+                    <p>Build production-ready LLM & ML pipelines, deploy on cloud, get certified in GCP or AWS</p>
+                </div>
+            </div>
+
+            <div class="roadmap-item future" data-aos="custom-fade-right" data-aos-delay="300">
+                <div class="roadmap-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="roadmap-content">
+                    <h3>Next Year</h3>
+                    <p>Contribute to open-source, publish AI blog posts, aim for full-time data/AI engineering role</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="roadmap-cta" data-aos="custom-zoom" data-aos-delay="450">
+            <h3>Let's Build Together</h3>
+            <a href="https://www.linkedin.com/in/jeet-singh-saini/" class="btn" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i> Connect on LinkedIn
+            </a>
+        </div>
+    </section>
 
     <section id="contact" class="container">
         <h2>Contact Me</h2>
         <div class="contact-container">
             <div class="contact-info">
-                <div class="contact-item" data-aos="fade-up">
+                <div class="contact-item" data-aos="custom-fade-right">
                     <i class="fas fa-envelope"></i>
                     <a href="mailto:sainijeetsingh@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Jeet Singh">sainijeetsingh@gmail.com</a>
                 </div>
-                <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-item" data-aos="custom-fade-right" data-aos-delay="100">
                     <i class="fab fa-linkedin"></i>
                     <a href="https://www.linkedin.com/in/jeet-singh-saini/" target="_blank" rel="noopener noreferrer" aria-label="Jeet Singh's LinkedIn Profile">LinkedIn</a>
                 </div>
-                <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-item" data-aos="custom-fade-right" data-aos-delay="200">
                     <i class="fab fa-github"></i>
                     <a href="https://github.com/jeetsingh-14" target="_blank" rel="noopener noreferrer" aria-label="Jeet Singh's GitHub Profile">GitHub</a>
                 </div>
             </div>
 
-            <div class="contact-form-container" data-aos="fade-up" data-aos-delay="300">
+            <div class="contact-form-container" data-aos="custom-fade-left" data-aos-delay="300">
                 <h3>Send Me a Message</h3>
                 <form id="contact-form" class="contact-form" action="https://formspree.io/f/xayzgdoe" method="POST">
                     <div class="form-group">
@@ -345,7 +419,8 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <!-- Optimized script loading with defer -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="script.min.js" defer></script>
 </body>
 </html>

@@ -18,20 +18,20 @@
             padding: 20px;
             text-align: left;
         }
-        
+
         .project-content h1 {
             color: var(--primary-color);
             margin-bottom: 10px;
             font-size: 2.5rem;
         }
-        
+
         .project-content h2 {
             color: var(--text-color);
             font-size: 1.5rem;
             margin-bottom: 30px;
             font-weight: 400;
         }
-        
+
         .project-content h3 {
             color: var(--primary-color);
             margin-top: 40px;
@@ -40,7 +40,7 @@
             position: relative;
             padding-bottom: 10px;
         }
-        
+
         .project-content h3::after {
             content: '';
             position: absolute;
@@ -50,29 +50,29 @@
             height: 3px;
             background-color: var(--primary-color);
         }
-        
+
         .project-content p {
             margin-bottom: 20px;
             line-height: 1.8;
         }
-        
+
         .project-content ul {
             margin-bottom: 20px;
             padding-left: 20px;
         }
-        
+
         .project-content li {
             margin-bottom: 10px;
             line-height: 1.6;
         }
-        
+
         .project-links {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-top: 40px;
         }
-        
+
         .project-links a {
             display: inline-block;
             padding: 10px 20px;
@@ -83,17 +83,40 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
-        
+
         .project-links a:hover {
             background-color: var(--secondary-color);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .divider {
             height: 1px;
             background: linear-gradient(to right, transparent, var(--primary-color), transparent);
             margin: 30px 0;
+        }
+
+        .github-link {
+            display: flex;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .github-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .github-link a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -130,15 +153,19 @@
         <div class="project-content" data-aos="fade-up">
             <h1>LA Crime Data Analysis (2020–2023)</h1>
             <h2>Comprehensive analysis of crime patterns in Los Angeles using geospatial visualization</h2>
-            
+
             <div class="divider"></div>
-            
+
+            <div class="github-link">
+                <a href="https://github.com/jeetsingh-14/Crime-Analysis-" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            </div>
+
             <h3>Overview</h3>
             <p>This project analyzes crime data from Los Angeles between 2020 and 2023, identifying patterns across different areas, weapon types, and time periods. Using advanced data visualization techniques, including heatmaps and interactive plots, the analysis provides insights into crime trends that could help inform public safety strategies and resource allocation.</p>
-            
+
             <h3>Problem Statement</h3>
             <p>Understanding crime patterns in large metropolitan areas is crucial for effective law enforcement and public safety planning. However, raw crime data is often overwhelming and difficult to interpret. This project aimed to transform complex crime statistics into actionable insights by identifying spatial and temporal patterns, weapon usage trends, and demographic correlations.</p>
-            
+
             <h3>Approach & Tech Stack</h3>
             <ul>
                 <li><strong>Data Source</strong>: Los Angeles Police Department's open data portal</li>
@@ -147,7 +174,7 @@
                 <li><strong>Geospatial Analysis</strong>: GeoPandas for spatial data processing</li>
                 <li><strong>Statistical Analysis</strong>: SciPy for correlation and trend analysis</li>
             </ul>
-            
+
             <h3>Key Features</h3>
             <ul>
                 <li>Interactive crime heatmaps showing concentration across LA neighborhoods</li>
@@ -156,10 +183,10 @@
                 <li>Demographic correlation studies between crime rates and socioeconomic factors</li>
                 <li>Comparative analysis of pre and post-pandemic crime patterns</li>
             </ul>
-            
+
             <h3>Architecture</h3>
             <p>The project follows a data pipeline architecture starting with data acquisition and cleaning, followed by exploratory data analysis, statistical modeling, and visualization. The analysis is structured in modular Jupyter notebooks, with each focusing on a specific aspect of crime analysis (spatial, temporal, categorical, etc.). Final visualizations are exported as interactive HTML files for easy sharing with stakeholders.</p>
-            
+
             <h3>Challenges Faced</h3>
             <ul>
                 <li>Handling missing or inconsistent location data in crime reports</li>
@@ -167,7 +194,7 @@
                 <li>Accounting for reporting biases in different neighborhoods</li>
                 <li>Optimizing performance for large geospatial datasets</li>
             </ul>
-            
+
             <h3>Future Improvements</h3>
             <ul>
                 <li>Implement predictive modeling to forecast crime hotspots</li>
@@ -175,9 +202,8 @@
                 <li>Develop an interactive dashboard for real-time crime analysis</li>
                 <li>Expand analysis to include comparative studies with other major cities</li>
             </ul>
-            
+
             <div class="project-links">
-                <a href="https://github.com/jeetsingh-14/Crime-Analysis-" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
                 <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
             </div>
         </div>

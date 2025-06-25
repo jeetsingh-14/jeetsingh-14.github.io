@@ -18,20 +18,20 @@
             padding: 20px;
             text-align: left;
         }
-        
+
         .project-content h1 {
             color: var(--primary-color);
             margin-bottom: 10px;
             font-size: 2.5rem;
         }
-        
+
         .project-content h2 {
             color: var(--text-color);
             font-size: 1.5rem;
             margin-bottom: 30px;
             font-weight: 400;
         }
-        
+
         .project-content h3 {
             color: var(--primary-color);
             margin-top: 40px;
@@ -40,7 +40,7 @@
             position: relative;
             padding-bottom: 10px;
         }
-        
+
         .project-content h3::after {
             content: '';
             position: absolute;
@@ -50,29 +50,29 @@
             height: 3px;
             background-color: var(--primary-color);
         }
-        
+
         .project-content p {
             margin-bottom: 20px;
             line-height: 1.8;
         }
-        
+
         .project-content ul {
             margin-bottom: 20px;
             padding-left: 20px;
         }
-        
+
         .project-content li {
             margin-bottom: 10px;
             line-height: 1.6;
         }
-        
+
         .project-links {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-top: 40px;
         }
-        
+
         .project-links a {
             display: inline-block;
             padding: 10px 20px;
@@ -83,17 +83,40 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
-        
+
         .project-links a:hover {
             background-color: var(--secondary-color);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .divider {
             height: 1px;
             background: linear-gradient(to right, transparent, var(--primary-color), transparent);
             margin: 30px 0;
+        }
+
+        .github-link {
+            display: flex;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .github-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .github-link a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -130,15 +153,15 @@
         <div class="project-content" data-aos="fade-up">
             <h1>Jio AI-Powered Network Projects</h1>
             <h2>Advanced analytics and AI solutions for telecom network optimization</h2>
-            
+
             <div class="divider"></div>
-            
+
             <h3>Overview</h3>
             <p>This project suite encompasses multiple AI-driven solutions developed for Jio's telecommunications network. The solutions include network traffic forecasting, anomaly detection systems, and real-time monitoring dashboards that help optimize network performance, predict outages, and enhance customer experience across one of the world's largest telecom networks.</p>
-            
+
             <h3>Problem Statement</h3>
             <p>Managing a nationwide telecommunications network presents enormous challenges in predicting traffic patterns, detecting anomalies, and optimizing resources. Traditional rule-based systems struggle with the scale and complexity of modern networks. Jio needed intelligent, automated solutions that could analyze massive amounts of network data in real-time, identify patterns, and provide actionable insights to network operations teams.</p>
-            
+
             <h3>Approach & Tech Stack</h3>
             <ul>
                 <li><strong>Time Series Forecasting</strong>: SARIMA models for seasonal network traffic prediction</li>
@@ -148,7 +171,7 @@
                 <li><strong>Generative AI</strong>: Integration of LLMs for natural language insights and recommendations</li>
                 <li><strong>Data Processing</strong>: Apache Spark for distributed data processing</li>
             </ul>
-            
+
             <h3>Key Features</h3>
             <ul>
                 <li>Network traffic forecasting with 95%+ accuracy for capacity planning</li>
@@ -157,10 +180,10 @@
                 <li>Natural language query interface for network status and diagnostics</li>
                 <li>Predictive maintenance recommendations to prevent outages</li>
             </ul>
-            
+
             <h3>Architecture</h3>
             <p>The system follows a microservices architecture with separate components for data ingestion, processing, analysis, and visualization. Network telemetry data is continuously streamed into a data lake, processed through various ML pipelines, and results are exposed via APIs. The frontend dashboards consume these APIs to provide real-time visualizations and insights. The GenAI component acts as an intelligent layer that translates complex network data into human-readable insights and recommendations.</p>
-            
+
             <h3>Challenges Faced</h3>
             <ul>
                 <li>Processing and analyzing terabytes of network data in real-time</li>
@@ -168,7 +191,7 @@
                 <li>Creating models that adapt to evolving network conditions and usage patterns</li>
                 <li>Developing intuitive visualizations for complex network metrics</li>
             </ul>
-            
+
             <h3>Future Improvements</h3>
             <ul>
                 <li>Implement deep reinforcement learning for automated network optimization</li>
@@ -176,7 +199,7 @@
                 <li>Develop predictive models for customer experience metrics</li>
                 <li>Create a digital twin of the network for simulation and testing</li>
             </ul>
-            
+
             <div class="project-links">
                 <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
             </div>
