@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RampShield - Financial Security and Audit Analytics Platform by Jeet Singh">
+    <title>RampShield – Financial Security Platform – Jeet Singh Portfolio</title>
+    <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .project-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .project-content h2 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .project-content h3 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .project-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .project-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .project-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .project-content li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 30px 0;
+        }
+
+        .github-link {
+            display: flex;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .github-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .github-link a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+        .architecture-diagram {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <div class="container">
+            <h1>Jeet Singh</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#certifications">Certifications</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="project-content" data-aos="fade-up">
+            <h1>RampShield – Financial Security and Audit Analytics Platform</h1>
+            <h2>Comprehensive solution for financial security, fraud detection, and audit analytics</h2>
+
+            <div class="divider"></div>
+
+            <div class="github-link">
+                <a href="https://github.com/jeetsingh-14/RampShield" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            </div>
+
+            <h3>Project Overview</h3>
+            <p>RampShield is a comprehensive financial security and audit analytics platform designed to protect organizations from financial fraud, ensure compliance with regulatory requirements, and provide deep insights into financial operations. The platform combines advanced machine learning algorithms with robust data analytics to detect anomalies, prevent fraud, and streamline audit processes.</p>
+
+            <div class="architecture-diagram">
+                <img src="../img/rampsheild architecture.png" alt="RampShield Architecture" style="width: 80%; max-width: 100%; display: block; margin: 0 auto;">
+                <p style="margin-top: 10px;">Figure: RampShield architecture</p>
+            </div>
+
+            <h3>Motivation / Problem Statement</h3>
+            <p>Financial fraud and compliance violations cost organizations billions annually, while traditional audit processes are often manual, time-consuming, and reactive rather than preventive. RampShield addresses these challenges by providing:</p>
+            <ul>
+                <li>Real-time monitoring and alerts for suspicious financial activities</li>
+                <li>Automated compliance checks against regulatory frameworks</li>
+                <li>Streamlined audit workflows with AI-assisted document processing</li>
+                <li>Comprehensive analytics to identify patterns and potential vulnerabilities</li>
+            </ul>
+
+            <h3>Tech Stack</h3>
+            <ul>
+                <li><strong>Backend:</strong> Python, Django, Flask</li>
+                <li><strong>Frontend:</strong> React, Redux, Material UI</li>
+                <li><strong>Database:</strong> PostgreSQL, MongoDB</li>
+                <li><strong>Machine Learning:</strong> TensorFlow, PyTorch, scikit-learn</li>
+                <li><strong>Data Processing:</strong> Apache Spark, Pandas</li>
+                <li><strong>Security:</strong> OAuth 2.0, JWT, encryption libraries</li>
+                <li><strong>Deployment:</strong> Docker, Kubernetes, AWS</li>
+            </ul>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Anomaly Detection Engine:</strong> ML-powered system that identifies unusual financial transactions based on historical patterns and predefined rules</li>
+                <li><strong>Compliance Dashboard:</strong> Real-time monitoring of regulatory compliance with automated alerts for potential violations</li>
+                <li><strong>Audit Workflow Automation:</strong> Streamlined audit processes with document classification, data extraction, and reconciliation</li>
+                <li><strong>Risk Scoring:</strong> Comprehensive risk assessment framework for transactions, vendors, and internal processes</li>
+                <li><strong>Forensic Analytics:</strong> Advanced tools for investigating suspicious activities and generating evidence-based reports</li>
+                <li><strong>Executive Reporting:</strong> Customizable dashboards and reports for different stakeholders</li>
+            </ul>
+
+            <h3>Data Sources</h3>
+            <ul>
+                <li>Financial transaction records from ERP and accounting systems</li>
+                <li>Vendor and supplier databases</li>
+                <li>Employee information systems</li>
+                <li>Regulatory compliance frameworks and requirements</li>
+                <li>Historical audit findings and remediation records</li>
+                <li>External data sources for fraud pattern recognition</li>
+            </ul>
+
+            <h3>Core Logic and Algorithms</h3>
+            <p>RampShield employs a multi-layered approach to financial security and audit analytics:</p>
+            <ul>
+                <li><strong>Unsupervised Learning:</strong> Isolation forests and autoencoders to detect anomalies without predefined patterns</li>
+                <li><strong>Supervised Classification:</strong> Gradient boosting models trained on labeled fraud cases</li>
+                <li><strong>Network Analysis:</strong> Graph algorithms to identify suspicious relationships between entities</li>
+                <li><strong>Natural Language Processing:</strong> Text analysis of financial documents and communications</li>
+                <li><strong>Time Series Analysis:</strong> Detection of temporal patterns and seasonality in financial data</li>
+                <li><strong>Rule-Based Systems:</strong> Customizable business rules for compliance checks</li>
+            </ul>
+
+            <h3>Results and Impact</h3>
+            <ul>
+                <li>Reduced false positive rates by 65% compared to traditional rule-based systems</li>
+                <li>Detected potential fraud cases with 92% accuracy in pilot deployments</li>
+                <li>Decreased audit preparation time by 40% through automated document processing</li>
+                <li>Improved compliance monitoring efficiency by 75%</li>
+                <li>Provided actionable insights that led to process improvements and risk reduction</li>
+            </ul>
+
+            <h3>Challenges Faced</h3>
+            <ul>
+                <li>Balancing detection sensitivity with false positive rates</li>
+                <li>Integrating with diverse financial systems and data formats</li>
+                <li>Ensuring data privacy and security while maintaining analytical capabilities</li>
+                <li>Developing explainable AI models for audit and compliance contexts</li>
+                <li>Creating intuitive visualizations for complex financial risk patterns</li>
+            </ul>
+
+            <h3>Future Improvements</h3>
+            <ul>
+                <li>Expand the platform to include predictive analytics for proactive risk management</li>
+                <li>Implement blockchain-based audit trails for immutable record-keeping</li>
+                <li>Develop industry-specific modules for healthcare, government, and financial services</li>
+                <li>Enhance NLP capabilities for contract analysis and obligation tracking</li>
+                <li>Create a collaborative investigation module for cross-functional teams</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jeet Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

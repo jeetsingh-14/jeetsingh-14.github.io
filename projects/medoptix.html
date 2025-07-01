@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedOptix - Healthcare Analytics Dashboard for Patient and Hospital Insights by Jeet Singh">
+    <title>MedOptix – Healthcare Analytics Dashboard – Jeet Singh Portfolio</title>
+    <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .project-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .project-content h2 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .project-content h3 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .project-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .project-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .project-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .project-content li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 30px 0;
+        }
+
+        .github-link {
+            display: flex;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .github-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .github-link a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+        .architecture-diagram {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <div class="container">
+            <h1>Jeet Singh</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#certifications">Certifications</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="project-content" data-aos="fade-up">
+            <h1>MedOptix – Healthcare Analytics Dashboard</h1>
+            <h2>Comprehensive analytics platform for patient outcomes and hospital operations</h2>
+
+            <div class="divider"></div>
+
+            <div class="github-link">
+                <a href="https://github.com/jeetsingh-14/MedOptix" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            </div>
+
+            <h3>Project Overview</h3>
+            <p>MedOptix is a comprehensive healthcare analytics dashboard designed to provide actionable insights for healthcare providers, administrators, and researchers. The platform integrates clinical, operational, and financial data to create a holistic view of patient care and hospital performance. By leveraging advanced analytics and intuitive visualizations, MedOptix helps healthcare organizations improve patient outcomes, optimize resource allocation, and enhance operational efficiency.</p>
+
+            <div class="architecture-diagram">
+                <img src="../img/Medoptic architecture.png" alt="Medoptic Architecture" style="width: 80%; max-width: 100%; display: block; margin: 0 auto;">
+                <p style="margin-top: 10px;">Figure: Medoptic architecture</p>
+            </div>
+
+            <h3>Motivation / Problem Statement</h3>
+            <p>Healthcare organizations face numerous challenges in today's complex environment:</p>
+            <ul>
+                <li>Fragmented data across multiple systems (EHR, billing, scheduling, etc.)</li>
+                <li>Difficulty in measuring and improving patient outcomes</li>
+                <li>Inefficient resource allocation and scheduling</li>
+                <li>Limited visibility into operational bottlenecks</li>
+                <li>Compliance with evolving regulatory requirements</li>
+                <li>Need for data-driven decision making at all levels</li>
+            </ul>
+            <p>MedOptix addresses these challenges by providing a unified analytics platform that transforms raw healthcare data into meaningful insights, enabling better decisions and improved outcomes.</p>
+
+            <h3>Tech Stack</h3>
+            <ul>
+                <li><strong>Backend:</strong> Python, Django, Flask</li>
+                <li><strong>Frontend:</strong> React, D3.js, Plotly</li>
+                <li><strong>Database:</strong> PostgreSQL, MongoDB</li>
+                <li><strong>Analytics:</strong> Pandas, NumPy, scikit-learn</li>
+                <li><strong>Data Integration:</strong> Apache Airflow, FHIR API</li>
+                <li><strong>Security:</strong> HIPAA-compliant encryption, role-based access control</li>
+                <li><strong>Deployment:</strong> Docker, Kubernetes, AWS</li>
+            </ul>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Clinical Analytics:</strong> Patient outcome tracking, treatment effectiveness analysis, readmission prediction</li>
+                <li><strong>Operational Dashboards:</strong> Resource utilization, patient flow, wait time analysis, staff productivity metrics</li>
+                <li><strong>Financial Performance:</strong> Revenue cycle analytics, cost analysis, payer mix optimization</li>
+                <li><strong>Population Health:</strong> Risk stratification, chronic disease management, preventive care tracking</li>
+                <li><strong>Predictive Analytics:</strong> Length of stay prediction, readmission risk, resource demand forecasting</li>
+                <li><strong>Customizable Reporting:</strong> Role-specific dashboards for executives, clinicians, and department managers</li>
+                <li><strong>Alert System:</strong> Real-time notifications for critical metrics and KPIs</li>
+            </ul>
+
+            <h3>Data Sources</h3>
+            <ul>
+                <li>Electronic Health Records (EHR) systems</li>
+                <li>Hospital Information Systems (HIS)</li>
+                <li>Laboratory Information Systems (LIS)</li>
+                <li>Radiology Information Systems (RIS)</li>
+                <li>Billing and revenue cycle management systems</li>
+                <li>Scheduling and resource management systems</li>
+                <li>Patient satisfaction surveys</li>
+                <li>Quality and compliance reporting systems</li>
+            </ul>
+
+            <h3>Core Logic and Algorithms</h3>
+            <p>MedOptix employs a variety of analytical approaches to transform healthcare data into actionable insights:</p>
+            <ul>
+                <li><strong>Statistical Analysis:</strong> Descriptive statistics, trend analysis, and correlation studies</li>
+                <li><strong>Machine Learning:</strong> Predictive models for patient outcomes, readmission risk, and resource utilization</li>
+                <li><strong>Natural Language Processing:</strong> Analysis of clinical notes and patient feedback</li>
+                <li><strong>Time Series Analysis:</strong> Forecasting patient volumes, resource needs, and seasonal trends</li>
+                <li><strong>Process Mining:</strong> Identifying bottlenecks and optimization opportunities in clinical workflows</li>
+                <li><strong>Cohort Analysis:</strong> Comparing outcomes across different patient populations and treatment protocols</li>
+            </ul>
+
+            <h3>Results and Impact</h3>
+            <ul>
+                <li>Reduced average length of stay by 0.8 days through improved resource allocation and care coordination</li>
+                <li>Decreased readmission rates by 12% using predictive analytics to identify high-risk patients</li>
+                <li>Improved operating room utilization by 15% through better scheduling and turnover management</li>
+                <li>Enhanced patient satisfaction scores by 9% by addressing service bottlenecks</li>
+                <li>Achieved $2.3M in cost savings through operational efficiency improvements</li>
+                <li>Reduced reporting time by 85%, freeing up staff for more value-added activities</li>
+            </ul>
+
+            <h3>Challenges Faced</h3>
+            <ul>
+                <li>Integrating data from disparate healthcare systems with varying standards and formats</li>
+                <li>Ensuring data privacy and HIPAA compliance while maintaining analytical capabilities</li>
+                <li>Balancing technical sophistication with usability for healthcare professionals</li>
+                <li>Developing meaningful visualizations for complex clinical and operational metrics</li>
+                <li>Creating predictive models that account for the complexity of healthcare processes</li>
+                <li>Designing a system that scales from small clinics to large hospital networks</li>
+            </ul>
+
+            <h3>Future Improvements</h3>
+            <ul>
+                <li>Implement advanced AI capabilities for clinical decision support</li>
+                <li>Develop mobile applications for on-the-go access to critical metrics</li>
+                <li>Expand interoperability with additional healthcare systems and standards</li>
+                <li>Enhance predictive capabilities with deep learning models</li>
+                <li>Add telehealth analytics to track virtual care effectiveness</li>
+                <li>Develop specialized modules for different medical specialties</li>
+                <li>Incorporate social determinants of health data for more holistic patient analysis</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jeet Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
