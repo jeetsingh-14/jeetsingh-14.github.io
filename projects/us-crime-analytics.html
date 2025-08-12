@@ -5,120 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="U.S. Crime Analytics (2020–2023) Project by Jeet Singh">
     <title>U.S. Crime Analytics – Jeet Singh Portfolio</title>
+    
+    <!-- CSS files -->
     <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="../project-case-study.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../script.js" as="script">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .project-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: left;
-        }
-
-        .project-content h1 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-        }
-
-        .project-content h2 {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-
-        .project-content h3 {
-            color: var(--primary-color);
-            margin-top: 40px;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .project-content h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .project-content p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .project-content ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .project-content li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .project-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-links a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
-            margin: 30px 0;
-        }
-
-        .github-link {
-            display: flex;
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-
-        .github-link a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .github-link a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -134,7 +35,7 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <header>
+    <header class="case-header">
         <div class="container">
             <h1>Jeet Singh</h1>
             <nav>
@@ -151,115 +52,244 @@
 
     <div class="container">
         <div class="project-content" data-aos="fade-up">
-            <h1>U.S. Crime Analytics (2020–2023)</h1>
-            <h2>Combined analysis of crime trends in Los Angeles and across the United States</h2>
-
-            <div class="divider"></div>
-
-            <div class="github-link">
-                <a href="https://github.com/jeetsingh-14/Crime-Analysis-" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            <!-- Hero/Intro Section -->
+            <div class="project-hero fade-in">
+                <img src="../img/us-crime-analytics-banner.jpg" alt="U.S. Crime Analytics" class="project-hero-image">
+                <div class="project-hero-overlay">
+                    <h1 class="project-title">U.S. Crime Analytics (2020–2023)</h1>
+                    <p class="project-impact">Combined analysis of crime trends in Los Angeles and across the United States using advanced statistical methods.</p>
+                    
+                    <div class="project-tags">
+                        <div class="tag-group">
+                            <div class="tag-label">Tech Stack</div>
+                            <div>
+                                <span class="tag">Python</span>
+                                <span class="tag">R</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">GeoPandas</span>
+                                <span class="tag">D3.js</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tag-group">
+                            <div class="tag-label">Category</div>
+                            <div>
+                                <span class="tag">Data Analytics</span>
+                                <span class="tag">Geospatial Analysis</span>
+                                <span class="tag">Statistical Modeling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overview Section -->
+            <div class="project-section fade-in delay-1">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Overview</h2>
+                <div class="section-content">
+                    <p>The U.S. Crime Analytics project combines local and national perspectives on crime patterns across the United States from 2020 to 2023. At the local level, it explores crime data from Los Angeles, identifying patterns across different neighborhoods, weapon types, and time periods using advanced geospatial visualization techniques including heatmaps and interactive plots.</p>
+                    
+                    <div class="side-by-side">
+                        <div class="side-by-side-text">
+                            <p>At the national level, it examines the complex interrelationships between economic indicators and violent crime rates across 217 major U.S. metropolitan areas, leveraging advanced statistical methodologies and machine learning techniques to explain 78.3% of the variance in violent crime rates through a combination of 27 distinct socioeconomic variables. This comprehensive approach provides a multi-dimensional view of crime trends, connecting local-level insights with broader national patterns to inform more effective public safety strategies and resource allocation.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/us-crime-analytics-overview.jpg" alt="Crime analytics dashboard" class="project-image">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <h3>Overview</h3>
-            <p>The U.S. Crime Analytics project combines local and national perspectives on crime patterns across the United States from 2020 to 2023. At the local level, it explores crime data from Los Angeles, identifying patterns across different neighborhoods, weapon types, and time periods using advanced geospatial visualization techniques including heatmaps and interactive plots. At the national level, it examines the complex interrelationships between economic indicators and violent crime rates across 217 major U.S. metropolitan areas, leveraging advanced statistical methodologies and machine learning techniques to explain 78.3% of the variance in violent crime rates through a combination of 27 distinct socioeconomic variables.</p>
-
-            <p>This comprehensive approach provides a multi-dimensional view of crime trends, connecting local-level insights with broader national patterns to inform more effective public safety strategies and resource allocation.</p>
-
-            <h3>Problem Statement</h3>
-            <p>Understanding crime patterns at both local and national levels presents significant challenges for law enforcement, policymakers, and researchers:</p>
-
-            <ul>
-                <li><strong>Local Perspective</strong>: Raw crime data from large metropolitan areas like Los Angeles is often overwhelming and difficult to interpret. Transforming this complex data into actionable insights requires identifying spatial and temporal patterns, weapon usage trends, and demographic correlations.</li>
-                <li><strong>National Perspective</strong>: The relationship between economic conditions and criminal behavior represents one of the most persistent and consequential challenges in public policy. Previous studies have often relied on simplistic correlations or failed to account for confounding variables, leading to contradictory findings and ineffective policy recommendations.</li>
-                <li><strong>Integration Challenge</strong>: Connecting local crime patterns with national socioeconomic trends requires sophisticated data integration and analysis techniques that can bridge different geographic scales and data sources.</li>
-            </ul>
-
-            <p>This project addresses these challenges through a comprehensive analytical framework that integrates multiple data sources, advanced statistical methodologies, and domain expertise to provide actionable insights for stakeholders at both local and national levels.</p>
-
-            <h3>Approach & Tech Stack</h3>
-            <ul>
-                <li><strong>Data Sources</strong>:
+            <!-- Problem Section -->
+            <div class="project-section fade-in delay-2">
+                <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Problem</h2>
+                <div class="section-content">
+                    <p>Understanding crime patterns at both local and national levels presents significant challenges for law enforcement, policymakers, and researchers:</p>
+                    
                     <ul>
-                        <li>Los Angeles Police Department's open data portal for local crime data</li>
-                        <li>FBI Uniform Crime Reports (2020-2023) for national crime statistics</li>
-                        <li>U.S. Census Bureau American Community Survey (ACS) for demographic and socioeconomic indicators</li>
-                        <li>Bureau of Labor Statistics data for employment metrics</li>
-                        <li>Federal Reserve Economic Data (FRED) for macroeconomic indicators</li>
+                        <li><strong>Local Perspective</strong>: Raw crime data from large metropolitan areas like Los Angeles is often overwhelming and difficult to interpret. Transforming this complex data into actionable insights requires identifying spatial and temporal patterns, weapon usage trends, and demographic correlations.</li>
+                        <li><strong>National Perspective</strong>: The relationship between economic conditions and criminal behavior represents one of the most persistent and consequential challenges in public policy. Previous studies have often relied on simplistic correlations or failed to account for confounding variables, leading to contradictory findings and ineffective policy recommendations.</li>
+                        <li><strong>Integration Challenge</strong>: Connecting local crime patterns with national socioeconomic trends requires sophisticated data integration and analysis techniques that can bridge different geographic scales and data sources.</li>
                     </ul>
-                </li>
-                <li><strong>Data Processing & Analysis</strong>:
-                    <ul>
-                        <li>Python ecosystem (Pandas, NumPy, SciPy) for data manipulation and feature engineering</li>
-                        <li>R statistical environment for advanced econometric modeling</li>
-                        <li>Scikit-learn for machine learning and predictive modeling</li>
-                    </ul>
-                </li>
-                <li><strong>Visualization</strong>:
-                    <ul>
-                        <li>Matplotlib and Seaborn for statistical visualizations</li>
-                        <li>Folium for interactive geospatial maps</li>
-                        <li>GeoPandas for spatial data processing</li>
-                        <li>D3.js for interactive web-based visualizations</li>
-                    </ul>
-                </li>
-                <li><strong>Statistical Methods</strong>:
-                    <ul>
-                        <li>Fixed-effects panel regression models for controlling city-specific characteristics</li>
-                        <li>Spatial regression techniques for geographic spillover effects</li>
-                        <li>Time-series analysis for temporal patterns and trends</li>
-                        <li>Machine learning for pattern recognition and predictive analytics</li>
-                    </ul>
-                </li>
-            </ul>
+                    
+                    <div class="side-by-side-reverse">
+                        <div class="side-by-side-text">
+                            <p>This project addresses these challenges through a comprehensive analytical framework that integrates multiple data sources, advanced statistical methodologies, and domain expertise to provide actionable insights for stakeholders at both local and national levels.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/us-crime-analytics-problem.jpg" alt="Crime data complexity visualization" class="project-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <h3>Key Features</h3>
-            <ul>
-                <li><strong>Local Crime Analysis</strong>:
+            <!-- Solution Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Solution</h2>
+                <div class="section-content">
+                    <p>Our solution is a comprehensive analytical framework that integrates multiple data sources and advanced statistical methodologies to provide insights into crime patterns at both local and national levels.</p>
+                    
+                    <div class="project-image-container">
+                        <img src="../img/us-crime-analytics-solution.jpg" alt="Crime analytics dashboard" class="project-image">
+                        <p class="image-caption">Interactive dashboard showing crime patterns across different geographic scales</p>
+                    </div>
+                    
+                    <p>The solution combines several key components:</p>
+                    
                     <ul>
-                        <li>Interactive crime heatmaps showing concentration across LA neighborhoods</li>
-                        <li>Time-series analysis of crime rates by hour, day, month, and year</li>
-                        <li>Weapon type distribution analysis across different crime categories</li>
-                        <li>Demographic correlation studies between crime rates and local socioeconomic factors</li>
+                        <li><strong>Data Integration</strong>: We combined data from the Los Angeles Police Department, FBI Uniform Crime Reports, U.S. Census Bureau, Bureau of Labor Statistics, and Federal Reserve Economic Data to create a comprehensive dataset spanning local and national perspectives.</li>
+                        <li><strong>Advanced Analytics</strong>: We applied fixed-effects panel regression models, spatial regression techniques, time-series analysis, and machine learning algorithms to identify patterns and relationships in the data.</li>
+                        <li><strong>Interactive Visualization</strong>: We developed interactive dashboards using Folium for geospatial maps and D3.js for web-based visualizations, allowing users to explore crime patterns across different dimensions.</li>
                     </ul>
-                </li>
-                <li><strong>National Crime Analytics</strong>:
+                </div>
+            </div>
+            
+            <!-- Tech Stack Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-code"></i> Tech Stack</h2>
+                <div class="section-content">
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-python"></i></div>
+                            <div class="tech-name">Python</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-r-project"></i></div>
+                            <div class="tech-name">R</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-table"></i></div>
+                            <div class="tech-name">Pandas</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-brain"></i></div>
+                            <div class="tech-name">Scikit-learn</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-map-marked-alt"></i></div>
+                            <div class="tech-name">GeoPandas</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-chart-bar"></i></div>
+                            <div class="tech-name">Matplotlib</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-globe"></i></div>
+                            <div class="tech-name">Folium</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-js-square"></i></div>
+                            <div class="tech-name">D3.js</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-tasks"></i> Process</h2>
+                <div class="section-content">
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <h4>Data Collection & Integration</h4>
+                            <p>Gathered and integrated data from multiple sources including LAPD, FBI, Census Bureau, BLS, and FRED, creating a comprehensive dataset spanning local and national perspectives.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Data Cleaning & Preprocessing</h4>
+                            <p>Standardized data formats, addressed missing values, and normalized variables to ensure consistency across different data sources and geographic scales.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Exploratory Data Analysis</h4>
+                            <p>Conducted initial statistical analysis and visualization to identify patterns, correlations, and potential insights in the data at both local and national levels.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Advanced Statistical Modeling</h4>
+                            <p>Applied fixed-effects panel regression, spatial regression, time-series analysis, and machine learning to identify relationships between variables and predict crime patterns.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Visualization & Reporting</h4>
+                            <p>Developed interactive dashboards and comprehensive reports to communicate findings and insights to stakeholders in an accessible and actionable format.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Features Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-star"></i> Key Features</h2>
+                <div class="section-content">
+                    <div class="key-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                            <h3 class="feature-title">Interactive Crime Heatmaps</h3>
+                            <p>Geospatial visualizations showing crime concentration across LA neighborhoods with filtering by crime type, time period, and demographic factors.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3 class="feature-title">Time-Series Analysis</h3>
+                            <p>Temporal analysis of crime rates by hour, day, month, and year, revealing patterns and trends in criminal activity over time.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                            <h3 class="feature-title">Multivariate Regression Models</h3>
+                            <p>Advanced statistical models identifying significant economic predictors of violent crime across 217 major U.S. metropolitan areas.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-users"></i></div>
+                            <h3 class="feature-title">Demographic Analysis</h3>
+                            <p>Correlation studies between crime rates and socioeconomic factors, revealing differential impacts across regions and demographic groups.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                            <h3 class="feature-title">Cross-Scale Integration</h3>
+                            <p>Tools connecting neighborhood-level data with metropolitan and national trends, providing a multi-dimensional view of crime patterns.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-flask"></i></div>
+                            <h3 class="feature-title">Policy Simulation</h3>
+                            <p>Framework for testing intervention strategies at different scales, allowing policymakers to evaluate potential impacts before implementation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenges Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-mountain"></i> Challenges Faced</h2>
+                <div class="section-content">
                     <ul>
-                        <li>Multivariate panel regression models identifying significant economic predictors of violent crime</li>
-                        <li>Heterogeneous effects analysis revealing differential impacts across regions and demographic groups</li>
-                        <li>Temporal analysis capturing how economic changes affect crime rates over time</li>
-                        <li>Geospatial econometric models accounting for geographic spillover effects</li>
+                        <li>Integrating data from multiple sources with inconsistent geographic boundaries and temporal granularity</li>
+                        <li>Addressing significant variation in crime reporting practices across jurisdictions</li>
+                        <li>Establishing causal relationships between economic factors and crime rates</li>
+                        <li>Creating meaningful visualizations that balance detail with clarity</li>
+                        <li>Translating complex statistical findings into actionable insights for policymakers</li>
                     </ul>
-                </li>
-                <li><strong>Integrated Insights</strong>:
+                </div>
+            </div>
+            
+            <!-- Future Improvements Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> Future Improvements</h2>
+                <div class="section-content">
                     <ul>
-                        <li>Comparative analysis of local vs. national crime trends</li>
-                        <li>Identification of how national economic factors manifest in local crime patterns</li>
-                        <li>Policy simulation framework for testing intervention strategies at different scales</li>
-                        <li>Cross-scale visualization tools connecting neighborhood-level data with metropolitan and national trends</li>
+                        <li>Extend the analytical framework to census tract and block group levels for more granular insights</li>
+                        <li>Develop ensemble forecasting models to project crime trends under various economic scenarios</li>
+                        <li>Expand the analysis to include international comparative data from major metropolitan areas worldwide</li>
+                        <li>Create an interactive policy simulation laboratory for testing different intervention strategies</li>
+                        <li>Implement state-of-the-art causal machine learning techniques for more robust causal inference</li>
                     </ul>
-                </li>
-            </ul>
-
-            <h3>Challenges Faced</h3>
-            <ul>
-                <li>Integrating data from multiple sources with inconsistent geographic boundaries and temporal granularity</li>
-                <li>Addressing significant variation in crime reporting practices across jurisdictions</li>
-                <li>Establishing causal relationships between economic factors and crime rates</li>
-                <li>Creating meaningful visualizations that balance detail with clarity</li>
-                <li>Translating complex statistical findings into actionable insights for policymakers</li>
-            </ul>
-
-            <h3>Future Improvements</h3>
-            <ul>
-                <li>Extend the analytical framework to census tract and block group levels for more granular insights</li>
-                <li>Develop ensemble forecasting models to project crime trends under various economic scenarios</li>
-                <li>Expand the analysis to include international comparative data from major metropolitan areas worldwide</li>
-                <li>Create an interactive policy simulation laboratory for testing different intervention strategies</li>
-                <li>Implement state-of-the-art causal machine learning techniques for more robust causal inference</li>
-            </ul>
-
-            <div class="project-links">
-                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="project-cta fade-in delay-5">
+                <a href="https://github.com/jeetsingh-14/Crime-Analysis-" target="_blank" class="cta-button">
+                    <i class="fab fa-github"></i> View GitHub Repository
+                </a>
+                <a href="../index.html#projects" class="cta-button secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
             </div>
         </div>
     </div>

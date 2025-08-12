@@ -5,142 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="RampShield - Financial Security and Audit Analytics Platform by Jeet Singh">
     <title>RampShield – Financial Security Platform – Jeet Singh Portfolio</title>
+    
+    <!-- CSS files -->
     <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="../project-case-study.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../script.js" as="script">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .project-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: left;
-        }
-
-        .project-content h1 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-        }
-
-        .project-content h2 {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-
-        .project-content h3 {
-            color: var(--primary-color);
-            margin-top: 40px;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .project-content h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .project-content p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .project-content ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .project-content li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .project-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-links a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
-            margin: 30px 0;
-        }
-
-        .github-link {
-            display: flex;
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-
-        .github-link a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .github-link a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .screenshot {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            display: block;
-        }
-
-        .architecture-diagram {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            display: block;
-            background-color: #f5f5f5;
-            padding: 20px;
-            text-align: center;
-            font-style: italic;
-        }
-    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -156,7 +35,7 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <header>
+    <header class="case-header">
         <div class="container">
             <h1>Jeet Singh</h1>
             <nav>
@@ -173,103 +52,263 @@
 
     <div class="container">
         <div class="project-content" data-aos="fade-up">
-            <h1>RampShield – Financial Security and Audit Analytics Platform</h1>
-            <h2>Comprehensive solution for financial security, fraud detection, and audit analytics</h2>
-
-            <div class="divider"></div>
-
-            <div class="github-link">
-                <a href="https://github.com/jeetsingh-14/RampShield" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            <!-- Hero/Intro Section -->
+            <div class="project-hero fade-in">
+                <img src="../img/rampshield-banner.jpg" alt="RampShield Financial Security Platform" class="project-hero-image">
+                <div class="project-hero-overlay">
+                    <h1 class="project-title">RampShield – Financial Security Platform</h1>
+                    <p class="project-impact">Comprehensive solution for financial security, fraud detection, and audit analytics with 92% accuracy.</p>
+                    
+                    <div class="project-tags">
+                        <div class="tag-group">
+                            <div class="tag-label">Tech Stack</div>
+                            <div>
+                                <span class="tag">Python</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">React</span>
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">AWS</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tag-group">
+                            <div class="tag-label">Category</div>
+                            <div>
+                                <span class="tag">Financial Security</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Fraud Detection</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overview Section -->
+            <div class="project-section fade-in delay-1">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Overview</h2>
+                <div class="section-content">
+                    <p>RampShield is a comprehensive financial security and audit analytics platform designed to protect organizations from financial fraud, ensure compliance with regulatory requirements, and provide deep insights into financial operations. The platform combines advanced machine learning algorithms with robust data analytics to detect anomalies, prevent fraud, and streamline audit processes.</p>
+                    
+                    <div class="project-image-container">
+                        <img src="../img/rampsheild architecture.png" alt="RampShield Architecture" class="project-image">
+                        <p class="image-caption">System architecture diagram showing the components of the RampShield platform</p>
+                    </div>
+                </div>
             </div>
 
-            <h3>Project Overview</h3>
-            <p>RampShield is a comprehensive financial security and audit analytics platform designed to protect organizations from financial fraud, ensure compliance with regulatory requirements, and provide deep insights into financial operations. The platform combines advanced machine learning algorithms with robust data analytics to detect anomalies, prevent fraud, and streamline audit processes.</p>
-
-            <div class="architecture-diagram">
-                <img src="../img/rampsheild architecture.png" alt="RampShield Architecture" style="width: 80%; max-width: 100%; display: block; margin: 0 auto;">
-                <p style="margin-top: 10px;">Figure: RampShield architecture</p>
+            <!-- Problem Section -->
+            <div class="project-section fade-in delay-2">
+                <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Problem</h2>
+                <div class="section-content">
+                    <p>Financial fraud and compliance violations cost organizations billions annually, while traditional audit processes are often manual, time-consuming, and reactive rather than preventive. Organizations face several critical challenges:</p>
+                    
+                    <ul>
+                        <li><strong>Reactive Detection</strong>: Traditional systems only identify fraud after it occurs, leading to significant financial losses.</li>
+                        <li><strong>Manual Processes</strong>: Audit workflows are labor-intensive and prone to human error.</li>
+                        <li><strong>Compliance Complexity</strong>: Keeping up with evolving regulatory requirements is challenging and resource-intensive.</li>
+                        <li><strong>Data Silos</strong>: Financial information is often fragmented across multiple systems, making comprehensive analysis difficult.</li>
+                        <li><strong>Limited Visibility</strong>: Organizations lack real-time insights into financial risk patterns and emerging threats.</li>
+                    </ul>
+                </div>
             </div>
 
-            <h3>Motivation / Problem Statement</h3>
-            <p>Financial fraud and compliance violations cost organizations billions annually, while traditional audit processes are often manual, time-consuming, and reactive rather than preventive. RampShield addresses these challenges by providing:</p>
-            <ul>
-                <li>Real-time monitoring and alerts for suspicious financial activities</li>
-                <li>Automated compliance checks against regulatory frameworks</li>
-                <li>Streamlined audit workflows with AI-assisted document processing</li>
-                <li>Comprehensive analytics to identify patterns and potential vulnerabilities</li>
-            </ul>
+            <!-- Solution Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Solution</h2>
+                <div class="section-content">
+                    <p>RampShield addresses these challenges through an integrated platform that combines advanced analytics, machine learning, and purpose-built workflows:</p>
+                    
+                    <ul>
+                        <li>Real-time monitoring and alerts for suspicious financial activities</li>
+                        <li>Automated compliance checks against regulatory frameworks</li>
+                        <li>Streamlined audit workflows with AI-assisted document processing</li>
+                        <li>Comprehensive analytics to identify patterns and potential vulnerabilities</li>
+                    </ul>
+                    
+                    <div class="side-by-side">
+                        <div class="side-by-side-text">
+                            <p>The platform's modular architecture allows for seamless integration with existing financial systems while providing a unified view of financial risk across the organization.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/rampshield-dashboard.jpg" alt="RampShield Dashboard" class="project-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Stack Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-code"></i> Tech Stack</h2>
+                <div class="section-content">
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-python"></i></div>
+                            <div class="tech-name">Python</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-django"></i></div>
+                            <div class="tech-name">Django</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-react"></i></div>
+                            <div class="tech-name">React</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-name">PostgreSQL</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-name">MongoDB</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-brain"></i></div>
+                            <div class="tech-name">TensorFlow</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-fire"></i></div>
+                            <div class="tech-name">PyTorch</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-aws"></i></div>
+                            <div class="tech-name">AWS</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-docker"></i></div>
+                            <div class="tech-name">Docker</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <h3>Tech Stack</h3>
-            <ul>
-                <li><strong>Backend:</strong> Python, Django, Flask</li>
-                <li><strong>Frontend:</strong> React, Redux, Material UI</li>
-                <li><strong>Database:</strong> PostgreSQL, MongoDB</li>
-                <li><strong>Machine Learning:</strong> TensorFlow, PyTorch, scikit-learn</li>
-                <li><strong>Data Processing:</strong> Apache Spark, Pandas</li>
-                <li><strong>Security:</strong> OAuth 2.0, JWT, encryption libraries</li>
-                <li><strong>Deployment:</strong> Docker, Kubernetes, AWS</li>
-            </ul>
+            <!-- Key Features Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-star"></i> Key Features</h2>
+                <div class="section-content">
+                    <div class="key-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-search-dollar"></i></div>
+                            <h3 class="feature-title">Anomaly Detection Engine</h3>
+                            <p>ML-powered system that identifies unusual financial transactions based on historical patterns and predefined rules.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <h3 class="feature-title">Compliance Dashboard</h3>
+                            <p>Real-time monitoring of regulatory compliance with automated alerts for potential violations.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-tasks"></i></div>
+                            <h3 class="feature-title">Audit Workflow Automation</h3>
+                            <p>Streamlined audit processes with document classification, data extraction, and reconciliation.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3 class="feature-title">Risk Scoring</h3>
+                            <p>Comprehensive risk assessment framework for transactions, vendors, and internal processes.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-microscope"></i></div>
+                            <h3 class="feature-title">Forensic Analytics</h3>
+                            <p>Advanced tools for investigating suspicious activities and generating evidence-based reports.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+                            <h3 class="feature-title">Executive Reporting</h3>
+                            <p>Customizable dashboards and reports for different stakeholders with actionable insights.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data & Algorithms Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-database"></i> Data & Algorithms</h2>
+                <div class="section-content">
+                    <h3>Data Sources</h3>
+                    <ul>
+                        <li>Financial transaction records from ERP and accounting systems</li>
+                        <li>Vendor and supplier databases</li>
+                        <li>Employee information systems</li>
+                        <li>Regulatory compliance frameworks and requirements</li>
+                        <li>Historical audit findings and remediation records</li>
+                        <li>External data sources for fraud pattern recognition</li>
+                    </ul>
+                    
+                    <h3>Core Logic and Algorithms</h3>
+                    <p>RampShield employs a multi-layered approach to financial security and audit analytics:</p>
+                    <ul>
+                        <li><strong>Unsupervised Learning:</strong> Isolation forests and autoencoders to detect anomalies without predefined patterns</li>
+                        <li><strong>Supervised Classification:</strong> Gradient boosting models trained on labeled fraud cases</li>
+                        <li><strong>Network Analysis:</strong> Graph algorithms to identify suspicious relationships between entities</li>
+                        <li><strong>Natural Language Processing:</strong> Text analysis of financial documents and communications</li>
+                        <li><strong>Time Series Analysis:</strong> Detection of temporal patterns and seasonality in financial data</li>
+                        <li><strong>Rule-Based Systems:</strong> Customizable business rules for compliance checks</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Results Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-chart-bar"></i> Results & Impact</h2>
+                <div class="section-content">
+                    <div class="impact-results">
+                        <div class="impact-item">
+                            <div class="impact-number">65%</div>
+                            <div class="impact-text">Reduction in false positive rates compared to traditional rule-based systems</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">92%</div>
+                            <div class="impact-text">Accuracy in detecting potential fraud cases in pilot deployments</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">40%</div>
+                            <div class="impact-text">Decrease in audit preparation time through automated document processing</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">75%</div>
+                            <div class="impact-text">Improvement in compliance monitoring efficiency</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <h3>Key Features</h3>
-            <ul>
-                <li><strong>Anomaly Detection Engine:</strong> ML-powered system that identifies unusual financial transactions based on historical patterns and predefined rules</li>
-                <li><strong>Compliance Dashboard:</strong> Real-time monitoring of regulatory compliance with automated alerts for potential violations</li>
-                <li><strong>Audit Workflow Automation:</strong> Streamlined audit processes with document classification, data extraction, and reconciliation</li>
-                <li><strong>Risk Scoring:</strong> Comprehensive risk assessment framework for transactions, vendors, and internal processes</li>
-                <li><strong>Forensic Analytics:</strong> Advanced tools for investigating suspicious activities and generating evidence-based reports</li>
-                <li><strong>Executive Reporting:</strong> Customizable dashboards and reports for different stakeholders</li>
-            </ul>
+            <!-- Challenges Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-mountain"></i> Challenges Faced</h2>
+                <div class="section-content">
+                    <ul>
+                        <li><strong>Detection Sensitivity:</strong> Balancing detection sensitivity with false positive rates required extensive tuning and validation.</li>
+                        <li><strong>System Integration:</strong> Integrating with diverse financial systems and data formats necessitated building flexible connectors and data transformation pipelines.</li>
+                        <li><strong>Data Privacy:</strong> Ensuring data privacy and security while maintaining analytical capabilities demanded sophisticated encryption and access control mechanisms.</li>
+                        <li><strong>Model Explainability:</strong> Developing explainable AI models for audit and compliance contexts required innovative approaches to model interpretation.</li>
+                        <li><strong>Visualization Complexity:</strong> Creating intuitive visualizations for complex financial risk patterns involved extensive user testing and iterative design.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Future Improvements Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> Future Improvements</h2>
+                <div class="section-content">
+                    <ul>
+                        <li><strong>Predictive Analytics:</strong> Expand the platform to include predictive analytics for proactive risk management and early warning systems.</li>
+                        <li><strong>Blockchain Integration:</strong> Implement blockchain-based audit trails for immutable record-keeping and enhanced trust in financial data.</li>
+                        <li><strong>Industry Modules:</strong> Develop industry-specific modules for healthcare, government, and financial services with specialized detection rules.</li>
+                        <li><strong>Enhanced NLP:</strong> Enhance NLP capabilities for contract analysis and obligation tracking to identify potential compliance issues in legal documents.</li>
+                        <li><strong>Collaborative Investigation:</strong> Create a collaborative investigation module for cross-functional teams to streamline fraud response workflows.</li>
+                    </ul>
+                </div>
+            </div>
 
-            <h3>Data Sources</h3>
-            <ul>
-                <li>Financial transaction records from ERP and accounting systems</li>
-                <li>Vendor and supplier databases</li>
-                <li>Employee information systems</li>
-                <li>Regulatory compliance frameworks and requirements</li>
-                <li>Historical audit findings and remediation records</li>
-                <li>External data sources for fraud pattern recognition</li>
-            </ul>
-
-            <h3>Core Logic and Algorithms</h3>
-            <p>RampShield employs a multi-layered approach to financial security and audit analytics:</p>
-            <ul>
-                <li><strong>Unsupervised Learning:</strong> Isolation forests and autoencoders to detect anomalies without predefined patterns</li>
-                <li><strong>Supervised Classification:</strong> Gradient boosting models trained on labeled fraud cases</li>
-                <li><strong>Network Analysis:</strong> Graph algorithms to identify suspicious relationships between entities</li>
-                <li><strong>Natural Language Processing:</strong> Text analysis of financial documents and communications</li>
-                <li><strong>Time Series Analysis:</strong> Detection of temporal patterns and seasonality in financial data</li>
-                <li><strong>Rule-Based Systems:</strong> Customizable business rules for compliance checks</li>
-            </ul>
-
-            <h3>Results and Impact</h3>
-            <ul>
-                <li>Reduced false positive rates by 65% compared to traditional rule-based systems</li>
-                <li>Detected potential fraud cases with 92% accuracy in pilot deployments</li>
-                <li>Decreased audit preparation time by 40% through automated document processing</li>
-                <li>Improved compliance monitoring efficiency by 75%</li>
-                <li>Provided actionable insights that led to process improvements and risk reduction</li>
-            </ul>
-
-            <h3>Challenges Faced</h3>
-            <ul>
-                <li>Balancing detection sensitivity with false positive rates</li>
-                <li>Integrating with diverse financial systems and data formats</li>
-                <li>Ensuring data privacy and security while maintaining analytical capabilities</li>
-                <li>Developing explainable AI models for audit and compliance contexts</li>
-                <li>Creating intuitive visualizations for complex financial risk patterns</li>
-            </ul>
-
-            <h3>Future Improvements</h3>
-            <ul>
-                <li>Expand the platform to include predictive analytics for proactive risk management</li>
-                <li>Implement blockchain-based audit trails for immutable record-keeping</li>
-                <li>Develop industry-specific modules for healthcare, government, and financial services</li>
-                <li>Enhance NLP capabilities for contract analysis and obligation tracking</li>
-                <li>Create a collaborative investigation module for cross-functional teams</li>
-            </ul>
-
-            <div class="project-links">
-                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            <!-- Call to Action -->
+            <div class="project-cta fade-in delay-5">
+                <a href="https://github.com/jeetsingh-14/RampShield" target="_blank" class="cta-button">
+                    <i class="fab fa-github"></i> View GitHub Repository
+                </a>
+                <a href="../index.html#projects" class="cta-button secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
             </div>
         </div>
     </div>

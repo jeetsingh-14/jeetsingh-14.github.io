@@ -5,142 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MedOptix - Healthcare Analytics Dashboard for Patient and Hospital Insights by Jeet Singh">
     <title>MedOptix – Healthcare Analytics Dashboard – Jeet Singh Portfolio</title>
+    
+    <!-- CSS files -->
     <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="../project-case-study.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../script.js" as="script">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .project-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: left;
-        }
-
-        .project-content h1 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-        }
-
-        .project-content h2 {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-
-        .project-content h3 {
-            color: var(--primary-color);
-            margin-top: 40px;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .project-content h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .project-content p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .project-content ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .project-content li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .project-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-links a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
-            margin: 30px 0;
-        }
-
-        .github-link {
-            display: flex;
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-
-        .github-link a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .github-link a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .screenshot {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            display: block;
-        }
-
-        .architecture-diagram {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            display: block;
-            background-color: #f5f5f5;
-            padding: 20px;
-            text-align: center;
-            font-style: italic;
-        }
-    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -156,7 +35,7 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <header>
+    <header class="case-header">
         <div class="container">
             <h1>Jeet Singh</h1>
             <nav>
@@ -173,113 +52,319 @@
 
     <div class="container">
         <div class="project-content" data-aos="fade-up">
-            <h1>MedOptix – Healthcare Analytics Dashboard</h1>
-            <h2>Comprehensive analytics platform for patient outcomes and hospital operations</h2>
-
-            <div class="divider"></div>
-
-            <div class="github-link">
-                <a href="https://github.com/jeetsingh-14/MedOptix" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            <!-- Hero/Intro Section -->
+            <div class="project-hero fade-in">
+                <img src="../img/medoptix-banner.jpg" alt="MedOptix Healthcare Analytics Dashboard" class="project-hero-image">
+                <div class="project-hero-overlay">
+                    <h1 class="project-title">MedOptix – Healthcare Analytics Dashboard</h1>
+                    <p class="project-impact">Comprehensive analytics platform transforming healthcare data into actionable insights for improved patient outcomes and operational efficiency.</p>
+                    
+                    <div class="project-tags">
+                        <div class="tag-group">
+                            <div class="tag-label">Tech Stack</div>
+                            <div>
+                                <span class="tag">Python</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">AWS</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tag-group">
+                            <div class="tag-label">Category</div>
+                            <div>
+                                <span class="tag">Healthcare</span>
+                                <span class="tag">Analytics</span>
+                                <span class="tag">Dashboard</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <h3>Project Overview</h3>
-            <p>MedOptix is a comprehensive healthcare analytics dashboard designed to provide actionable insights for healthcare providers, administrators, and researchers. The platform integrates clinical, operational, and financial data to create a holistic view of patient care and hospital performance. By leveraging advanced analytics and intuitive visualizations, MedOptix helps healthcare organizations improve patient outcomes, optimize resource allocation, and enhance operational efficiency.</p>
-
-            <div class="architecture-diagram">
-                <img src="../img/Medoptic architecture.png" alt="Medoptic Architecture" style="width: 80%; max-width: 100%; display: block; margin: 0 auto;">
-                <p style="margin-top: 10px;">Figure: Medoptic architecture</p>
+            
+            <!-- Overview Section -->
+            <div class="project-section fade-in delay-1">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Overview</h2>
+                <div class="section-content">
+                    <p>MedOptix is a comprehensive healthcare analytics dashboard designed to provide actionable insights for healthcare providers, administrators, and researchers. The platform integrates clinical, operational, and financial data to create a holistic view of patient care and hospital performance. By leveraging advanced analytics and intuitive visualizations, MedOptix helps healthcare organizations improve patient outcomes, optimize resource allocation, and enhance operational efficiency.</p>
+                    
+                    <div class="side-by-side">
+                        <div class="side-by-side-text">
+                            <p>The healthcare industry generates massive amounts of data daily, but much of it remains siloed and underutilized. MedOptix bridges this gap by connecting disparate data sources and transforming raw information into meaningful insights that drive better decision-making at all levels of healthcare organizations.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/Medoptic architecture.png" alt="MedOptix Architecture" class="project-image">
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <h3>Motivation / Problem Statement</h3>
-            <p>Healthcare organizations face numerous challenges in today's complex environment:</p>
-            <ul>
-                <li>Fragmented data across multiple systems (EHR, billing, scheduling, etc.)</li>
-                <li>Difficulty in measuring and improving patient outcomes</li>
-                <li>Inefficient resource allocation and scheduling</li>
-                <li>Limited visibility into operational bottlenecks</li>
-                <li>Compliance with evolving regulatory requirements</li>
-                <li>Need for data-driven decision making at all levels</li>
-            </ul>
-            <p>MedOptix addresses these challenges by providing a unified analytics platform that transforms raw healthcare data into meaningful insights, enabling better decisions and improved outcomes.</p>
-
-            <h3>Tech Stack</h3>
-            <ul>
-                <li><strong>Backend:</strong> Python, Django, Flask</li>
-                <li><strong>Frontend:</strong> React, D3.js, Plotly</li>
-                <li><strong>Database:</strong> PostgreSQL, MongoDB</li>
-                <li><strong>Analytics:</strong> Pandas, NumPy, scikit-learn</li>
-                <li><strong>Data Integration:</strong> Apache Airflow, FHIR API</li>
-                <li><strong>Security:</strong> HIPAA-compliant encryption, role-based access control</li>
-                <li><strong>Deployment:</strong> Docker, Kubernetes, AWS</li>
-            </ul>
-
-            <h3>Key Features</h3>
-            <ul>
-                <li><strong>Clinical Analytics:</strong> Patient outcome tracking, treatment effectiveness analysis, readmission prediction</li>
-                <li><strong>Operational Dashboards:</strong> Resource utilization, patient flow, wait time analysis, staff productivity metrics</li>
-                <li><strong>Financial Performance:</strong> Revenue cycle analytics, cost analysis, payer mix optimization</li>
-                <li><strong>Population Health:</strong> Risk stratification, chronic disease management, preventive care tracking</li>
-                <li><strong>Predictive Analytics:</strong> Length of stay prediction, readmission risk, resource demand forecasting</li>
-                <li><strong>Customizable Reporting:</strong> Role-specific dashboards for executives, clinicians, and department managers</li>
-                <li><strong>Alert System:</strong> Real-time notifications for critical metrics and KPIs</li>
-            </ul>
-
-            <h3>Data Sources</h3>
-            <ul>
-                <li>Electronic Health Records (EHR) systems</li>
-                <li>Hospital Information Systems (HIS)</li>
-                <li>Laboratory Information Systems (LIS)</li>
-                <li>Radiology Information Systems (RIS)</li>
-                <li>Billing and revenue cycle management systems</li>
-                <li>Scheduling and resource management systems</li>
-                <li>Patient satisfaction surveys</li>
-                <li>Quality and compliance reporting systems</li>
-            </ul>
-
-            <h3>Core Logic and Algorithms</h3>
-            <p>MedOptix employs a variety of analytical approaches to transform healthcare data into actionable insights:</p>
-            <ul>
-                <li><strong>Statistical Analysis:</strong> Descriptive statistics, trend analysis, and correlation studies</li>
-                <li><strong>Machine Learning:</strong> Predictive models for patient outcomes, readmission risk, and resource utilization</li>
-                <li><strong>Natural Language Processing:</strong> Analysis of clinical notes and patient feedback</li>
-                <li><strong>Time Series Analysis:</strong> Forecasting patient volumes, resource needs, and seasonal trends</li>
-                <li><strong>Process Mining:</strong> Identifying bottlenecks and optimization opportunities in clinical workflows</li>
-                <li><strong>Cohort Analysis:</strong> Comparing outcomes across different patient populations and treatment protocols</li>
-            </ul>
-
-            <h3>Results and Impact</h3>
-            <ul>
-                <li>Reduced average length of stay by 0.8 days through improved resource allocation and care coordination</li>
-                <li>Decreased readmission rates by 12% using predictive analytics to identify high-risk patients</li>
-                <li>Improved operating room utilization by 15% through better scheduling and turnover management</li>
-                <li>Enhanced patient satisfaction scores by 9% by addressing service bottlenecks</li>
-                <li>Achieved $2.3M in cost savings through operational efficiency improvements</li>
-                <li>Reduced reporting time by 85%, freeing up staff for more value-added activities</li>
-            </ul>
-
-            <h3>Challenges Faced</h3>
-            <ul>
-                <li>Integrating data from disparate healthcare systems with varying standards and formats</li>
-                <li>Ensuring data privacy and HIPAA compliance while maintaining analytical capabilities</li>
-                <li>Balancing technical sophistication with usability for healthcare professionals</li>
-                <li>Developing meaningful visualizations for complex clinical and operational metrics</li>
-                <li>Creating predictive models that account for the complexity of healthcare processes</li>
-                <li>Designing a system that scales from small clinics to large hospital networks</li>
-            </ul>
-
-            <h3>Future Improvements</h3>
-            <ul>
-                <li>Implement advanced AI capabilities for clinical decision support</li>
-                <li>Develop mobile applications for on-the-go access to critical metrics</li>
-                <li>Expand interoperability with additional healthcare systems and standards</li>
-                <li>Enhance predictive capabilities with deep learning models</li>
-                <li>Add telehealth analytics to track virtual care effectiveness</li>
-                <li>Develop specialized modules for different medical specialties</li>
-                <li>Incorporate social determinants of health data for more holistic patient analysis</li>
-            </ul>
-
-            <div class="project-links">
-                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            
+            <!-- Problem Section -->
+            <div class="project-section fade-in delay-2">
+                <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Problem</h2>
+                <div class="section-content">
+                    <p>Healthcare organizations face numerous challenges in today's complex environment that hinder their ability to deliver optimal care while maintaining operational efficiency:</p>
+                    
+                    <ul>
+                        <li>Fragmented data across multiple systems (EHR, billing, scheduling, etc.)</li>
+                        <li>Difficulty in measuring and improving patient outcomes</li>
+                        <li>Inefficient resource allocation and scheduling</li>
+                        <li>Limited visibility into operational bottlenecks</li>
+                        <li>Compliance with evolving regulatory requirements</li>
+                        <li>Need for data-driven decision making at all levels</li>
+                    </ul>
+                    
+                    <div class="side-by-side-reverse">
+                        <div class="side-by-side-text">
+                            <p>Without integrated analytics, healthcare organizations struggle to identify improvement opportunities, optimize resources, and deliver the best possible patient care. The complexity of healthcare data and the need for real-time insights create significant challenges for traditional reporting systems.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/healthcare-problem.jpg" alt="Healthcare data challenges" class="project-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Solution Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Solution</h2>
+                <div class="section-content">
+                    <p>MedOptix addresses these challenges by providing a unified analytics platform that transforms raw healthcare data into meaningful insights, enabling better decisions and improved outcomes. The solution integrates data from multiple sources, applies advanced analytics, and presents actionable information through intuitive dashboards tailored to different user roles.</p>
+                    
+                    <div class="project-image-container">
+                        <img src="../img/medoptix-dashboard.jpg" alt="MedOptix Dashboard Interface" class="project-image">
+                        <p class="image-caption">MedOptix dashboard showing key performance indicators for a hospital unit</p>
+                    </div>
+                    
+                    <p>The platform's modular architecture allows healthcare organizations to start with core analytics modules and expand as needed. Each module addresses specific healthcare challenges while maintaining a consistent user experience and data model across the entire platform.</p>
+                </div>
+            </div>
+            
+            <!-- Tech Stack Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-code"></i> Tech Stack</h2>
+                <div class="section-content">
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-python"></i></div>
+                            <div class="tech-name">Python</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-react"></i></div>
+                            <div class="tech-name">React</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-js"></i></div>
+                            <div class="tech-name">D3.js</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-server"></i></div>
+                            <div class="tech-name">Django</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-flask"></i></div>
+                            <div class="tech-name">Flask</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-name">PostgreSQL</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-name">MongoDB</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-aws"></i></div>
+                            <div class="tech-name">AWS</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-docker"></i></div>
+                            <div class="tech-name">Docker</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-dharmachakra"></i></div>
+                            <div class="tech-name">Kubernetes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Process Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-tasks"></i> Process</h2>
+                <div class="section-content">
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <h4>Requirements Gathering</h4>
+                            <p>Conducted extensive interviews with healthcare professionals across different roles to understand their analytics needs and pain points.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Data Architecture Design</h4>
+                            <p>Designed a flexible data architecture that could integrate with various healthcare systems while maintaining HIPAA compliance and data security.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Analytics Framework Development</h4>
+                            <p>Built a scalable analytics framework using Python, Pandas, and scikit-learn to process healthcare data and generate actionable insights.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Dashboard Implementation</h4>
+                            <p>Developed intuitive dashboards using React and D3.js with role-based views and interactive visualizations for different user needs.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Integration & Deployment</h4>
+                            <p>Implemented data connectors for major healthcare systems and deployed the solution using Docker and Kubernetes on AWS infrastructure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Features Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-star"></i> Key Features</h2>
+                <div class="section-content">
+                    <div class="key-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+                            <h3 class="feature-title">Clinical Analytics</h3>
+                            <p>Patient outcome tracking, treatment effectiveness analysis, and readmission prediction.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-hospital"></i></div>
+                            <h3 class="feature-title">Operational Dashboards</h3>
+                            <p>Resource utilization, patient flow, wait time analysis, and staff productivity metrics.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3 class="feature-title">Financial Performance</h3>
+                            <p>Revenue cycle analytics, cost analysis, and payer mix optimization.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-users"></i></div>
+                            <h3 class="feature-title">Population Health</h3>
+                            <p>Risk stratification, chronic disease management, and preventive care tracking.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                            <h3 class="feature-title">Predictive Analytics</h3>
+                            <p>Length of stay prediction, readmission risk, and resource demand forecasting.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                            <h3 class="feature-title">Alert System</h3>
+                            <p>Real-time notifications for critical metrics and KPIs requiring attention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data Sources Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-database"></i> Data Sources</h2>
+                <div class="section-content">
+                    <p>MedOptix integrates data from multiple healthcare systems to provide a comprehensive view of operations and patient care:</p>
+                    <ul>
+                        <li>Electronic Health Records (EHR) systems</li>
+                        <li>Hospital Information Systems (HIS)</li>
+                        <li>Laboratory Information Systems (LIS)</li>
+                        <li>Radiology Information Systems (RIS)</li>
+                        <li>Billing and revenue cycle management systems</li>
+                        <li>Scheduling and resource management systems</li>
+                        <li>Patient satisfaction surveys</li>
+                        <li>Quality and compliance reporting systems</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Impact/Results Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-chart-bar"></i> Impact & Results</h2>
+                <div class="section-content">
+                    <p>MedOptix has delivered significant improvements for healthcare organizations across multiple dimensions:</p>
+                    
+                    <div class="impact-results">
+                        <div class="impact-item">
+                            <div class="impact-number">0.8 days</div>
+                            <div class="impact-text">Reduction in average length of stay through improved resource allocation and care coordination</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">12%</div>
+                            <div class="impact-text">Decrease in readmission rates using predictive analytics to identify high-risk patients</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">15%</div>
+                            <div class="impact-text">Improvement in operating room utilization through better scheduling and turnover management</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">$2.3M</div>
+                            <div class="impact-text">Cost savings achieved through operational efficiency improvements</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">85%</div>
+                            <div class="impact-text">Reduction in reporting time, freeing up staff for more value-added activities</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">9%</div>
+                            <div class="impact-text">Enhancement in patient satisfaction scores by addressing service bottlenecks</div>
+                        </div>
+                    </div>
+                    
+                    <div class="before-after">
+                        <div class="before-after-item">
+                            <div class="before-after-label">Before</div>
+                            <div class="before-after-image">
+                                <img src="../img/healthcare-before.jpg" alt="Before MedOptix implementation">
+                            </div>
+                        </div>
+                        <div class="before-after-item">
+                            <div class="before-after-label">After</div>
+                            <div class="before-after-image">
+                                <img src="../img/healthcare-after.jpg" alt="After MedOptix implementation">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Challenges Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-mountain"></i> Challenges Faced</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Integrating data from disparate healthcare systems with varying standards and formats</li>
+                        <li>Ensuring data privacy and HIPAA compliance while maintaining analytical capabilities</li>
+                        <li>Balancing technical sophistication with usability for healthcare professionals</li>
+                        <li>Developing meaningful visualizations for complex clinical and operational metrics</li>
+                        <li>Creating predictive models that account for the complexity of healthcare processes</li>
+                        <li>Designing a system that scales from small clinics to large hospital networks</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Future Improvements Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> Future Improvements</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Implement advanced AI capabilities for clinical decision support</li>
+                        <li>Develop mobile applications for on-the-go access to critical metrics</li>
+                        <li>Expand interoperability with additional healthcare systems and standards</li>
+                        <li>Enhance predictive capabilities with deep learning models</li>
+                        <li>Add telehealth analytics to track virtual care effectiveness</li>
+                        <li>Develop specialized modules for different medical specialties</li>
+                        <li>Incorporate social determinants of health data for more holistic patient analysis</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="project-cta fade-in delay-5">
+                <a href="https://github.com/jeetsingh-14/MedOptix" target="_blank" class="cta-button">
+                    <i class="fab fa-github"></i> View GitHub Repository
+                </a>
+                <a href="../index.html#projects" class="cta-button secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
             </div>
         </div>
     </div>

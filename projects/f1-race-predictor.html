@@ -5,120 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="F1 Race Outcome Prediction Project by Jeet Singh">
     <title>F1 Race Outcome Prediction – Jeet Singh Portfolio</title>
+    
+    <!-- CSS files -->
     <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="../project-case-study.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../script.js" as="script">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .project-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: left;
-        }
-
-        .project-content h1 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-        }
-
-        .project-content h2 {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-
-        .project-content h3 {
-            color: var(--primary-color);
-            margin-top: 40px;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .project-content h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .project-content p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .project-content ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .project-content li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .project-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-links a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
-            margin: 30px 0;
-        }
-
-        .github-link {
-            display: flex;
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-
-        .github-link a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .github-link a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -134,7 +35,7 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <header>
+    <header class="case-header">
         <div class="container">
             <h1>Jeet Singh</h1>
             <nav>
@@ -151,224 +52,249 @@
 
     <div class="container">
         <div class="project-content" data-aos="fade-up">
-            <h1>F1 Race Outcome Prediction (2025 Season)</h1>
-            <h2>Machine learning models to forecast Formula 1 podium finishes</h2>
-
-            <div class="divider"></div>
-
-            <div class="github-link">
-                <a href="https://github.com/jeetsingh-14/Predicating-F1-Season-2025" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            <!-- Hero/Intro Section -->
+            <div class="project-hero fade-in">
+                <img src="../img/f1-race-predictor-banner.jpg" alt="F1 Race Outcome Prediction" class="project-hero-image">
+                <div class="project-hero-overlay">
+                    <h1 class="project-title">F1 Race Outcome Prediction (2025 Season)</h1>
+                    <p class="project-impact">Machine learning models to forecast Formula 1 podium finishes with 83% accuracy.</p>
+                    
+                    <div class="project-tags">
+                        <div class="tag-group">
+                            <div class="tag-label">Tech Stack</div>
+                            <div>
+                                <span class="tag">Python</span>
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">XGBoost</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">AWS</span>
+                                <span class="tag">MLflow</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tag-group">
+                            <div class="tag-label">Category</div>
+                            <div>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Predictive Analytics</span>
+                                <span class="tag">Sports Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overview Section -->
+            <div class="project-section fade-in delay-1">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Overview</h2>
+                <div class="section-content">
+                    <p>This enterprise-grade predictive analytics solution leverages state-of-the-art machine learning and deep learning techniques to forecast Formula 1 race outcomes for the 2025 season with 83% accuracy for podium predictions. The system processes over 70 years of historical F1 data, incorporating 200+ variables including driver performance metrics, team engineering capabilities, qualifying results, weather patterns, and track-specific characteristics.</p>
+                    
+                    <div class="side-by-side">
+                        <div class="side-by-side-text">
+                            <p>The solution was developed over a 6-month period using agile methodology with bi-weekly sprints, involving collaboration between data scientists, F1 domain experts, and software engineers. The production system runs on a cloud-based infrastructure that automatically updates predictions as new race data becomes available throughout the season.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/f1-race-predictor-overview.jpg" alt="F1 race prediction dashboard" class="project-image">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <h3>Overview</h3>
-            <p>This enterprise-grade predictive analytics solution leverages state-of-the-art machine learning and deep learning techniques to forecast Formula 1 race outcomes for the 2025 season with 83% accuracy for podium predictions. The system processes over 70 years of historical F1 data, incorporating 200+ variables including driver performance metrics, team engineering capabilities, qualifying results, weather patterns, and track-specific characteristics. This comprehensive analytical framework provides actionable insights for fans, teams, and sports betting platforms, creating a competitive advantage through data-driven decision making.</p>
-
-            <p>The solution was developed over a 6-month period using agile methodology with bi-weekly sprints, involving collaboration between data scientists, F1 domain experts, and software engineers. The production system runs on a cloud-based infrastructure that automatically updates predictions as new race data becomes available throughout the season.</p>
-
-            <h3>Problem Statement</h3>
-            <p>Formula 1 racing outcomes are influenced by a complex interplay of variables - from driver skill and team strategy to weather conditions and track characteristics. Traditional analysis methods face significant limitations:</p>
-
-            <ul>
-                <li><strong>Multi-dimensional Complexity</strong>: Over 200 variables influence race outcomes, creating a high-dimensional problem space that traditional statistical methods struggle to model effectively.</li>
-                <li><strong>Dynamic Conditions</strong>: Race-day variables like weather changes, tire degradation patterns, and mid-race incidents introduce significant unpredictability that must be accounted for in real-time.</li>
-                <li><strong>Team Strategy Evolution</strong>: Pit stop strategies, tire compound selections, and car setup decisions create a game-theory scenario that changes throughout the race weekend.</li>
-                <li><strong>Data Integration Challenges</strong>: Combining structured data (lap times, sector performance) with unstructured data (team radio communications, driver interviews) requires sophisticated data processing pipelines.</li>
-            </ul>
-
-            <p>Our enterprise solution addresses these challenges through an integrated machine learning approach that processes multiple dimensions of information simultaneously, creating a robust predictive framework that adapts to the evolving nature of Formula 1 racing.</p>
-
-            <h3>Approach & Tech Stack</h3>
-            <p>Our enterprise solution implements a comprehensive, multi-stage data pipeline with robust error handling and automated retraining capabilities. The system architecture follows industry best practices for MLOps, ensuring reproducibility, scalability, and maintainability.</p>
-
-            <ul>
-                <li><strong>Data Collection & Integration</strong>:
+            <!-- Problem Section -->
+            <div class="project-section fade-in delay-2">
+                <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Problem</h2>
+                <div class="section-content">
+                    <p>Formula 1 racing outcomes are influenced by a complex interplay of variables - from driver skill and team strategy to weather conditions and track characteristics. Traditional analysis methods face significant limitations:</p>
+                    
                     <ul>
-                        <li>Primary data sources: Ergast Developer API (historical race data), Official F1 API (real-time telemetry), and proprietary databases</li>
-                        <li>Custom ETL pipelines built with Apache Airflow for scheduled data extraction and transformation</li>
-                        <li>Data validation framework ensuring 99.9% data quality through automated checks and anomaly detection</li>
-                        <li>Incremental data loading with change data capture (CDC) for efficient updates</li>
+                        <li><strong>Multi-dimensional Complexity</strong>: Over 200 variables influence race outcomes, creating a high-dimensional problem space that traditional statistical methods struggle to model effectively.</li>
+                        <li><strong>Dynamic Conditions</strong>: Race-day variables like weather changes, tire degradation patterns, and mid-race incidents introduce significant unpredictability that must be accounted for in real-time.</li>
+                        <li><strong>Team Strategy Evolution</strong>: Pit stop strategies, tire compound selections, and car setup decisions create a game-theory scenario that changes throughout the race weekend.</li>
+                        <li><strong>Data Integration Challenges</strong>: Combining structured data (lap times, sector performance) with unstructured data (team radio communications, driver interviews) requires sophisticated data processing pipelines.</li>
                     </ul>
-                </li>
-                <li><strong>Feature Engineering & Data Science</strong>:
+                    
+                    <div class="side-by-side-reverse">
+                        <div class="side-by-side-text">
+                            <p>Our enterprise solution addresses these challenges through an integrated machine learning approach that processes multiple dimensions of information simultaneously, creating a robust predictive framework that adapts to the evolving nature of Formula 1 racing.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/f1-race-predictor-problem.jpg" alt="F1 race complexity visualization" class="project-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Solution</h2>
+                <div class="section-content">
+                    <p>Our enterprise solution implements a comprehensive, multi-stage data pipeline with robust error handling and automated retraining capabilities. The system architecture follows industry best practices for MLOps, ensuring reproducibility, scalability, and maintainability.</p>
+                    
+                    <div class="project-image-container">
+                        <img src="../img/f1-race-predictor-solution.jpg" alt="F1 prediction system architecture" class="project-image">
+                        <p class="image-caption">System architecture diagram showing data flow from collection to prediction</p>
+                    </div>
+                    
+                    <p>The solution consists of several integrated components:</p>
+                    
                     <ul>
-                        <li>Advanced ELO rating system with temporal decay factors for driver skill quantification</li>
-                        <li>Proprietary algorithms for track-specific performance metrics accounting for 23 different circuit characteristics</li>
-                        <li>Time-series analysis of team development trajectories with seasonal adjustment factors</li>
-                        <li>Natural Language Processing of team radio communications for strategy inference</li>
-                        <li>Feature importance analysis using SHAP values for model interpretability</li>
+                        <li><strong>Data Collection & Integration</strong>: Primary data sources include Ergast Developer API (historical race data), Official F1 API (real-time telemetry), and proprietary databases. Custom ETL pipelines built with Apache Airflow handle scheduled data extraction and transformation with 99.9% data quality.</li>
+                        <li><strong>Feature Engineering</strong>: Advanced ELO rating system with temporal decay factors for driver skill quantification, proprietary algorithms for track-specific performance metrics, and time-series analysis of team development trajectories.</li>
+                        <li><strong>Prediction Engine</strong>: Ensemble of machine learning models including gradient boosted trees, deep neural networks, and specialized models for specific race conditions, with predictions weighted dynamically based on recent performance.</li>
                     </ul>
-                </li>
-                <li><strong>Technology Stack</strong>:
+                </div>
+            </div>
+            
+            <!-- Tech Stack Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-code"></i> Tech Stack</h2>
+                <div class="section-content">
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-python"></i></div>
+                            <div class="tech-name">Python</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-tensorflow"></i></div>
+                            <div class="tech-name">TensorFlow</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="tech-name">XGBoost</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="tech-name">FastAPI</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-aws"></i></div>
+                            <div class="tech-name">AWS</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-cogs"></i></div>
+                            <div class="tech-name">MLflow</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-docker"></i></div>
+                            <div class="tech-name">Docker</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-name">Redis</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-stream"></i></div>
+                            <div class="tech-name">Airflow</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-tasks"></i> Process</h2>
+                <div class="section-content">
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <h4>Data Collection & Preparation</h4>
+                            <p>Gathered and integrated 70+ years of historical F1 data from multiple sources, implementing rigorous data validation and cleaning processes to ensure 99.9% data quality.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Feature Engineering</h4>
+                            <p>Developed advanced algorithms for driver skill quantification, track-specific performance metrics, and team development trajectories, creating 200+ predictive variables.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Model Development</h4>
+                            <p>Built and trained multiple machine learning models including gradient boosted trees, deep neural networks, and specialized models for specific race conditions.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>System Integration</h4>
+                            <p>Implemented a microservices architecture with event-driven components, ensuring high availability and scalability to handle peak loads during race weekends.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Deployment & Monitoring</h4>
+                            <p>Deployed the system on cloud infrastructure with automated scaling, continuous monitoring, and feedback loops for model retraining and improvement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Features Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-star"></i> Key Features</h2>
+                <div class="section-content">
+                    <div class="key-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3 class="feature-title">Predictive Analytics Engine</h3>
+                            <p>Race winner predictions with 83% accuracy, podium finish forecasts with 76% accuracy, and confidence intervals for each prediction.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-user-check"></i></div>
+                            <h3 class="feature-title">Performance Intelligence</h3>
+                            <p>Driver performance profiling across 15 track categories with strength/weakness analysis and team development trajectory forecasting.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-desktop"></i></div>
+                            <h3 class="feature-title">Interactive Visualization</h3>
+                            <p>Real-time dashboards with dynamic filtering, interactive race simulations, and heat maps of driver performance by track sector.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                            <h3 class="feature-title">Anomaly Detection</h3>
+                            <p>Automated identification of unexpected race developments and performance shifts that could impact race outcomes.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-plug"></i></div>
+                            <h3 class="feature-title">Integration Capabilities</h3>
+                            <p>RESTful API with comprehensive documentation, webhook support for real-time notifications, and third-party platform connectors.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-file-export"></i></div>
+                            <h3 class="feature-title">Exportable Reports</h3>
+                            <p>Comprehensive reports in multiple formats (PDF, Excel, PowerPoint) for stakeholder presentations and analysis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenges Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-mountain"></i> Challenges Faced</h2>
+                <div class="section-content">
                     <ul>
-                        <li><strong>Backend</strong>: Python 3.9, FastAPI for RESTful services, Redis for caching</li>
-                        <li><strong>Data Processing</strong>: Pandas, NumPy, Dask for distributed computing</li>
-                        <li><strong>Machine Learning</strong>: Scikit-learn, XGBoost, TensorFlow 2.8 with custom layers</li>
-                        <li><strong>MLOps</strong>: MLflow for experiment tracking, Docker for containerization, Kubernetes for orchestration</li>
-                        <li><strong>Monitoring</strong>: Prometheus and Grafana dashboards for real-time model performance metrics</li>
-                        <li><strong>Cloud Infrastructure</strong>: AWS (EC2, S3, Lambda) with Terraform for infrastructure as code</li>
+                        <li><strong>Race Event Anomaly Handling</strong>: Unexpected race events (safety cars, red flags, crashes) introduced significant variability in race outcomes, with 37% of races in our historical dataset being affected by such events.</li>
+                        <li><strong>Temporal Performance Weighting</strong>: Determining the optimal balance between historical driver performance (providing larger sample sizes) and recent form (reflecting current capabilities but with smaller sample sizes).</li>
+                        <li><strong>Strategy Quantification</strong>: Team strategy decisions (pit stops, tire choices) significantly impact race outcomes but are difficult to quantify and predict due to their game-theory nature.</li>
+                        <li><strong>Qualitative Data Integration</strong>: Critical racing aspects like driver aggression and car handling characteristics are primarily available as unstructured qualitative data.</li>
+                        <li><strong>Computational Efficiency</strong>: The comprehensive modeling approach required significant computational resources, with initial prototypes taking 4+ hours to retrain.</li>
                     </ul>
-                </li>
-            </ul>
-
-            <h3>Key Features</h3>
-            <p>Our enterprise-grade F1 prediction platform delivers a comprehensive suite of analytical capabilities:</p>
-
-            <ul>
-                <li><strong>Predictive Analytics Engine</strong>:
+                </div>
+            </div>
+            
+            <!-- Future Improvements Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> Future Improvements</h2>
+                <div class="section-content">
                     <ul>
-                        <li>Race winner predictions with 83% accuracy and podium finish forecasts with 76% accuracy</li>
-                        <li>Confidence intervals and probability distributions for each prediction</li>
-                        <li>Automated recalibration based on qualifying results and pre-race conditions</li>
-                        <li>Anomaly detection for identifying unexpected race developments</li>
+                        <li><strong>Real-time Telemetry Integration</strong>: Develop a low-latency data processing pipeline to ingest and analyze 1,500+ telemetry data points per second from each car during live races.</li>
+                        <li><strong>Advanced Weather Modeling System</strong>: Integrate with high-precision meteorological APIs and deploy circuit-specific microclimate models to simulate weather effects on track conditions.</li>
+                        <li><strong>Lap-by-Lap Prediction Engine</strong>: Develop a recurrent neural network with attention mechanisms that processes sequential lap data to update race outcome probabilities after each completed lap.</li>
+                        <li><strong>Enterprise API & Integration Platform</strong>: Create a comprehensive API gateway with authentication, rate limiting, and support for multiple data formats and integration patterns.</li>
+                        <li><strong>Autonomous Strategy Advisor</strong>: Build an AI-powered strategy assistant that provides real-time recommendations to teams during races based on current conditions and competitor strategies.</li>
                     </ul>
-                </li>
-                <li><strong>Performance Intelligence Suite</strong>:
-                    <ul>
-                        <li>Driver performance profiling across 15 different track categories with strength/weakness analysis</li>
-                        <li>Team development trajectory forecasting with 6-race lookahead window</li>
-                        <li>Head-to-head driver comparison matrix with 28 performance metrics</li>
-                        <li>Pit stop optimization recommendations based on historical efficiency analysis</li>
-                    </ul>
-                </li>
-                <li><strong>Interactive Visualization Platform</strong>:
-                    <ul>
-                        <li>Real-time dashboard with dynamic filtering capabilities</li>
-                        <li>Interactive race simulation with "what-if" scenario modeling</li>
-                        <li>Heat maps of driver performance by track sector and conditions</li>
-                        <li>Decision tree visualizations explaining prediction factors and their weights</li>
-                        <li>Exportable reports in multiple formats (PDF, Excel, PowerPoint) for stakeholder presentations</li>
-                    </ul>
-                </li>
-                <li><strong>Integration Capabilities</strong>:
-                    <ul>
-                        <li>RESTful API with comprehensive documentation and client SDKs</li>
-                        <li>Webhook support for real-time event notifications</li>
-                        <li>Custom data connectors for third-party sports analytics platforms</li>
-                    </ul>
-                </li>
-            </ul>
+                </div>
+            </div>
 
-            <h3>Architecture</h3>
-            <p>The enterprise solution implements a microservices architecture with event-driven components, ensuring high availability (99.95% uptime SLA) and scalability to handle peak loads during race weekends (up to 500,000 concurrent users).</p>
-
-            <p>The system consists of five primary components:</p>
-
-            <ul>
-                <li><strong>Data Ingestion Layer</strong>: Scalable, fault-tolerant pipelines process both batch historical data and streaming real-time data from multiple sources. Apache Kafka handles event streaming with guaranteed message delivery and exactly-once processing semantics.</li>
-
-                <li><strong>Feature Store</strong>: A centralized repository of feature values using Redis and Amazon S3, enabling feature sharing, versioning, and consistent access across training and inference pipelines. Time-travel capabilities allow point-in-time reconstructions for backtesting.</li>
-
-                <li><strong>Model Training Pipeline</strong>: Automated ML workflows orchestrated by Airflow, including hyperparameter optimization using Bayesian methods, cross-validation, and model selection. The system maintains a model registry with versioning and A/B testing capabilities.</li>
-
-                <li><strong>Prediction Service</strong>: Horizontally scalable inference endpoints with load balancing and auto-scaling. The service implements a model ensemble approach, combining predictions from:
-                    <ul>
-                        <li>Gradient Boosted Decision Trees (XGBoost) for tabular data</li>
-                        <li>Deep Neural Networks with attention mechanisms for sequential data</li>
-                        <li>Random Forest models specialized for specific race conditions</li>
-                    </ul>
-                    Model predictions are weighted dynamically based on recent performance metrics.
-                </li>
-
-                <li><strong>Feedback Loop System</strong>: Continuous model evaluation against actual race results, with automated retraining triggers when performance metrics drop below thresholds. This closed-loop system enables continuous improvement with minimal human intervention.</li>
-            </ul>
-
-            <h3>Challenges Faced & Solutions Implemented</h3>
-            <p>Throughout the development lifecycle, our team encountered and systematically addressed several complex technical and analytical challenges:</p>
-
-            <ul>
-                <li><strong>Race Event Anomaly Handling</strong>:
-                    <ul>
-                        <li><strong>Challenge</strong>: Unexpected race events (safety cars, red flags, crashes) introduced significant variability in race outcomes, with 37% of races in our historical dataset being affected by such events.</li>
-                        <li><strong>Solution</strong>: Implemented a Monte Carlo simulation framework that runs 10,000+ race simulations with stochastic event injection based on historical probability distributions. This approach improved prediction robustness by 28% during races with unexpected events.</li>
-                        <li><strong>Business Impact</strong>: Reduced prediction volatility during live races by 42%, providing more stable and reliable insights for stakeholders.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Temporal Performance Weighting</strong>:
-                    <ul>
-                        <li><strong>Challenge</strong>: Determining the optimal balance between historical driver performance (providing larger sample sizes) and recent form (reflecting current capabilities but with smaller sample sizes).</li>
-                        <li><strong>Solution</strong>: Developed an adaptive weighting algorithm using exponential decay functions with dynamic half-life parameters that adjust based on detected performance trend changes. The system automatically calibrates temporal relevance weights through Bayesian optimization.</li>
-                        <li><strong>Technical Implementation</strong>: Created a custom TensorFlow layer that implements time-aware attention mechanisms, allowing the model to learn optimal temporal weighting patterns from the data.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Strategy Quantification</strong>:
-                    <ul>
-                        <li><strong>Challenge</strong>: Team strategy decisions (pit stops, tire choices) significantly impact race outcomes but are difficult to quantify and predict due to their game-theory nature and dependency on evolving race conditions.</li>
-                        <li><strong>Solution</strong>: Developed a reinforcement learning framework that models team strategy as a Markov Decision Process, with states representing race conditions and actions representing strategy choices. The system was trained on 15+ years of historical strategy decisions and their outcomes.</li>
-                        <li><strong>Results</strong>: Achieved 72% accuracy in predicting pit stop windows and 68% accuracy for tire compound selections, enabling more reliable race simulations.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Qualitative Data Integration</strong>:
-                    <ul>
-                        <li><strong>Challenge</strong>: Critical racing aspects like driver aggression, team morale, and car handling characteristics are primarily available as unstructured qualitative data in interviews, commentary, and social media.</li>
-                        <li><strong>Solution</strong>: Implemented a natural language processing pipeline using BERT-based models fine-tuned on F1-specific corpus to extract sentiment and technical insights from 50,000+ articles, interviews, and social media posts.</li>
-                        <li><strong>Technical Details</strong>: Created a domain-specific entity recognition system that identifies 120+ F1-specific technical terms and their relationships, enabling structured feature extraction from unstructured text.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Computational Efficiency</strong>:
-                    <ul>
-                        <li><strong>Challenge</strong>: The comprehensive modeling approach required significant computational resources, with initial prototypes taking 4+ hours to retrain after each race weekend.</li>
-                        <li><strong>Solution</strong>: Implemented distributed training across GPU clusters using Horovod for TensorFlow, reducing training time by 87%. Developed an incremental learning approach that updates only the most relevant model components after new data arrives.</li>
-                        <li><strong>Infrastructure Optimization</strong>: Implemented auto-scaling cloud resources that provision additional compute capacity during training windows and scale down during prediction-only periods, reducing operational costs by 42%.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h3>Future Roadmap & Strategic Enhancements</h3>
-            <p>Our product development roadmap outlines strategic enhancements planned for the next 18 months, prioritized based on business impact and technical feasibility:</p>
-
-            <ul>
-                <li><strong>Real-time Telemetry Integration (Q3 2025)</strong>:
-                    <ul>
-                        <li><strong>Technical Scope</strong>: Develop a low-latency data processing pipeline to ingest and analyze 1,500+ telemetry data points per second from each car during live races.</li>
-                        <li><strong>Implementation Plan</strong>: Utilize Apache Flink for stream processing with custom operators for F1-specific telemetry analysis. Deploy edge computing nodes at race venues to minimize data transmission latency.</li>
-                        <li><strong>Expected Outcome</strong>: Enable mid-race prediction updates with sub-second latency, improving prediction accuracy during races by an estimated 15-20%.</li>
-                        <li><strong>Business Value</strong>: Create new premium service tier for enterprise clients requiring real-time insights during races, with projected revenue increase of 30%.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Advanced Weather Modeling System (Q4 2025)</strong>:
-                    <ul>
-                        <li><strong>Technical Approach</strong>: Integrate with high-precision meteorological APIs and deploy circuit-specific microclimate models using computational fluid dynamics to simulate weather effects on track conditions.</li>
-                        <li><strong>Key Features</strong>: Track temperature mapping with 5-meter resolution, precipitation probability forecasts with 5-minute granularity, and wind effect modeling for aerodynamic performance impact.</li>
-                        <li><strong>Integration Points</strong>: Weather data will feed into the prediction models through a dedicated feature transformation pipeline with automated feature importance analysis.</li>
-                        <li><strong>Expected Impact</strong>: Improve prediction accuracy by 12-18% during races with changing weather conditions, which account for approximately 35% of the F1 calendar.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Lap-by-Lap Prediction Engine (Q1 2026)</strong>:
-                    <ul>
-                        <li><strong>Technical Architecture</strong>: Develop a recurrent neural network with attention mechanisms that processes sequential lap data to update race outcome probabilities after each completed lap.</li>
-                        <li><strong>Data Requirements</strong>: Expand historical dataset to include lap-by-lap position, timing, and telemetry data for all drivers across 10+ seasons.</li>
-                        <li><strong>Performance Targets</strong>: Achieve prediction latency under 2 seconds after lap completion, with accuracy improvements of 3-5% per completed lap as the race progresses.</li>
-                        <li><strong>Market Opportunity</strong>: Enable new interactive fan experiences and betting products with dynamic odds adjustments, expanding the addressable market by an estimated $15M annually.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Enterprise API & Integration Platform (Q2 2026)</strong>:
-                    <ul>
-                        <li><strong>Technical Specifications</strong>: Develop a comprehensive API gateway with OAuth 2.0 authentication, rate limiting, and usage analytics. Support multiple data formats (JSON, XML, Protocol Buffers) and integration patterns (REST, GraphQL, gRPC).</li>
-                        <li><strong>Developer Experience</strong>: Create SDKs for 5+ programming languages, interactive API documentation with Swagger, and a developer portal with sandbox environment.</li>
-                        <li><strong>Compliance & Security</strong>: Implement SOC 2 compliance, end-to-end encryption, and data residency options for international clients.</li>
-                        <li><strong>Go-to-Market Strategy</strong>: Tiered API access plans targeting media companies, betting platforms, and F1 teams, with projected annual recurring revenue of $2.5M by end of 2026.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Autonomous Strategy Advisor (Q4 2026)</strong>:
-                    <ul>
-                        <li><strong>Concept</strong>: An AI-powered strategy assistant that provides real-time recommendations to teams during races, considering current positions, tire conditions, weather forecasts, and competitor strategies.</li>
-                        <li><strong>Technical Approach</strong>: Combine reinforcement learning with game theory models to simulate multi-agent decision-making in the dynamic race environment.</li>
-                        <li><strong>Differentiating Features</strong>: Counterfactual strategy analysis ("what if" scenarios), risk-adjusted outcome projections, and competitor strategy prediction.</li>
-                        <li><strong>Target Market</strong>: F1 teams and their technical partners, with potential expansion to other motorsport categories.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <div class="project-links">
-                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            <!-- Call to Action -->
+            <div class="project-cta fade-in delay-5">
+                <a href="https://github.com/jeetsingh-14/Predicating-F1-Season-2025" target="_blank" class="cta-button">
+                    <i class="fab fa-github"></i> View GitHub Repository
+                </a>
+                <a href="../index.html#projects" class="cta-button secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
             </div>
         </div>
     </div>

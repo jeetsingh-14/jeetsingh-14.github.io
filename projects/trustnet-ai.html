@@ -5,120 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="TrustNet AI – Secure Financial Transaction Monitoring Project by Jeet Singh">
     <title>TrustNet AI – Jeet Singh Portfolio</title>
+    
+    <!-- CSS files -->
     <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="../project-case-study.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../script.js" as="script">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .project-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: left;
-        }
-
-        .project-content h1 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-        }
-
-        .project-content h2 {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-
-        .project-content h3 {
-            color: var(--primary-color);
-            margin-top: 40px;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .project-content h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .project-content p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .project-content ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .project-content li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .project-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-links a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
-            margin: 30px 0;
-        }
-
-        .github-link {
-            display: flex;
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-
-        .github-link a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .github-link a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -134,7 +35,7 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <header>
+    <header class="case-header">
         <div class="container">
             <h1>Jeet Singh</h1>
             <nav>
@@ -151,350 +52,264 @@
 
     <div class="container">
         <div class="project-content" data-aos="fade-up">
-            <h1>TrustNet AI – Secure Financial Transaction Monitoring</h1>
-            <h2>Real-time AI fraud detection system with explainable insights</h2>
-
-            <div class="divider"></div>
-
-            <div class="github-link">
-                <a href="https://github.com/jeetsingh-14/TrustNet-AI" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            <!-- Hero/Intro Section -->
+            <div class="project-hero fade-in">
+                <img src="../img/trustnet-ai-banner.jpg" alt="TrustNet AI – Secure Financial Transaction Monitoring" class="project-hero-image">
+                <div class="project-hero-overlay">
+                    <h1 class="project-title">TrustNet AI – Secure Financial Transaction Monitoring</h1>
+                    <p class="project-impact">Real-time AI fraud detection system with explainable insights, processing 10,000+ transactions per second with 94.3% accuracy.</p>
+                    
+                    <div class="project-tags">
+                        <div class="tag-group">
+                            <div class="tag-label">Tech Stack</div>
+                            <div>
+                                <span class="tag">Python</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">React</span>
+                                <span class="tag">XGBoost</span>
+                                <span class="tag">Kafka</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">AWS</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tag-group">
+                            <div class="tag-label">Category</div>
+                            <div>
+                                <span class="tag">AI/ML</span>
+                                <span class="tag">FinTech</span>
+                                <span class="tag">Cybersecurity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overview Section -->
+            <div class="project-section fade-in delay-1">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Overview</h2>
+                <div class="section-content">
+                    <p>TrustNet AI is an enterprise-grade, real-time transaction monitoring and fraud detection platform designed for high-volume financial institutions. The system processes over 10,000 transactions per second with sub-50ms latency, leveraging advanced behavioral analytics, machine learning, and anomaly detection algorithms to identify potentially fraudulent activities with 94.3% accuracy.</p>
+                    
+                    <div class="side-by-side">
+                        <div class="side-by-side-text">
+                            <p>Developed in collaboration with cybersecurity experts and financial compliance specialists, TrustNet AI features a fully explainable AI dashboard that provides transparent insights into fraud detection decisions—critical for regulatory compliance with GDPR, PSD2, and other financial regulations. The platform is currently deployed across three tier-1 banks and five fintech companies, protecting over $12 billion in daily transaction volume.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/trustnet-ai-overview.jpg" alt="TrustNet AI dashboard" class="project-image">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <h3>Overview</h3>
-            <p>TrustNet AI is an enterprise-grade, real-time transaction monitoring and fraud detection platform designed for high-volume financial institutions. The system processes over 10,000 transactions per second with sub-50ms latency, leveraging advanced behavioral analytics, machine learning, and anomaly detection algorithms to identify potentially fraudulent activities with 94.3% accuracy. Our solution has demonstrated a 76% reduction in false positives compared to traditional rule-based systems while increasing fraud detection rates by 62%.</p>
-
-            <p>Developed in collaboration with cybersecurity experts and financial compliance specialists, TrustNet AI features a fully explainable AI dashboard that provides transparent insights into fraud detection decisions—critical for regulatory compliance with GDPR, PSD2, and other financial regulations. The platform is currently deployed across three tier-1 banks and five fintech companies, protecting over $12 billion in daily transaction volume.</p>
-
-            <h3>Problem Statement</h3>
-            <p>The financial services industry faces unprecedented challenges in fraud detection and prevention:</p>
-
-            <ul>
-                <li><strong>Escalating Sophistication of Fraud</strong>: Modern financial fraud has evolved beyond simple rule-based patterns, with organized criminal networks employing advanced techniques that mimic legitimate user behavior. Traditional detection systems fail to identify these sophisticated attacks, resulting in annual losses exceeding $30 billion globally.</li>
-
-                <li><strong>Regulatory Compliance Burden</strong>: Financial institutions must comply with increasingly stringent regulations (GDPR, PSD2, AML directives) that mandate both effective fraud prevention and transparent decision-making processes. Non-compliance penalties can reach up to 4% of annual global turnover.</li>
-
-                <li><strong>False Positive Crisis</strong>: Legacy rule-based systems generate excessive false positives (industry average: 90%), overwhelming fraud investigation teams and creating significant operational costs—estimated at $3.5 million annually for mid-sized banks.</li>
-
-                <li><strong>Real-time Processing Requirements</strong>: Modern payment systems require instant transaction verification, leaving milliseconds for fraud detection without impacting user experience. Traditional batch processing approaches introduce unacceptable latency.</li>
-
-                <li><strong>"Black Box" AI Problem</strong>: While machine learning can improve detection rates, many solutions operate as opaque "black boxes," making it impossible to explain decisions to regulators or customers—a critical requirement in financial services.</li>
-            </ul>
-
-            <p>TrustNet AI addresses these challenges through an integrated approach that combines advanced machine learning with explainable AI techniques, delivering a solution that is simultaneously more accurate, transparent, and operationally efficient than traditional fraud detection systems.</p>
-
-            <h3>Approach & Tech Stack</h3>
-            <p>TrustNet AI implements a comprehensive, multi-layered approach to fraud detection that combines domain expertise in financial security with cutting-edge machine learning techniques. Our development methodology followed a rigorous process aligned with ISO 27001 and PCI-DSS security standards, ensuring compliance with financial industry regulations from the ground up.</p>
-
-            <ul>
-                <li><strong>Data Engineering & Processing</strong>:
+            <!-- Problem Section -->
+            <div class="project-section fade-in delay-2">
+                <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Problem</h2>
+                <div class="section-content">
+                    <p>The financial services industry faces unprecedented challenges in fraud detection and prevention:</p>
+                    
                     <ul>
-                        <li><strong>Data Sources</strong>: Integration with core banking systems, payment gateways, and third-party identity verification services through secure APIs</li>
-                        <li><strong>Data Enrichment</strong>: Real-time enrichment with 45+ contextual data points including geolocation verification, device fingerprinting, behavioral biometrics, and historical transaction patterns</li>
-                        <li><strong>Data Processing</strong>: Apache Kafka for real-time event streaming with exactly-once delivery guarantees, processing 10,000+ TPS with sub-millisecond latency</li>
-                        <li><strong>Feature Engineering</strong>: Automated feature generation pipeline creating 200+ derived features from raw transaction data, including temporal patterns, network relationships, and behavioral anomalies</li>
+                        <li><strong>Escalating Sophistication of Fraud</strong>: Modern financial fraud has evolved beyond simple rule-based patterns, with organized criminal networks employing advanced techniques that mimic legitimate user behavior. Traditional detection systems fail to identify these sophisticated attacks, resulting in annual losses exceeding $30 billion globally.</li>
+                        <li><strong>Regulatory Compliance Burden</strong>: Financial institutions must comply with increasingly stringent regulations (GDPR, PSD2, AML directives) that mandate both effective fraud prevention and transparent decision-making processes.</li>
+                        <li><strong>False Positive Crisis</strong>: Legacy rule-based systems generate excessive false positives (industry average: 90%), overwhelming fraud investigation teams and creating significant operational costs.</li>
+                        <li><strong>Real-time Processing Requirements</strong>: Modern payment systems require instant transaction verification, leaving milliseconds for fraud detection without impacting user experience.</li>
+                        <li><strong>"Black Box" AI Problem</strong>: While machine learning can improve detection rates, many solutions operate as opaque "black boxes," making it impossible to explain decisions to regulators or customers.</li>
                     </ul>
-                </li>
+                    
+                    <div class="side-by-side-reverse">
+                        <div class="side-by-side-text">
+                            <p>TrustNet AI addresses these challenges through an integrated approach that combines advanced machine learning with explainable AI techniques, delivering a solution that is simultaneously more accurate, transparent, and operationally efficient than traditional fraud detection systems.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/trustnet-ai-problem.jpg" alt="Financial fraud challenges visualization" class="project-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <li><strong>Machine Learning & AI</strong>:
+            <!-- Solution Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Solution</h2>
+                <div class="section-content">
+                    <p>TrustNet AI implements a comprehensive, multi-layered approach to fraud detection that combines domain expertise in financial security with cutting-edge machine learning techniques. Our development methodology followed a rigorous process aligned with ISO 27001 and PCI-DSS security standards, ensuring compliance with financial industry regulations from the ground up.</p>
+                    
+                    <div class="project-image-container">
+                        <img src="../img/trustnet-ai-solution.jpg" alt="TrustNet AI system architecture" class="project-image">
+                        <p class="image-caption">TrustNet AI system architecture showing data flow from transaction sources through AI processing to fraud detection</p>
+                    </div>
+                    
+                    <p>The solution consists of several integrated components:</p>
+                    
                     <ul>
-                        <li><strong>Core Models</strong>: Ensemble approach combining gradient-boosted decision trees (XGBoost), deep neural networks, and specialized anomaly detection algorithms</li>
-                        <li><strong>Explainability Layer</strong>: SHAP (SHapley Additive exPlanations) values for transparent feature attribution, with custom visualization components for regulatory compliance</li>
-                        <li><strong>Adaptive Learning</strong>: Continuous model retraining with human-in-the-loop feedback mechanisms, reducing false positive rates by 5% month-over-month</li>
-                        <li><strong>Model Governance</strong>: Comprehensive model versioning, A/B testing framework, and audit trails for all model decisions to satisfy regulatory requirements</li>
+                        <li><strong>Data Engineering & Enrichment</strong>: Integration with core banking systems and real-time enrichment with 45+ contextual data points including geolocation verification, device fingerprinting, and behavioral biometrics.</li>
+                        <li><strong>Advanced ML Models</strong>: Ensemble approach combining gradient-boosted decision trees (XGBoost), deep neural networks, and specialized anomaly detection algorithms with continuous retraining.</li>
+                        <li><strong>Explainability Framework</strong>: SHAP (SHapley Additive exPlanations) values for transparent feature attribution with custom visualization components for regulatory compliance.</li>
+                        <li><strong>Real-time Processing</strong>: High-performance architecture processing 10,000+ transactions per second with sub-50ms latency, enabling fraud prevention without impacting user experience.</li>
                     </ul>
-                </li>
+                </div>
+            </div>
+            
+            <!-- Tech Stack Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-code"></i> Tech Stack</h2>
+                <div class="section-content">
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-python"></i></div>
+                            <div class="tech-name">Python</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="tech-name">FastAPI</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-react"></i></div>
+                            <div class="tech-name">React</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="tech-name">XGBoost</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-stream"></i></div>
+                            <div class="tech-name">Kafka</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-name">MongoDB</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-memory"></i></div>
+                            <div class="tech-name">Redis</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-aws"></i></div>
+                            <div class="tech-name">AWS</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-chart-bar"></i></div>
+                            <div class="tech-name">D3.js</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-brain"></i></div>
+                            <div class="tech-name">SHAP</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-dharmachakra"></i></div>
+                            <div class="tech-name">Kubernetes</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-code-branch"></i></div>
+                            <div class="tech-name">Terraform</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <li><strong>Technology Stack</strong>:
+            <!-- Process Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-tasks"></i> Process</h2>
+                <div class="section-content">
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <h4>Requirements Analysis</h4>
+                            <p>Collaborated with financial institutions and cybersecurity experts to understand fraud detection challenges, regulatory requirements, and operational constraints.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Data Pipeline Development</h4>
+                            <p>Built scalable data ingestion and processing pipelines capable of handling 10,000+ transactions per second with real-time enrichment of 45+ contextual data points.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>ML Model Development</h4>
+                            <p>Developed ensemble models combining gradient-boosted trees, neural networks, and anomaly detection algorithms with explainability layer for regulatory compliance.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Dashboard & Interface Creation</h4>
+                            <p>Designed intuitive dashboards and visualization tools for fraud analysts, with interactive exploration capabilities and automated case management.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Deployment & Optimization</h4>
+                            <p>Implemented enterprise-grade infrastructure with multi-region failover, continuous monitoring, and automated feedback loops for ongoing model improvement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Features Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-star"></i> Key Features</h2>
+                <div class="section-content">
+                    <div class="key-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                            <h3 class="feature-title">Real-time Transaction Intelligence</h3>
+                            <p>Sub-50ms transaction risk scoring with 94.3% accuracy across web, mobile, API, and in-person channels with unified risk assessment.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-fingerprint"></i></div>
+                            <h3 class="feature-title">Behavioral Analytics</h3>
+                            <p>User behavioral profiling based on 200+ dimensions of transaction patterns, with peer group anomaly detection and temporal pattern analysis.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3 class="feature-title">Explainable AI Framework</h3>
+                            <p>SHAP-based feature attribution providing clear, human-readable explanations for all fraud determinations with regulatory compliance documentation.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-desktop"></i></div>
+                            <h3 class="feature-title">Risk Intelligence Dashboard</h3>
+                            <p>Real-time monitoring console with customizable views, interactive case management, and visual analytics including geographic heat maps.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-plug"></i></div>
+                            <h3 class="feature-title">Enterprise Integration</h3>
+                            <p>Secure API gateway with pre-built connectors for banking cores, payment processors, and identity verification services with comprehensive documentation.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <h3 class="feature-title">Compliance & Reporting</h3>
+                            <p>Comprehensive audit trails, automated regulatory reporting, and custom report builder with configurable data retention policies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenges Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-mountain"></i> Challenges Faced</h2>
+                <div class="section-content">
                     <ul>
-                        <li><strong>Backend Services</strong>: Python 3.9 with FastAPI for high-performance REST endpoints, achieving 5ms average response time under production load</li>
-                        <li><strong>Real-time Processing</strong>: Apache Kafka for event streaming, Redis for in-memory caching, and custom-built rule engine for hybrid detection approach</li>
-                        <li><strong>Data Storage</strong>: Tiered architecture with MySQL for transactional data, MongoDB for semi-structured data, and Amazon S3 for cold storage with automated lifecycle policies</li>
-                        <li><strong>Security Infrastructure</strong>: End-to-end encryption (AES-256), field-level encryption for PII, comprehensive audit logging, and OAuth 2.0 with MFA for all access</li>
-                        <li><strong>Monitoring & Observability</strong>: Prometheus and Grafana for real-time metrics, ELK stack for log aggregation, and custom alerting system for fraud pattern detection</li>
+                        <li><strong>Extreme Data Imbalance</strong>: Fraud represents less than 0.1% of all financial transactions, creating a severe class imbalance that caused initial models to simply predict "not fraud" for all transactions.</li>
+                        <li><strong>Explainability Requirements</strong>: Financial regulations require transparent explanations for automated decisions affecting customers, but complex ML models operate as "black boxes" that are difficult to interpret.</li>
+                        <li><strong>Real-time Performance Demands</strong>: Financial transactions require near-instantaneous fraud decisions (target: <100ms) to maintain seamless user experience, but initial implementations required 500-800ms.</li>
+                        <li><strong>Enterprise Scalability</strong>: Initial architecture designed for startup-scale operations struggled when deployed at enterprise scale, with performance degradation under peak loads.</li>
+                        <li><strong>False Positive Reduction</strong>: Early versions achieved high fraud detection rates but at the cost of excessive false positives (28% rate), creating operational burden for fraud investigation teams.</li>
                     </ul>
-                </li>
-
-                <li><strong>Frontend & Visualization</strong>:
+                </div>
+            </div>
+            
+            <!-- Future Improvements Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> Future Improvements</h2>
+                <div class="section-content">
                     <ul>
-                        <li><strong>Analyst Dashboard</strong>: React.js with TypeScript for type safety, featuring responsive design optimized for fraud analyst workflows</li>
-                        <li><strong>Data Visualization</strong>: D3.js and Plotly for interactive charts, network graphs for relationship mapping, and custom SHAP visualizations</li>
-                        <li><strong>Case Management</strong>: Streamlit-powered rapid investigation tools with integrated workflow automation for fraud resolution</li>
-                        <li><strong>Reporting</strong>: Automated report generation with customizable templates for different stakeholders (operations, compliance, executive)</li>
+                        <li><strong>Advanced Behavioral Biometrics</strong>: Integrate passive behavioral biometrics including keystroke dynamics, mouse movement patterns, and mobile device handling characteristics to improve account takeover detection by 35-40%.</li>
+                        <li><strong>Federated Learning Framework</strong>: Implement privacy-preserving federated learning allowing financial institutions to collaboratively train fraud detection models without sharing sensitive customer data.</li>
+                        <li><strong>Real-time Fraud Network Detection</strong>: Develop graph-based analytics engine that identifies complex fraud networks in real-time by analyzing transaction patterns across multiple accounts and institutions.</li>
+                        <li><strong>Quantum-resistant Cryptography</strong>: Prepare for the emerging threat of quantum computing by implementing NIST-approved post-quantum cryptographic standards.</li>
+                        <li><strong>AI-powered Fraud Investigation Assistant</strong>: Develop an AI assistant for fraud analysts that automates evidence gathering, suggests investigation paths, and generates comprehensive case documentation.</li>
                     </ul>
-                </li>
-
-                <li><strong>Development & Deployment</strong>:
-                    <ul>
-                        <li><strong>CI/CD Pipeline</strong>: GitHub Actions for continuous integration, automated testing with 95% code coverage, and blue-green deployment strategy</li>
-                        <li><strong>Infrastructure</strong>: Kubernetes for container orchestration, Terraform for infrastructure as code, deployed on AWS with multi-region failover</li>
-                        <li><strong>Compliance</strong>: Automated security scanning, dependency vulnerability checks, and compliance verification integrated into the deployment pipeline</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h3>Key Features & Capabilities</h3>
-            <p>TrustNet AI delivers a comprehensive suite of fraud prevention capabilities designed to address the complex challenges faced by modern financial institutions:</p>
-
-            <ul>
-                <li><strong>Real-time Transaction Intelligence</strong>:
-                    <ul>
-                        <li>Sub-50ms transaction risk scoring with 94.3% accuracy, enabling fraud prevention without impacting legitimate user experience</li>
-                        <li>Multi-channel monitoring across web, mobile, API, and in-person transactions with unified risk assessment</li>
-                        <li>Continuous session monitoring with behavioral biometrics to detect account takeover attempts in progress</li>
-                        <li>Automated transaction blocking for high-risk activities with configurable risk thresholds by transaction type and channel</li>
-                    </ul>
-                </li>
-
-                <li><strong>Advanced Behavioral Analytics</strong>:
-                    <ul>
-                        <li>Individual user behavioral profiling based on 200+ dimensions of transaction patterns, device usage, and navigation patterns</li>
-                        <li>Peer group anomaly detection comparing user activity against similar customer segments</li>
-                        <li>Temporal pattern analysis identifying deviations from established user routines with 87% precision</li>
-                        <li>Network analysis uncovering hidden relationships between accounts, beneficiaries, and devices to detect organized fraud rings</li>
-                    </ul>
-                </li>
-
-                <li><strong>Explainable AI Framework</strong>:
-                    <ul>
-                        <li>SHAP-based feature attribution providing clear, human-readable explanations for all fraud determinations</li>
-                        <li>Interactive visualization tools allowing analysts to explore model decisions and contributing factors</li>
-                        <li>Natural language explanation generation translating complex model outputs into plain English for customer service teams</li>
-                        <li>Regulatory compliance documentation automatically generated for each blocked transaction</li>
-                    </ul>
-                </li>
-
-                <li><strong>Risk Intelligence Dashboard</strong>:
-                    <ul>
-                        <li>Real-time fraud monitoring console with customizable views for different user roles (analyst, manager, executive)</li>
-                        <li>Interactive case management system with automated workflow routing and SLA tracking</li>
-                        <li>Advanced filtering and search capabilities across all transaction attributes and risk factors</li>
-                        <li>Visual analytics including geographic heat maps, temporal trend analysis, and network relationship graphs</li>
-                    </ul>
-                </li>
-
-                <li><strong>Enterprise Integration Capabilities</strong>:
-                    <ul>
-                        <li>Secure API gateway with comprehensive documentation and client SDKs for major programming languages</li>
-                        <li>Pre-built connectors for major banking cores, payment processors, and identity verification services</li>
-                        <li>Real-time webhook notifications for fraud alerts with configurable delivery channels (email, SMS, push notifications)</li>
-                        <li>Batch processing capabilities for historical analysis and model training with automated ETL pipelines</li>
-                    </ul>
-                </li>
-
-                <li><strong>Compliance & Reporting</strong>:
-                    <ul>
-                        <li>Comprehensive audit trails for all system activities and fraud determinations</li>
-                        <li>Automated regulatory reporting for SAR (Suspicious Activity Report) filing with pre-populated templates</li>
-                        <li>Custom report builder for internal stakeholders with scheduled delivery options</li>
-                        <li>Data retention and purging policies configurable to meet regional regulatory requirements</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h3>Enterprise Architecture</h3>
-            <p>TrustNet AI implements a scalable, fault-tolerant architecture designed to meet the stringent requirements of financial institutions, including 99.99% availability SLA, end-to-end data security, and sub-second processing latency. The system architecture follows industry best practices for high-throughput financial systems while maintaining regulatory compliance.</p>
-
-            <p>The platform is built on a microservices architecture with the following key components:</p>
-
-            <ul>
-                <li><strong>Data Ingestion Layer</strong>:
-                    <ul>
-                        <li>High-throughput API gateway with rate limiting, request validation, and DDoS protection</li>
-                        <li>Dedicated connectors for major financial systems with protocol-specific optimizations</li>
-                        <li>Apache Kafka cluster for event streaming with partition-based scaling to handle 10,000+ TPS</li>
-                        <li>Data validation service ensuring data quality and completeness before processing</li>
-                    </ul>
-                </li>
-
-                <li><strong>Real-time Processing Engine</strong>:
-                    <ul>
-                        <li>Stateless processing nodes deployed in Kubernetes for horizontal scalability</li>
-                        <li>In-memory data grid (Redis) for sub-millisecond access to user profiles and reference data</li>
-                        <li>Rule execution engine with JIT compilation for high-performance evaluation of complex rule sets</li>
-                        <li>Feature computation service generating 200+ derived features in real-time</li>
-                    </ul>
-                </li>
-
-                <li><strong>Machine Learning Subsystem</strong>:
-                    <ul>
-                        <li>Model serving infrastructure with A/B testing capabilities and automatic fallback mechanisms</li>
-                        <li>Ensemble prediction service combining outputs from multiple model types</li>
-                        <li>SHAP computation engine for real-time explainability generation</li>
-                        <li>Model monitoring service tracking drift and performance degradation</li>
-                    </ul>
-                </li>
-
-                <li><strong>Data Persistence Layer</strong>:
-                    <ul>
-                        <li>Multi-tier storage strategy with hot, warm, and cold data zones</li>
-                        <li>MySQL database cluster with read replicas for transactional data</li>
-                        <li>MongoDB for semi-structured data with sharding for horizontal scaling</li>
-                        <li>S3-compatible object storage for long-term data retention with encryption at rest</li>
-                    </ul>
-                </li>
-
-                <li><strong>Analytics & Reporting Engine</strong>:
-                    <ul>
-                        <li>Real-time analytics processing with Apache Flink for continuous aggregations</li>
-                        <li>OLAP data warehouse for historical analysis and reporting</li>
-                        <li>Report generation service with templating engine and multi-format export</li>
-                        <li>Scheduled job service for periodic report distribution and data maintenance</li>
-                    </ul>
-                </li>
-
-                <li><strong>Security & Compliance Framework</strong>:
-                    <ul>
-                        <li>Identity and access management service with RBAC and fine-grained permissions</li>
-                        <li>Comprehensive audit logging capturing all system interactions</li>
-                        <li>Encryption service managing keys and certificates for data protection</li>
-                        <li>Compliance verification service ensuring adherence to regulatory requirements</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <p>The system implements a multi-region deployment with active-active configuration, ensuring business continuity even in the event of regional outages. All components are designed with fault tolerance in mind, with automated failover mechanisms and self-healing capabilities.</p>
-
-            <h3>Challenges Faced & Solutions Implemented</h3>
-            <p>Throughout the development and deployment of TrustNet AI, our team encountered and systematically addressed several significant technical and operational challenges:</p>
-
-            <ul>
-                <li><strong>Extreme Data Imbalance</strong>:
-                    <ul>
-                        <li><strong>Challenge</strong>: Fraud represents less than 0.1% of all financial transactions, creating a severe class imbalance that caused initial models to simply predict "not fraud" for all transactions, achieving high accuracy but missing actual fraud cases.</li>
-                        <li><strong>Solution</strong>: Implemented a multi-faceted approach combining:
-                            <ul>
-                                <li>Advanced sampling techniques including SMOTE (Synthetic Minority Over-sampling Technique) with borderline optimization</li>
-                                <li>Cost-sensitive learning with dynamically adjusted misclassification penalties</li>
-                                <li>Anomaly detection pre-filtering to identify potential fraud candidates</li>
-                                <li>Ensemble methods specifically designed for imbalanced data</li>
-                            </ul>
-                        </li>
-                        <li><strong>Results</strong>: Improved fraud detection recall from 37% to 92% while maintaining precision above 85%, representing a 148% improvement in overall fraud detection capability.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Explainability for Regulatory Compliance</strong>:
-                    <ul>
-                        <li><strong>Challenge</strong>: Financial regulations require transparent explanations for automated decisions affecting customers, but complex ML models (especially deep learning) operate as "black boxes" that are difficult to interpret.</li>
-                        <li><strong>Solution</strong>: Developed a comprehensive explainability framework:
-                            <ul>
-                                <li>Implemented SHAP (SHapley Additive exPlanations) values to quantify feature contributions to each prediction</li>
-                                <li>Created custom visualization components translating technical explanations into intuitive visual formats</li>
-                                <li>Developed a natural language generation system that converts model outputs into human-readable explanations</li>
-                                <li>Built an explanation verification system to ensure consistency and completeness of all generated explanations</li>
-                            </ul>
-                        </li>
-                        <li><strong>Business Impact</strong>: Successfully passed regulatory audits in three jurisdictions, with auditors specifically commending the transparency of the system. Reduced time spent on compliance documentation by 73%.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Real-time Performance Optimization</strong>:
-                    <ul>
-                        <li><strong>Challenge</strong>: Financial transactions require near-instantaneous fraud decisions (target: <100ms) to maintain seamless user experience, but initial implementations required 500-800ms for comprehensive analysis.</li>
-                        <li><strong>Solution</strong>: Implemented a multi-level optimization strategy:
-                            <ul>
-                                <li>Developed a tiered processing approach with lightweight pre-screening followed by comprehensive analysis only for suspicious transactions</li>
-                                <li>Optimized feature computation through parallel processing and pre-computation of expensive features</li>
-                                <li>Implemented model quantization and pruning techniques to reduce inference time by 78%</li>
-                                <li>Deployed distributed caching with intelligent prefetching of user profiles based on activity patterns</li>
-                            </ul>
-                        </li>
-                        <li><strong>Performance Gains</strong>: Reduced average processing time from 650ms to 47ms (93% improvement), with 99.9th percentile latency under 100ms even during peak load periods.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Scalability for Enterprise Deployment</strong>:
-                    <ul>
-                        <li><strong>Challenge</strong>: Initial architecture designed for startup-scale operations struggled when deployed at enterprise scale, with performance degradation and occasional system instability under peak loads.</li>
-                        <li><strong>Solution</strong>: Redesigned system architecture for horizontal scalability:
-                            <ul>
-                                <li>Refactored monolithic components into microservices with well-defined boundaries</li>
-                                <li>Implemented event-driven architecture with Apache Kafka for reliable message delivery</li>
-                                <li>Deployed on Kubernetes with auto-scaling policies based on CPU, memory, and queue depth metrics</li>
-                                <li>Implemented database sharding and read replicas to distribute database load</li>
-                            </ul>
-                        </li>
-                        <li><strong>Results</strong>: System now handles 10,000+ transactions per second with consistent sub-50ms latency, supporting a 15x increase in transaction volume without performance degradation.</li>
-                    </ul>
-                </li>
-
-                <li><strong>False Positive Reduction</strong>:
-                    <ul>
-                        <li><strong>Challenge</strong>: Early versions of the system achieved high fraud detection rates but at the cost of excessive false positives (28% false positive rate), creating operational burden for fraud investigation teams.</li>
-                        <li><strong>Solution</strong>: Implemented a multi-pronged approach to false positive reduction:
-                            <ul>
-                                <li>Developed customer-specific behavioral baselines to better distinguish unusual but legitimate activity from fraud</li>
-                                <li>Implemented contextual analysis incorporating merchant category, transaction history, and location data</li>
-                                <li>Created a feedback loop system where analyst decisions are used to continuously improve model performance</li>
-                                <li>Developed specialized models for different transaction types and customer segments</li>
-                            </ul>
-                        </li>
-                        <li><strong>Business Impact</strong>: Reduced false positive rate from 28% to 6.7% while maintaining 94% fraud detection rate, resulting in 76% reduction in manual review workload and $2.3M annual operational cost savings for a typical tier-1 bank.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h3>Strategic Roadmap & Future Enhancements</h3>
-            <p>Based on market research, customer feedback, and emerging technologies, we have developed a comprehensive roadmap for TrustNet AI that will further enhance its capabilities and market position:</p>
-
-            <ul>
-                <li><strong>Advanced Behavioral Biometrics (Q3 2025)</strong>:
-                    <ul>
-                        <li><strong>Technical Scope</strong>: Integrate passive behavioral biometrics including keystroke dynamics, mouse movement patterns, and mobile device handling characteristics to create unique user behavioral signatures.</li>
-                        <li><strong>Implementation Approach</strong>: Deploy client-side JavaScript and mobile SDK components to capture behavioral data, with edge computing for initial processing and privacy preservation.</li>
-                        <li><strong>Expected Outcomes</strong>: Improve account takeover detection by 35-40% while reducing authentication friction for legitimate users.</li>
-                        <li><strong>Business Impact</strong>: Reduce account fraud losses by an estimated $3.7M annually for the average enterprise customer while improving customer experience through reduced step-up authentication requirements.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Federated Learning Framework (Q4 2025)</strong>:
-                    <ul>
-                        <li><strong>Technical Approach</strong>: Implement privacy-preserving federated learning allowing financial institutions to collaboratively train fraud detection models without sharing sensitive customer data.</li>
-                        <li><strong>Key Components</strong>: Secure multi-party computation, differential privacy guarantees, and decentralized model training infrastructure.</li>
-                        <li><strong>Technical Benefits</strong>: Enable cross-institutional fraud pattern detection while maintaining strict data privacy and regulatory compliance.</li>
-                        <li><strong>Market Opportunity</strong>: Create new consortium-based offering for regional banking groups, with projected annual recurring revenue of $4.2M by end of 2026.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Real-time Fraud Network Detection (Q1 2026)</strong>:
-                    <ul>
-                        <li><strong>Technical Innovation</strong>: Develop graph-based analytics engine that identifies complex fraud networks in real-time by analyzing transaction patterns across multiple accounts and institutions.</li>
-                        <li><strong>Implementation Details</strong>: Deploy specialized graph database with custom algorithms for pattern matching and anomaly detection in network structures.</li>
-                        <li><strong>Performance Targets</strong>: Identify organized fraud rings with 85%+ accuracy within the first 3-5 transactions, compared to current industry average of 10-15 transactions.</li>
-                        <li><strong>ROI Projection</strong>: Early fraud ring detection estimated to prevent $7-12M in fraud losses annually for large financial institutions.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Quantum-resistant Cryptography Implementation (Q2 2026)</strong>:
-                    <ul>
-                        <li><strong>Strategic Rationale</strong>: Prepare for the emerging threat of quantum computing to current cryptographic standards by implementing post-quantum cryptographic algorithms.</li>
-                        <li><strong>Technical Approach</strong>: Integrate NIST-approved post-quantum cryptographic standards for data encryption, digital signatures, and secure key exchange.</li>
-                        <li><strong>Implementation Strategy</strong>: Phased approach with hybrid classical/post-quantum implementations to ensure backward compatibility.</li>
-                        <li><strong>Competitive Advantage</strong>: Position TrustNet AI as a future-proof solution, addressing emerging concerns about quantum computing threats to financial data security.</li>
-                    </ul>
-                </li>
-
-                <li><strong>AI-powered Fraud Investigation Assistant (Q3 2026)</strong>:
-                    <ul>
-                        <li><strong>Concept</strong>: Develop an AI assistant for fraud analysts that automates evidence gathering, suggests investigation paths, and generates comprehensive case documentation.</li>
-                        <li><strong>Technical Components</strong>: Large language model fine-tuned for financial fraud investigation, knowledge graph integration, and automated evidence collection system.</li>
-                        <li><strong>Efficiency Gains</strong>: Reduce average case investigation time by 65%, enabling analysts to handle 2.8x more cases per day.</li>
-                        <li><strong>Market Differentiation</strong>: Create significant competitive advantage through operational efficiency improvements for fraud teams, addressing critical resource constraints in the industry.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Global Regulatory Compliance Framework (Q4 2026)</strong>:
-                    <ul>
-                        <li><strong>Strategic Vision</strong>: Develop a comprehensive compliance framework supporting all major global financial regulations with automated documentation and reporting.</li>
-                        <li><strong>Technical Architecture</strong>: Rule-based compliance engine with jurisdiction-specific rule sets, automated regulatory reporting, and compliance audit trails.</li>
-                        <li><strong>Key Capabilities</strong>: Jurisdiction-specific data handling, automated regulatory reporting, and compliance verification workflows.</li>
-                        <li><strong>Business Opportunity</strong>: Enable rapid expansion into new geographic markets by reducing compliance implementation time from months to weeks, supporting global growth strategy.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <div class="project-links">
-                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="project-cta fade-in delay-5">
+                <a href="https://github.com/jeetsingh-14/TrustNet-AI" target="_blank" class="cta-button">
+                    <i class="fab fa-github"></i> View GitHub Repository
+                </a>
+                <a href="../index.html#projects" class="cta-button secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
             </div>
         </div>
     </div>

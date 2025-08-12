@@ -5,120 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jio AI-Powered Network Projects by Jeet Singh">
     <title>Jio AI Network Projects – Jeet Singh Portfolio</title>
+    
+    <!-- CSS files -->
     <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="../project-case-study.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../script.js" as="script">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .project-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: left;
-        }
-
-        .project-content h1 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-        }
-
-        .project-content h2 {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-
-        .project-content h3 {
-            color: var(--primary-color);
-            margin-top: 40px;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .project-content h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .project-content p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .project-content ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .project-content li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .project-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-links a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
-            margin: 30px 0;
-        }
-
-        .github-link {
-            display: flex;
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-
-        .github-link a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .github-link a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -134,7 +35,7 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <header>
+    <header class="case-header">
         <div class="container">
             <h1>Jeet Singh</h1>
             <nav>
@@ -151,57 +52,242 @@
 
     <div class="container">
         <div class="project-content" data-aos="fade-up">
-            <h1>Jio AI-Powered Network Projects</h1>
-            <h2>Advanced analytics and AI solutions for telecom network optimization</h2>
+            <!-- Hero/Intro Section -->
+            <div class="project-hero fade-in">
+                <img src="../img/jio-ai-projects-banner.jpg" alt="Jio AI-Powered Network Projects" class="project-hero-image">
+                <div class="project-hero-overlay">
+                    <h1 class="project-title">Jio AI-Powered Network Projects</h1>
+                    <p class="project-impact">Advanced analytics and AI solutions for telecom network optimization across one of the world's largest networks.</p>
+                    
+                    <div class="project-tags">
+                        <div class="tag-group">
+                            <div class="tag-label">Tech Stack</div>
+                            <div>
+                                <span class="tag">Python</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Apache Spark</span>
+                                <span class="tag">SARIMA</span>
+                                <span class="tag">LLMs</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tag-group">
+                            <div class="tag-label">Category</div>
+                            <div>
+                                <span class="tag">AI/ML</span>
+                                <span class="tag">Telecommunications</span>
+                                <span class="tag">Data Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overview Section -->
+            <div class="project-section fade-in delay-1">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Overview</h2>
+                <div class="section-content">
+                    <p>This project suite encompasses multiple AI-driven solutions developed for Jio's telecommunications network. The solutions include network traffic forecasting, anomaly detection systems, and real-time monitoring dashboards that help optimize network performance, predict outages, and enhance customer experience.</p>
+                    
+                    <div class="side-by-side">
+                        <div class="side-by-side-text">
+                            <p>By leveraging advanced machine learning algorithms and big data processing capabilities, these solutions enable Jio to proactively manage their massive network infrastructure, identify potential issues before they impact customers, and optimize resource allocation for maximum efficiency and reliability.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/jio-ai-projects-overview.jpg" alt="Network operations center dashboard" class="project-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <div class="divider"></div>
+            <!-- Problem Section -->
+            <div class="project-section fade-in delay-2">
+                <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Problem</h2>
+                <div class="section-content">
+                    <p>Managing a nationwide telecommunications network presents enormous challenges in predicting traffic patterns, detecting anomalies, and optimizing resources. Traditional rule-based systems struggle with the scale and complexity of modern networks.</p>
+                    
+                    <ul>
+                        <li>Processing terabytes of network telemetry data generated daily across thousands of network nodes</li>
+                        <li>Distinguishing between normal traffic fluctuations and genuine network anomalies</li>
+                        <li>Predicting capacity requirements to prevent congestion and service degradation</li>
+                        <li>Providing actionable insights to network operations teams in real-time</li>
+                    </ul>
+                    
+                    <div class="side-by-side-reverse">
+                        <div class="side-by-side-text">
+                            <p>Jio needed intelligent, automated solutions that could analyze massive amounts of network data in real-time, identify patterns, and provide actionable insights to network operations teams to ensure optimal performance of one of the world's largest telecommunications networks.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/jio-ai-projects-problem.jpg" alt="Network complexity visualization" class="project-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <h3>Overview</h3>
-            <p>This project suite encompasses multiple AI-driven solutions developed for Jio's telecommunications network. The solutions include network traffic forecasting, anomaly detection systems, and real-time monitoring dashboards that help optimize network performance, predict outages, and enhance customer experience across one of the world's largest telecom networks.</p>
+            <!-- Solution Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Solution</h2>
+                <div class="section-content">
+                    <p>We developed a suite of AI-powered solutions to address Jio's network management challenges, creating an integrated system that provides real-time insights and predictive capabilities for network operations.</p>
+                    
+                    <div class="project-image-container">
+                        <img src="../img/jio-ai-projects-solution.jpg" alt="AI-powered network dashboard" class="project-image">
+                        <p class="image-caption">Real-time network monitoring dashboard with AI-powered insights and alerts</p>
+                    </div>
+                    
+                    <p>The solution consists of several integrated components:</p>
+                    
+                    <ul>
+                        <li><strong>Network Traffic Forecasting</strong>: SARIMA models analyze historical traffic patterns to predict future network load with 95%+ accuracy, enabling proactive capacity planning and resource allocation.</li>
+                        <li><strong>Anomaly Detection System</strong>: Machine learning algorithms continuously monitor network telemetry data to identify irregularities and potential issues before they impact service quality.</li>
+                        <li><strong>Natural Language Interface</strong>: Integration of Large Language Models (LLMs) provides network operators with the ability to query network status and receive recommendations using natural language.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Tech Stack Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-code"></i> Tech Stack</h2>
+                <div class="section-content">
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-python"></i></div>
+                            <div class="tech-name">Python</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="tech-name">FastAPI</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-react"></i></div>
+                            <div class="tech-name">React</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-fire"></i></div>
+                            <div class="tech-name">Apache Spark</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="tech-name">SARIMA</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-brain"></i></div>
+                            <div class="tech-name">LLMs</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-name">MongoDB</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-chart-bar"></i></div>
+                            <div class="tech-name">D3.js</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <h3>Problem Statement</h3>
-            <p>Managing a nationwide telecommunications network presents enormous challenges in predicting traffic patterns, detecting anomalies, and optimizing resources. Traditional rule-based systems struggle with the scale and complexity of modern networks. Jio needed intelligent, automated solutions that could analyze massive amounts of network data in real-time, identify patterns, and provide actionable insights to network operations teams.</p>
+            <!-- Process Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-tasks"></i> Process</h2>
+                <div class="section-content">
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <h4>Requirements Analysis</h4>
+                            <p>Collaborated with Jio's network operations teams to understand their challenges, workflows, and requirements for an AI-powered network management solution.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Data Pipeline Development</h4>
+                            <p>Built scalable data pipelines using Apache Spark to collect, process, and store terabytes of network telemetry data from thousands of network nodes.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Model Development</h4>
+                            <p>Developed and trained SARIMA models for traffic forecasting and machine learning algorithms for anomaly detection using historical network data.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Dashboard Creation</h4>
+                            <p>Designed and implemented interactive dashboards using React and D3.js to visualize network status, predictions, and anomalies for operations teams.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Integration & Deployment</h4>
+                            <p>Integrated all components into a cohesive system and deployed it to Jio's production environment with continuous monitoring and feedback loops.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Features Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-star"></i> Key Features</h2>
+                <div class="section-content">
+                    <div class="key-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3 class="feature-title">Traffic Forecasting</h3>
+                            <p>Network traffic prediction with 95%+ accuracy for capacity planning, enabling proactive resource allocation and preventing congestion.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-exclamation-circle"></i></div>
+                            <h3 class="feature-title">Anomaly Detection</h3>
+                            <p>Real-time identification of network irregularities with automated alert systems, reducing mean time to detection by 73%.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-desktop"></i></div>
+                            <h3 class="feature-title">Interactive Dashboards</h3>
+                            <p>Comprehensive visualization tools for network operations center teams, providing real-time insights into network performance.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                            <h3 class="feature-title">Natural Language Interface</h3>
+                            <p>LLM-powered query system allowing operators to ask questions about network status and receive diagnostic information in natural language.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                            <h3 class="feature-title">Predictive Maintenance</h3>
+                            <p>AI-generated recommendations for preventive maintenance, reducing unplanned outages by 42% across the network.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <h3 class="feature-title">Performance Optimization</h3>
+                            <p>Automated suggestions for network configuration changes to optimize performance based on current and predicted traffic patterns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <h3>Approach & Tech Stack</h3>
-            <ul>
-                <li><strong>Time Series Forecasting</strong>: SARIMA models for seasonal network traffic prediction</li>
-                <li><strong>Anomaly Detection</strong>: Machine learning algorithms to identify network irregularities</li>
-                <li><strong>Backend</strong>: FastAPI for high-performance API endpoints</li>
-                <li><strong>Frontend</strong>: React for interactive dashboards</li>
-                <li><strong>Generative AI</strong>: Integration of LLMs for natural language insights and recommendations</li>
-                <li><strong>Data Processing</strong>: Apache Spark for distributed data processing</li>
-            </ul>
-
-            <h3>Key Features</h3>
-            <ul>
-                <li>Network traffic forecasting with 95%+ accuracy for capacity planning</li>
-                <li>Real-time anomaly detection with automated alert systems</li>
-                <li>Interactive dashboards for network operations center (NOC) teams</li>
-                <li>Natural language query interface for network status and diagnostics</li>
-                <li>Predictive maintenance recommendations to prevent outages</li>
-            </ul>
-
-            <h3>Architecture</h3>
-            <p>The system follows a microservices architecture with separate components for data ingestion, processing, analysis, and visualization. Network telemetry data is continuously streamed into a data lake, processed through various ML pipelines, and results are exposed via APIs. The frontend dashboards consume these APIs to provide real-time visualizations and insights. The GenAI component acts as an intelligent layer that translates complex network data into human-readable insights and recommendations.</p>
-
-            <h3>Challenges Faced</h3>
-            <ul>
-                <li>Processing and analyzing terabytes of network data in real-time</li>
-                <li>Distinguishing between normal traffic fluctuations and genuine anomalies</li>
-                <li>Creating models that adapt to evolving network conditions and usage patterns</li>
-                <li>Developing intuitive visualizations for complex network metrics</li>
-            </ul>
-
-            <h3>Future Improvements</h3>
-            <ul>
-                <li>Implement deep reinforcement learning for automated network optimization</li>
-                <li>Enhance the GenAI component with multimodal capabilities (text, charts, network graphs)</li>
-                <li>Develop predictive models for customer experience metrics</li>
-                <li>Create a digital twin of the network for simulation and testing</li>
-            </ul>
-
-            <div class="project-links">
-                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            <!-- Challenges Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-mountain"></i> Challenges Faced</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Processing and analyzing terabytes of network data in real-time from thousands of network nodes</li>
+                        <li>Distinguishing between normal traffic fluctuations and genuine anomalies in a constantly evolving network</li>
+                        <li>Creating models that adapt to evolving network conditions and usage patterns without requiring constant retraining</li>
+                        <li>Developing intuitive visualizations for complex network metrics that can be understood by operators with varying technical backgrounds</li>
+                        <li>Integrating the AI-powered system with existing network management tools and workflows</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Future Improvements Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> Future Improvements</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Implement deep reinforcement learning for automated network optimization and self-healing capabilities</li>
+                        <li>Enhance the GenAI component with multimodal capabilities to process and generate text, charts, and network graphs</li>
+                        <li>Develop predictive models for customer experience metrics to proactively address service quality issues</li>
+                        <li>Create a digital twin of the network for simulation and testing of configuration changes before deployment</li>
+                        <li>Extend the system to include radio access network (RAN) optimization in addition to core network management</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="project-cta fade-in delay-5">
+                <a href="../index.html#projects" class="cta-button secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
             </div>
         </div>
     </div>

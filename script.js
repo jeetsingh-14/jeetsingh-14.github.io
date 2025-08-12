@@ -37,14 +37,132 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initialize AOS animation library
+    // Initialize AOS animation library with enhanced settings
     AOS.init({
         duration: 800,
-        easing: 'ease-in-out',
-        once: true,
+        easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+        once: false,
         mirror: false,
-        offset: 50
+        offset: 50,
+        anchorPlacement: 'top-bottom',
+        disable: 'mobile'
     });
+    
+    // Add scroll class to navigation when scrolled
+    window.addEventListener('scroll', function() {
+        const mainNav = document.querySelector('.main-nav');
+        if (window.scrollY > 100) {
+            mainNav.classList.add('scrolled');
+        } else {
+            mainNav.classList.remove('scrolled');
+        }
+    });
+    
+    // Initialize particles
+    initParticles();
+    
+    // Initialize tech badge interactions
+    initTechBadges();
+    
+    // Function to initialize particles with random positions and animations
+    function initParticles() {
+        const particles = document.querySelectorAll('.particle');
+        
+        particles.forEach((particle, index) => {
+            // Set random starting positions
+            const randomX = Math.random() * 100;
+            const randomDelay = Math.random() * 20;
+            const randomDuration = 15 + Math.random() * 10;
+            const randomSize = 2 + Math.random() * 3;
+            
+            particle.style.setProperty('--x-pos', `${randomX}%`);
+            particle.style.animationDelay = `${randomDelay}s`;
+            particle.style.animationDuration = `${randomDuration}s`;
+            particle.style.width = `${randomSize}px`;
+            particle.style.height = `${randomSize}px`;
+            
+            // Add random movement
+            const randomMovement = -50 + Math.random() * 100;
+            particle.style.setProperty('--x-movement', `${randomMovement}px`);
+        });
+    }
+    
+    // Function to initialize tech badge interactions
+    function initTechBadges() {
+        const techBadges = document.querySelectorAll('.tech-badge');
+        
+        techBadges.forEach(badge => {
+            badge.addEventListener('mouseenter', function() {
+                const skill = this.getAttribute('data-skill');
+                
+                // Create tooltip with skill description
+                const tooltip = document.createElement('div');
+                tooltip.className = 'skill-tooltip';
+                
+                let description = '';
+                switch(skill) {
+                    case 'Python':
+                        description = 'Advanced Python for data processing, ML models & APIs';
+                        break;
+                    case 'SQL':
+                        description = 'Complex queries, database design & optimization';
+                        break;
+                    case 'ML/AI':
+                        description = 'Predictive models, NLP & computer vision';
+                        break;
+                    case 'FastAPI':
+                        description = 'High-performance REST APIs & microservices';
+                        break;
+                    case 'React':
+                        description = 'Interactive dashboards & data visualizations';
+                        break;
+                    case 'AWS/GCP':
+                        description = 'Cloud infrastructure, serverless & ML services';
+                        break;
+                    default:
+                        description = 'Technical expertise';
+                }
+                
+                tooltip.textContent = description;
+                document.body.appendChild(tooltip);
+                
+                // Position tooltip
+                const badgeRect = this.getBoundingClientRect();
+                tooltip.style.left = `${badgeRect.left + badgeRect.width/2}px`;
+                tooltip.style.top = `${badgeRect.bottom + 10}px`;
+                
+                // Show tooltip with animation
+                setTimeout(() => {
+                    tooltip.classList.add('visible');
+                }, 10);
+                
+                // Store tooltip reference
+                this.tooltip = tooltip;
+            });
+            
+            badge.addEventListener('mouseleave', function() {
+                if (this.tooltip) {
+                    this.tooltip.classList.remove('visible');
+                    
+                    // Remove tooltip after animation
+                    setTimeout(() => {
+                        if (this.tooltip && this.tooltip.parentNode) {
+                            this.tooltip.parentNode.removeChild(this.tooltip);
+                        }
+                    }, 300);
+                }
+            });
+            
+            // Add click effect
+            badge.addEventListener('click', function() {
+                this.classList.add('clicked');
+                
+                setTimeout(() => {
+                    this.classList.remove('clicked');
+                }, 500);
+            });
+        });
+    }
 
     // Project filtering functionality
     const filterButtons = document.querySelectorAll('.filter-btn');

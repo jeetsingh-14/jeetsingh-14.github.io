@@ -5,120 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Real-Time Stock Market Sentiment Analysis Project by Jeet Singh">
     <title>Stock Market Sentiment Analysis – Jeet Singh Portfolio</title>
+    
+    <!-- CSS files -->
     <link rel="stylesheet" href="../portfolio_style.css">
+    <link rel="stylesheet" href="../project-case-study.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../script.js" as="script">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .project-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: left;
-        }
-
-        .project-content h1 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-        }
-
-        .project-content h2 {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-
-        .project-content h3 {
-            color: var(--primary-color);
-            margin-top: 40px;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .project-content h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .project-content p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .project-content ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .project-content li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .project-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-links a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
-            margin: 30px 0;
-        }
-
-        .github-link {
-            display: flex;
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-
-        .github-link a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .github-link a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -134,7 +35,7 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <header>
+    <header class="case-header">
         <div class="container">
             <h1>Jeet Singh</h1>
             <nav>
@@ -151,61 +52,223 @@
 
     <div class="container">
         <div class="project-content" data-aos="fade-up">
-            <h1>Real-Time Stock Market Sentiment Analysis</h1>
-            <h2>Full-stack ML pipeline for live market sentiment prediction</h2>
-
-            <div class="divider"></div>
-
-            <div class="github-link">
-                <a href="https://github.com/jeetsingh-14/real-time-stock" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            <!-- Hero/Intro Section -->
+            <div class="project-hero fade-in">
+                <img src="../img/stock-sentiment-banner.jpg" alt="Real-Time Stock Market Sentiment Analysis" class="project-hero-image">
+                <div class="project-hero-overlay">
+                    <h1 class="project-title">Real-Time Stock Market Sentiment Analysis</h1>
+                    <p class="project-impact">Full-stack ML pipeline for live market sentiment prediction to enhance trading decisions.</p>
+                    
+                    <div class="project-tags">
+                        <div class="tag-group">
+                            <div class="tag-label">Tech Stack</div>
+                            <div>
+                                <span class="tag">Python</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">BERT</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">BigQuery</span>
+                                <span class="tag">Grafana</span>
+                                <span class="tag">Streamlit</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tag-group">
+                            <div class="tag-label">Category</div>
+                            <div>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">Financial Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <h3>Overview</h3>
-            <p>This project is a comprehensive system that analyzes real-time stock market sentiment by processing financial news, social media data, and market indicators. It provides traders and analysts with immediate insights into market sentiment shifts that could impact stock prices.</p>
-
-            <h3>Problem Statement</h3>
-            <p>Traditional stock analysis relies heavily on technical indicators and historical patterns, often missing the impact of rapidly changing market sentiment. News and social media can dramatically shift market dynamics in minutes, but manually tracking these sources is impossible. We needed an automated system to quantify and visualize sentiment in real-time.</p>
-
-            <h3>Approach & Tech Stack</h3>
-            <ul>
-                <li><strong>Data Collection</strong>: Python scripts with APIs for financial news, Twitter/Reddit data, and market feeds</li>
-                <li><strong>NLP Processing</strong>: BERT-based sentiment analysis models fine-tuned on financial text</li>
-                <li><strong>Backend</strong>: Python with Flask for API endpoints</li>
-                <li><strong>Data Storage</strong>: MySQL for structured data, BigQuery for large-scale analytics</li>
-                <li><strong>Visualization</strong>: Grafana for real-time dashboards, Streamlit for interactive analysis</li>
-                <li><strong>Deployment</strong>: Cloud-based infrastructure with scheduled data pipelines</li>
-            </ul>
-
-            <h3>Key Features</h3>
-            <ul>
-                <li>Real-time sentiment scoring for major stocks and market sectors</li>
-                <li>Historical sentiment tracking with correlation to price movements</li>
-                <li>Customizable alerts for significant sentiment shifts</li>
-                <li>Interactive dashboards for exploring sentiment by source and time period</li>
-                <li>API endpoints for integration with trading platforms</li>
-            </ul>
-
-            <h3>Architecture</h3>
-            <p>The system follows a modular architecture with separate components for data collection, processing, storage, and visualization. Data flows from various sources through our sentiment analysis pipeline, with results stored in databases and displayed on dashboards. The system updates continuously throughout trading hours, with batch processing for deeper analysis during off-hours.</p>
-
-            <h3>Challenges Faced</h3>
-            <ul>
-                <li>Handling the high volume and velocity of financial news and social media data</li>
-                <li>Distinguishing between genuine market sentiment and noise/spam</li>
-                <li>Optimizing the NLP models for both accuracy and processing speed</li>
-                <li>Creating visualizations that effectively communicate complex sentiment patterns</li>
-            </ul>
-
-            <h3>Future Improvements</h3>
-            <ul>
-                <li>Incorporate more granular entity recognition to track sentiment for specific company aspects</li>
-                <li>Develop predictive models that forecast sentiment shifts based on early signals</li>
-                <li>Add automated trading strategy backtesting based on sentiment indicators</li>
-                <li>Expand coverage to international markets and cryptocurrencies</li>
-            </ul>
-
-            <div class="project-links">
-                <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            
+            <!-- Overview Section -->
+            <div class="project-section fade-in delay-1">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Overview</h2>
+                <div class="section-content">
+                    <p>This project is a comprehensive system that analyzes real-time stock market sentiment by processing financial news, social media data, and market indicators. It provides traders and analysts with immediate insights into market sentiment shifts that could impact stock prices.</p>
+                    
+                    <div class="side-by-side">
+                        <div class="side-by-side-text">
+                            <p>The system continuously monitors multiple data sources, applies advanced NLP techniques to quantify sentiment, and visualizes the results through interactive dashboards. This enables financial professionals to incorporate sentiment analysis into their trading strategies and respond quickly to changing market conditions.</p>
+                        </div>
+                        <div class="side-by-side-image">
+                            <img src="../img/stock-sentiment-overview.jpg" alt="Stock sentiment dashboard" class="project-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Problem Section -->
+            <div class="project-section fade-in delay-2">
+                <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Problem</h2>
+                <div class="section-content">
+                    <p>Traditional stock analysis relies heavily on technical indicators and historical patterns, often missing the impact of rapidly changing market sentiment. News and social media can dramatically shift market dynamics in minutes, but manually tracking these sources is impossible. We needed an automated system to quantify and visualize sentiment in real-time.</p>
+                    
+                    <ul>
+                        <li>Inability to process the high volume of financial news and social media data in real-time</li>
+                        <li>Difficulty in quantifying subjective sentiment from textual data</li>
+                        <li>Lack of integration between sentiment data and trading platforms</li>
+                        <li>Challenge of distinguishing between genuine market sentiment and noise/spam</li>
+                        <li>Need for visualizations that effectively communicate complex sentiment patterns</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Solution Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Solution</h2>
+                <div class="section-content">
+                    <p>The solution is a modular system that collects data from various sources, processes it through NLP models, stores the results in databases, and presents insights through interactive dashboards. The system follows a data pipeline architecture with separate components for collection, processing, storage, and visualization.</p>
+                    
+                    <div class="project-image-container">
+                        <img src="../img/stock-sentiment-solution.jpg" alt="System architecture diagram" class="project-image">
+                        <p class="image-caption">Architecture diagram showing data flow from sources through processing to visualization</p>
+                    </div>
+                    
+                    <p>The system updates continuously throughout trading hours, with batch processing for deeper analysis during off-hours. API endpoints allow integration with trading platforms, enabling automated trading strategies based on sentiment signals.</p>
+                </div>
+            </div>
+            
+            <!-- Tech Stack Section -->
+            <div class="project-section fade-in delay-3">
+                <h2 class="section-title"><i class="fas fa-code"></i> Tech Stack</h2>
+                <div class="section-content">
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fab fa-python"></i></div>
+                            <div class="tech-name">Python</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-flask"></i></div>
+                            <div class="tech-name">Flask</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-brain"></i></div>
+                            <div class="tech-name">BERT</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-name">MySQL</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-server"></i></div>
+                            <div class="tech-name">BigQuery</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="tech-name">Grafana</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="fas fa-desktop"></i></div>
+                            <div class="tech-name">Streamlit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Process Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-tasks"></i> Process</h2>
+                <div class="section-content">
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <h4>Data Collection</h4>
+                            <p>Developed Python scripts with APIs for financial news, Twitter/Reddit data, and market feeds to gather real-time data from multiple sources.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>NLP Processing</h4>
+                            <p>Implemented BERT-based sentiment analysis models fine-tuned on financial text to accurately classify sentiment in financial contexts.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Data Storage</h4>
+                            <p>Set up MySQL for structured data storage and BigQuery for large-scale analytics to handle the high volume of processed data.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>API Development</h4>
+                            <p>Created Flask-based API endpoints for retrieving sentiment data and integrating with external trading platforms.</p>
+                        </div>
+                        <div class="process-step">
+                            <h4>Visualization</h4>
+                            <p>Designed Grafana dashboards for real-time monitoring and Streamlit interfaces for interactive analysis of sentiment trends.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Features Section -->
+            <div class="project-section fade-in delay-4">
+                <h2 class="section-title"><i class="fas fa-star"></i> Key Features</h2>
+                <div class="section-content">
+                    <div class="key-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3 class="feature-title">Real-time Sentiment Scoring</h3>
+                            <p>Continuous sentiment analysis for major stocks and market sectors with minute-by-minute updates.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-history"></i></div>
+                            <h3 class="feature-title">Historical Tracking</h3>
+                            <p>Historical sentiment data with correlation to price movements for pattern identification and backtesting.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                            <h3 class="feature-title">Customizable Alerts</h3>
+                            <p>User-defined alerts for significant sentiment shifts that may indicate trading opportunities.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-desktop"></i></div>
+                            <h3 class="feature-title">Interactive Dashboards</h3>
+                            <p>Comprehensive dashboards for exploring sentiment by source, time period, and market sector.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-plug"></i></div>
+                            <h3 class="feature-title">API Integration</h3>
+                            <p>RESTful API endpoints for seamless integration with trading platforms and other financial tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Challenges Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-mountain"></i> Challenges Faced</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Handling the high volume and velocity of financial news and social media data</li>
+                        <li>Distinguishing between genuine market sentiment and noise/spam</li>
+                        <li>Optimizing the NLP models for both accuracy and processing speed</li>
+                        <li>Creating visualizations that effectively communicate complex sentiment patterns</li>
+                        <li>Ensuring system reliability during high-volatility market events</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Future Improvements Section -->
+            <div class="project-section fade-in delay-5">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> Future Improvements</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Incorporate more granular entity recognition to track sentiment for specific company aspects</li>
+                        <li>Develop predictive models that forecast sentiment shifts based on early signals</li>
+                        <li>Add automated trading strategy backtesting based on sentiment indicators</li>
+                        <li>Expand coverage to international markets and cryptocurrencies</li>
+                        <li>Implement advanced anomaly detection to identify unusual sentiment patterns</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="project-cta fade-in delay-5">
+                <a href="https://github.com/jeetsingh-14/real-time-stock" target="_blank" class="cta-button">
+                    <i class="fab fa-github"></i> View GitHub Repository
+                </a>
+                <a href="../index.html#projects" class="cta-button secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
             </div>
         </div>
     </div>
