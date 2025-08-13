@@ -118,9 +118,11 @@ header {
     font-size: 16px;
     transition: all 0.3s ease;
     position: relative;
+    padding: 8px 12px;
+    display: inline-block;
 }
 
-.main-nav a:hover {
+.main-nav a:hover, .main-nav a:active, .main-nav a:focus {
     color: var(--primary-color);
 }
 
@@ -135,8 +137,42 @@ header {
     transition: width 0.3s ease;
 }
 
-.main-nav a:hover::after {
+.main-nav a:hover::after, .main-nav a:active::after, .main-nav a:focus::after {
     width: 100%;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .main-nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+    
+    .main-nav ul {
+        gap: 5px;
+    }
+    
+    .main-nav a {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
 }
 
 /* Hero Section */
@@ -150,6 +186,21 @@ header {
     position: relative;
     z-index: 1;
     overflow: hidden;
+}
+
+/* Mobile hero section adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0 60px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 120px 0 40px;
+        text-align: center;
+    }
 }
 
 /* Animated Background */
@@ -473,12 +524,18 @@ header {
     box-shadow: 0 5px 15px rgba(30, 144, 255, 0.3);
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
+    z-index: 5;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
     background: #0078e7;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(30, 144, 255, 0.4);
+    color: #fff;
 }
 
 .btn-primary::after {
@@ -495,8 +552,26 @@ header {
     transform-origin: 50% 50%;
 }
 
-.btn-primary:hover::after {
-    animation: ripple 1s ease-out;
+/* Only apply ripple effect on non-touch devices */
+@media (hover: hover) {
+    .btn-primary:hover::after {
+        animation: ripple 1s ease-out;
+    }
+}
+
+/* For touch devices, simplify the effect */
+@media (hover: none) {
+    .btn-primary:active::after {
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: none;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.2);
+        transition: opacity 0.3s ease;
+    }
 }
 
 @keyframes ripple {
@@ -1403,12 +1478,16 @@ section h2:after {
     padding: 12px 24px;
     border-radius: 30px;
     font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(30, 144, 255, 0.3);
     margin-top: 10px;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
 }
 
 .btn::before {
@@ -1435,7 +1514,6 @@ section h2:after {
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--primary-color));
     background-size: 200% 200%;
     z-index: -2;
-    animation: gradient-move 3s ease infinite;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1451,24 +1529,45 @@ section h2:after {
     transition: all 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover, .btn:active, .btn:focus {
     background: #0078e7;
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 20px var(--enhanced-glow-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(30, 144, 255, 0.4);
     color: #ffffff;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-.btn:hover::before {
+.btn:hover::before, .btn:active::before, .btn:focus::before {
     transform: translateX(100%);
 }
 
-.btn:hover::after {
+.btn:hover::after, .btn:active::after, .btn:focus::after {
     opacity: 1;
 }
 
-.btn:hover i {
-    transform: translateX(-3px) scale(1.2);
+.btn:hover i, .btn:active i, .btn:focus i {
+    transform: translateX(-2px);
+}
+
+/* For touch devices */
+@media (hover: none) {
+    .btn:active {
+        background: #0078e7;
+        transform: translateY(0);
+        box-shadow: 0 4px 10px rgba(30, 144, 255, 0.4);
+    }
+    
+    .btn.touch-active {
+        background: #0078e7;
+        transform: scale(0.98);
+        box-shadow: 0 2px 8px rgba(30, 144, 255, 0.5);
+        transition: all 0.1s ease;
+    }
+    
+    .btn-primary.touch-active {
+        background: #0066cc;
+        transform: scale(0.98);
+        box-shadow: 0 2px 8px rgba(30, 144, 255, 0.5);
+    }
 }
 
 /* Skills Section */
@@ -4367,8 +4466,26 @@ footer p {
     }
     
     .btn-primary, .btn-secondary {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        padding: 12px 24px;
+        font-size: 1rem;
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+        margin: 10px 5px;
+        min-width: 160px;
+        text-align: center;
+        /* Simplify effects for better mobile performance */
+        box-shadow: 0 4px 10px rgba(30, 144, 255, 0.4);
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        touch-action: manipulation;
+    }
+    
+    /* Ensure the hero-cta and about-cta sections display buttons properly */
+    .hero-cta, .about-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
     }
     
     .section-title {

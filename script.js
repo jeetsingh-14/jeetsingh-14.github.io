@@ -9,6 +9,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
         }, 800);
     });
+    
+    // Enhance touch interactions for resume buttons
+    const resumeButtons = document.querySelectorAll('a[href="Jeet Singh Resume.pdf"]');
+    resumeButtons.forEach(button => {
+        // Add active class on touch start
+        button.addEventListener('touchstart', function(e) {
+            this.classList.add('touch-active');
+        }, { passive: true });
+        
+        // Remove active class on touch end
+        button.addEventListener('touchend', function(e) {
+            this.classList.remove('touch-active');
+            // Small delay to ensure the click event fires properly
+            setTimeout(() => {
+                window.open(this.href, '_blank');
+            }, 10);
+        }, { passive: true });
+        
+        // Prevent default on mobile to handle with our custom logic
+        button.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+            }
+        });
+    });
 
     // Theme toggle functionality
     const themeToggle = document.getElementById('theme-toggle');
